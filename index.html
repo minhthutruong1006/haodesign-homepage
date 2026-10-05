@@ -227,7 +227,7 @@ html.lenis,html.lenis body{height:auto}
 /* 제작 사례 캐러셀: 가운데 카드 확대, 양옆은 어둡게·바깥으로 살짝 밀림, 무한 반복 */
 .wk{position:relative;margin-top:70px;padding:70px 0;overflow:hidden}
 .wk-track{display:flex;align-items:center;will-change:transform;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
-.wk-track.jump{transition:none}
+.wk.jump .wk-track,.wk.jump .wk-track *,.wk.jump .wk-track *::before,.wk.jump .wk-track *::after{transition:none!important}
 .wk-slide{flex:0 0 auto;padding:0 12px;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
 .wk-slide.left{transform:translateX(-8.5%)}
 .wk-slide.right{transform:translateX(8.5%)}
@@ -301,16 +301,27 @@ html.lenis,html.lenis body{height:auto}
 .eq-info p{color:#555}
 
 /* reviews */
-.reviews{background:var(--soft);padding:140px 0}
+/* 고객 후기: 알약 모양 카드(글/사진 교차)가 천천히 흐름, 마우스 올리면 멈춤 */
+.reviews{background:#f6f6f6;padding:clamp(100px,7.3vw,140px) 0;overflow:hidden}
+.rvp-head{text-align:center}
+.rvp-head .sec-title em{font-style:normal;color:var(--mint)}
+.rvp{margin-top:clamp(50px,4.2vw,80px);overflow:hidden}
+.rvp-track{display:flex;gap:28px;width:max-content;animation:rvpMove 45s linear infinite}
+.rvp:hover .rvp-track{animation-play-state:paused}
+@keyframes rvpMove{to{transform:translateX(calc(-50% - 14px))}}
+.rvp-card{flex:0 0 auto;width:clamp(250px,15.6vw,300px);height:clamp(360px,22.4vw,430px);border-radius:999px;overflow:hidden;background:#fff;position:relative}
+.rvp-card.txt{display:flex;flex-direction:column;justify-content:center;padding:0 clamp(28px,2vw,40px)}
+.rvp-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.rvp-stars{color:#f5b301;font-size:clamp(14px,.95vw,18px);letter-spacing:1px;line-height:1;white-space:nowrap}
+.rvp-card.txt .cat{font-size:clamp(14px,.95vw,18px);font-weight:700;color:var(--mint)}
+.rvp-card.txt .q{margin-top:clamp(16px,1.2vw,24px);font-size:clamp(15px,.95vw,18px);font-weight:600;line-height:1.6;letter-spacing:-.03em;color:var(--ink);display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.rvp-foot{margin-top:clamp(18px,1.4vw,26px);padding-top:clamp(14px,1vw,18px);border-top:1px solid #eee}
+.rvp-card.txt .logo{display:block;margin:0 auto;height:clamp(30px,2.3vw,44px);width:auto;max-width:160px;object-fit:contain;object-position:center}
+.rvp-card.txt .who{margin-top:10px;text-align:center;font-size:clamp(13px,.85vw,16px);color:#888}
+.rvp-card.img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}
+.rvp-card.img:hover img{transform:scale(1.05)}
+@media (prefers-reduced-motion:reduce){.rvp-track{animation:none}}
 .rv-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
-.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px}
-.rv{background:#fff;border-radius:20px;padding:32px;transition:.3s}
-.rv:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,.06)}
-.rv .cat{display:inline-block;font-size:12px;font-weight:700;color:var(--mint-dd);background:var(--mint-bg);border-radius:99px;padding:4px 12px}
-.rv h4{font-size:18px;margin:16px 0 10px}
-.rv p{font-size:14px;color:#666;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
-.rv .meta{margin-top:20px;font-size:13px;color:var(--gray)}
-.stars{color:#f5b301;letter-spacing:2px}
 
 /* news */
 .news{padding:140px 0}
@@ -351,7 +362,6 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
   .dv,.dv.on{flex:none;color:#fff;background:linear-gradient(135deg,#e83817,#f7a68f)}
   .dv-v{display:none}
   .dv-o{position:relative;opacity:1;transform:none;min-width:0;gap:28px}
-  .rv-grid{grid-template-columns:1fr 1fr}
   .news-grid{grid-template-columns:1fr 1fr}
   .ft-top{grid-template-columns:1fr}
 }
@@ -361,7 +371,6 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
   .quick{top:auto;bottom:0;right:0;left:0;transform:none;border-radius:16px 16px 0 0;display:flex}
   .quick a{flex:1;width:auto;border-bottom:0;border-right:1px solid var(--line)}
   body{padding-bottom:64px}
-  .rv-grid{grid-template-columns:1fr}
   .eq-wrap .ph{height:280px}
 }
 </style>
@@ -596,37 +605,15 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
   <div class="wk-ctrl"><button class="arw" id="wkPrev" aria-label="이전">←</button><div class="wk-dots" id="wkDots"></div><button class="arw" id="wkNext" aria-label="다음">→</button></div>
 </section>
 
-<!-- VISION -->
-<section class="vision">
-  <div class="ph dark" data-label="FULL-WIDTH BANNER IMAGE"></div>
-  <h2 class="reveal">다시 또렷해지는 일상,<br><span>맑은눈안과</span>에서 시작하세요</h2>
-</section>
-
-<!-- EQUIPMENT -->
-<section class="equip">
-  <div class="wrap">
-    <div class="center reveal"><div class="eyebrow">Equipment</div><h2 class="sec-title">정확한 진료를 위한 장비</h2></div>
-    <div class="eq-wrap reveal">
-      <div class="ph" id="eqImg" data-label="EQUIPMENT 01"></div>
-      <div class="eq-info">
-        <div class="eq-tabs" id="eqTabs">
-          <button class="on" data-i="0">수술 시스템</button><button data-i="1">망막 단층촬영</button><button data-i="2">광학 생체계측</button><button data-i="3">안저 촬영</button>
-        </div>
-        <h3 id="eqT">수술 시스템</h3><div class="sub" id="eqS">Surgical System</div><p id="eqD">정교한 미세 조작이 필요한 안과 수술을 안정적으로 진행할 수 있도록 돕는 장비입니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- REVIEWS -->
-<section class="reviews">
-  <div class="wrap">
-    <div class="rv-head reveal"><div><div class="eyebrow">Review</div><h2 class="sec-title">치료 후기</h2><p class="sec-desc">방문해 주신 분들이 남겨주신 이야기입니다. (샘플)</p></div><a class="btn btn-line" href="#">전체 보기 <span class="arr">→</span></a></div>
-    <div class="rv-grid">
-      <div class="rv reveal"><span class="cat">망막클리닉</span><h4>설명이 자세해서 안심됐어요</h4><p>샘플 후기 문구입니다. 실제 후기로 교체해 사용하세요. 검사 과정과 결과를 이해하기 쉽게 설명해 주셨다는 내용이 들어갈 자리입니다.</p><div class="meta"><span class="stars">★★★★★</span> · 김** · 2026.09</div></div>
-      <div class="rv reveal"><span class="cat">백내장</span><h4>수술 후 관리까지 꼼꼼했어요</h4><p>샘플 후기 문구입니다. 수술 전 상담, 당일 진행, 이후 경과 관찰에 대한 경험이 들어갈 자리입니다.</p><div class="meta"><span class="stars">★★★★★</span> · 이** · 2026.08</div></div>
-      <div class="rv reveal"><span class="cat">근시치료</span><h4>아이도 편하게 다녀요</h4><p>샘플 후기 문구입니다. 소아 진료 분위기와 보호자 설명에 대한 내용이 들어갈 자리입니다.</p><div class="meta"><span class="stars">★★★★★</span> · 박** · 2026.08</div></div>
-    </div>
+<section class="reviews" id="reviews">
+  <div class="wrap rvp-head reveal">
+    <div class="eyebrow">Client Voice</div>
+    <h2 class="sec-title">함께한 브랜드들이 말하는 <em>하오디자인</em></h2>
+    <p class="sec-desc">함께한 클라이언트들이 남겨주신 실제 프로젝트 후기입니다.</p>
+  </div>
+  <div class="rvp" aria-label="고객 후기">
+    <div class="rvp-track"><div class="rvp-card txt"><div class="rvp-top"><p class="cat">보험사</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">회사 안내 자료를 새로 만들면서 신뢰감이 확 살았어요. 고객 응대 현장에서 반응이 좋습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p46.png" alt="보험사 로고" loading="lazy" decoding="async"><p class="who">보험사 마케팅팀 김OO 팀장</p></div></div><div class="rvp-card txt"><div class="rvp-top"><p class="cat">은행</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">브랜드 톤을 정확히 잡아주셔서 홍보물이 일관돼졌어요. 소통도 빠르고 편했습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p52.png" alt="은행 로고" loading="lazy" decoding="async"><p class="who">은행 홍보팀 이OO 과장</p></div></div><div class="rvp-card txt"><div class="rvp-top"><p class="cat">대학교</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">모집 시즌 급한 일정에도 퀄리티를 놓치지 않으셨어요. 인쇄·납품까지 한 번에 끝나 든든했습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p58.png" alt="대학교 로고" loading="lazy" decoding="async"><p class="who">대학교 홍보팀 박OO 주임</p></div></div><div class="rvp-card txt"><div class="rvp-top"><p class="cat">문화재단</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">전시·행사 홍보물을 시안 단계부터 방향을 잘 잡아주셨어요. 멀리서도 눈에 잘 띕니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p70.png" alt="문화재단 로고" loading="lazy" decoding="async"><p class="who">문화재단 기획팀 최OO 대리</p></div></div><div class="rvp-card txt"><div class="rvp-top"><p class="cat">연구기관</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">영문·국문 자료를 같은 톤으로 정리해주셔서 해외 협력 자리에서 깔끔했습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p80.png" alt="연구기관 로고" loading="lazy" decoding="async"><p class="who">연구기관 대외협력팀 윤OO 선임</p></div></div><div class="rvp-card txt"><div class="rvp-top"><p class="cat">식품기업</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">패키지 리뉴얼 후 매대에서 확실히 눈에 띕니다. 다음 라인업도 맡길 예정이에요.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p93.png" alt="식품기업 로고" loading="lazy" decoding="async"><p class="who">식품기업 마케팅팀 한OO 과장</p></div></div><div class="rvp-card txt" aria-hidden="true"><div class="rvp-top"><p class="cat">보험사</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">회사 안내 자료를 새로 만들면서 신뢰감이 확 살았어요. 고객 응대 현장에서 반응이 좋습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p46.png" alt="보험사 로고" loading="lazy" decoding="async"><p class="who">보험사 마케팅팀 김OO 팀장</p></div></div><div class="rvp-card txt" aria-hidden="true"><div class="rvp-top"><p class="cat">은행</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">브랜드 톤을 정확히 잡아주셔서 홍보물이 일관돼졌어요. 소통도 빠르고 편했습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p52.png" alt="은행 로고" loading="lazy" decoding="async"><p class="who">은행 홍보팀 이OO 과장</p></div></div><div class="rvp-card txt" aria-hidden="true"><div class="rvp-top"><p class="cat">대학교</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">모집 시즌 급한 일정에도 퀄리티를 놓치지 않으셨어요. 인쇄·납품까지 한 번에 끝나 든든했습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p58.png" alt="대학교 로고" loading="lazy" decoding="async"><p class="who">대학교 홍보팀 박OO 주임</p></div></div><div class="rvp-card txt" aria-hidden="true"><div class="rvp-top"><p class="cat">문화재단</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">전시·행사 홍보물을 시안 단계부터 방향을 잘 잡아주셨어요. 멀리서도 눈에 잘 띕니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p70.png" alt="문화재단 로고" loading="lazy" decoding="async"><p class="who">문화재단 기획팀 최OO 대리</p></div></div><div class="rvp-card txt" aria-hidden="true"><div class="rvp-top"><p class="cat">연구기관</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">영문·국문 자료를 같은 톤으로 정리해주셔서 해외 협력 자리에서 깔끔했습니다.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p80.png" alt="연구기관 로고" loading="lazy" decoding="async"><p class="who">연구기관 대외협력팀 윤OO 선임</p></div></div><div class="rvp-card txt" aria-hidden="true"><div class="rvp-top"><p class="cat">식품기업</p><span class="rvp-stars" aria-label="별점 5점">★★★★★</span></div><p class="q">패키지 리뉴얼 후 매대에서 확실히 눈에 띕니다. 다음 라인업도 맡길 예정이에요.</p><div class="rvp-foot"><img class="logo" src="https://design.haoc.co.kr/assets/partners/p93.png" alt="식품기업 로고" loading="lazy" decoding="async"><p class="who">식품기업 마케팅팀 한OO 과장</p></div></div></div>
   </div>
 </section>
 
@@ -676,15 +663,21 @@ timer=setTimeout(()=>go(1),6000);
   orig.forEach((_,i)=>{const d=document.createElement('button');d.setAttribute('aria-label',`${i+1}번`);d.onclick=()=>go(n+i);dots.append(d)});
   let idx=n,timer;
   function place(anim){
-    track.classList.toggle('jump',!anim);
+    box.classList.toggle('jump',!anim);
     const s=slides[idx],off=s.offsetLeft+s.offsetWidth/2-box.clientWidth/2;
     track.style.transform=`translate3d(${-off}px,0,0)`;
     slides.forEach((el,i)=>{el.classList.toggle('active',i===idx);el.classList.toggle('left',i<idx);el.classList.toggle('right',i>idx)});
     [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===idx%n));
   }
-  function go(i){idx=i;place(true);restart()}
-  track.addEventListener('transitionend',e=>{if(e.target!==track)return;
-    if(idx>=2*n||idx<n){idx=n+((idx%n)+n)%n;place(false)}});
+  // 복제 구간에 들어가면 같은 모양의 원본 카드로 순간 이동 (화면상 변화 없음)
+  function normalize(){
+    if(idx>=n&&idx<2*n)return;
+    idx=n+((idx%n)+n)%n;place(false);
+    void track.offsetWidth;                       // 순간 이동을 먼저 반영
+    requestAnimationFrame(()=>box.classList.remove('jump'));
+  }
+  function go(i){normalize();idx=i;place(true);restart()}
+  track.addEventListener('transitionend',e=>{if(e.target===track)normalize()});
   document.getElementById('wkPrev').onclick=()=>go(idx-1);
   document.getElementById('wkNext').onclick=()=>go(idx+1);
   slides.forEach((s,i)=>s.addEventListener('click',e=>{if(i!==idx){e.preventDefault();go(i)}}));
@@ -695,15 +688,6 @@ timer=setTimeout(()=>go(1),6000);
   addEventListener('resize',()=>place(false));
   requestAnimationFrame(()=>place(false));restart();
 })();
-// equipment tabs
-const eq=[
- ['수술 시스템','Surgical System','정교한 미세 조작이 필요한 안과 수술을 안정적으로 진행할 수 있도록 돕는 장비입니다.'],
- ['망막 단층촬영','OCT','망막의 층 구조를 단면으로 촬영해 눈으로 보기 어려운 변화까지 확인합니다.'],
- ['광학 생체계측','Biometry','백내장 수술 전 안구 길이와 각막 곡률을 측정해 적합한 렌즈 도수를 계산합니다.'],
- ['안저 촬영','Fundus Camera','넓은 범위의 망막을 한 번에 촬영해 질환의 유무와 진행 정도를 기록합니다.']];
-document.getElementById('eqTabs').onclick=e=>{const b=e.target.closest('button');if(!b)return;
- document.querySelectorAll('#eqTabs button').forEach(x=>x.classList.toggle('on',x===b));
- const d=eq[b.dataset.i];eqT.textContent=d[0];eqS.textContent=d[1];eqD.textContent=d[2];eqImg.dataset.label='EQUIPMENT 0'+(+b.dataset.i+1)};
 // designer section: 한 번만 재생
 const docSec=document.getElementById('designer');
 new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){docSec.classList.add('on');o.disconnect()}}),{threshold:.2}).observe(docSec);
