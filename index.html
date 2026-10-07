@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>맑은눈안과 | 망막·백내장 전문 (템플릿)</title>
+<title>하오디자인 | 카탈로그·브로슈어·리플렛 디자인 인쇄 제작</title>
 <meta name="description" content="안과 홈페이지 레이아웃 템플릿 - 샘플 문구와 플레이스홀더 이미지로 구성">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -226,9 +226,9 @@ html.lenis,html.lenis body{height:auto}
 .services{padding:140px 0}
 /* 제작 사례 캐러셀: 가운데 카드 확대, 양옆은 어둡게·바깥으로 살짝 밀림, 무한 반복 */
 .wk{position:relative;margin-top:70px;padding:70px 0;overflow:hidden}
-.wk-track{display:flex;align-items:center;will-change:transform;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.wk-track{display:flex;align-items:center;will-change:transform;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
 .wk.jump .wk-track,.wk.jump .wk-track *,.wk.jump .wk-track *::before,.wk.jump .wk-track *::after{transition:none!important}
-.wk-slide{flex:0 0 auto;padding:0 12px;transition:transform .6s cubic-bezier(.25,.46,.45,.94)}
+.wk-slide{flex:0 0 auto;padding:0 12px;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
 .wk-slide.left{transform:translateX(-8.5%)}
 .wk-slide.right{transform:translateX(8.5%)}
 .wk-slide.active{transform:scale(1.17)}
@@ -323,12 +323,20 @@ html.lenis,html.lenis body{height:auto}
 @media (prefers-reduced-motion:reduce){.rvp-track{animation:none}}
 .rv-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap}
 
-/* news */
-.news{padding:140px 0}
-.news-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:50px}
-.nw .ph{aspect-ratio:1/1;border-radius:20px}
-.nw h4{margin-top:16px;font-size:17px}
-.nw time{font-size:13px;color:var(--gray)}
+/* partners: 로고 카드 두 줄이 서로 반대 방향으로 흐름, 마우스 올리면 멈춤 */
+.partners{padding:clamp(90px,7vw,140px) 0 clamp(70px,6vw,120px);overflow:hidden}
+.partners .sec-title em{font-style:normal;color:var(--mint)}
+.partners .wrap{margin-bottom:clamp(36px,3vw,56px)}
+.pt-mq{overflow:hidden;padding:10px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.pt-track{display:flex;gap:22px;width:max-content;animation:ptMove 38s linear infinite}
+.pt-mq.rev .pt-track{animation-direction:reverse;animation-duration:46s}
+.pt-mq:hover .pt-track{animation-play-state:paused}
+@keyframes ptMove{to{transform:translateX(calc(-50% - 11px))}}
+.plogo{flex:0 0 auto;width:clamp(220px,18.8vw,360px);height:clamp(96px,7.8vw,150px);display:grid;place-items:center;border:1px solid #e8e8e8;border-radius:14px;background:#fff;transition:border-color .3s,box-shadow .3s}
+.plogo img{max-width:60%;max-height:52%;object-fit:contain;filter:grayscale(1);opacity:.75;transition:filter .3s,opacity .3s}
+.plogo:hover{border-color:#ddd;box-shadow:0 14px 30px -22px rgba(0,0,0,.35)}
+.plogo:hover img{filter:none;opacity:1}
+@media (max-width:760px){.plogo{width:148px;height:62px;border-radius:12px}.plogo img{max-width:78%;max-height:66%}.pt-track{gap:12px;animation-duration:30s}.pt-mq.rev .pt-track{animation-duration:36s}}
 
 /* footer */
 footer{background:#1a1a1a;color:#aaa;padding:70px 0 50px;font-size:14px}
@@ -362,7 +370,6 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
   .dv,.dv.on{flex:none;color:#fff;background:linear-gradient(135deg,#e83817,#f7a68f)}
   .dv-v{display:none}
   .dv-o{position:relative;opacity:1;transform:none;min-width:0;gap:28px}
-  .news-grid{grid-template-columns:1fr 1fr}
   .ft-top{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -379,38 +386,31 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
 
 <header id="hd">
   <div class="wrap hd">
-    <a href="#" class="logo"><i></i>맑은눈안과</a>
+    <a href="index.html" class="logo"><i></i>하오디자인</a>
     <ul class="gnb">
-      <li><a href="#">병원소개</a></li>
-      <li><a href="#">망막클리닉</a></li>
-      <li><a href="#">백내장·노안</a></li>
-      <li><a href="#">근시치료</a></li>
-      <li><a href="#">건성안</a></li>
-      <li><a href="#">녹내장</a></li>
-      <li><a href="#">종합검진</a></li>
-      <li><a href="#">고객지원</a></li>
+      <li><a href="about.html">회사소개</a></li>
+      <li><a href="catalog-brochure.html">서비스</a></li>
+      <li><a href="work.html">포트폴리오</a></li>
+      <li><a href="board.html">칼럼</a></li>
+      <li><a href="contact.html">견적문의</a></li>
     </ul>
-    <div class="util"><a class="txt" href="#">로그인</a><span class="txt">|</span><a class="txt" href="#">회원가입</a><button class="burger" aria-label="메뉴"><span></span></button></div>
   </div>
   <div class="mega">
     <div class="wrap">
-      <ul><li><a href="#">인사말</a></li><li><a href="#">의료진</a></li><li><a href="#">보유장비</a></li><li><a href="#">둘러보기</a></li><li><a href="#">오시는 길</a></li></ul>
-      <ul><li><a href="#">황반변성</a></li><li><a href="#">망막박리</a></li><li><a href="#">당뇨망막병증</a></li><li><a href="#">망막전막</a></li><li><a href="#">유리체출혈</a></li></ul>
-      <ul><li><a href="#">백내장 수술</a></li><li><a href="#">다초점 렌즈</a></li><li><a href="#">노안 교정</a></li></ul>
-      <ul><li><a href="#">드림렌즈</a></li><li><a href="#">근시 억제 안경</a></li><li><a href="#">약물 치료</a></li></ul>
-      <ul><li><a href="#">건성안 검사</a></li><li><a href="#">IPL 치료</a></li></ul>
-      <ul><li><a href="#">녹내장 검사</a></li><li><a href="#">녹내장 치료</a></li></ul>
-      <ul><li><a href="#">종합검진 안내</a></li></ul>
-      <ul><li><a href="#">공지사항</a></li><li><a href="#">치료 후기</a></li><li><a href="#">예약문의</a></li><li><a href="#">비급여 안내</a></li></ul>
+      <ul><li><a href="about.html#story">회사소개</a></li><li><a href="about.html#way">하오디자인은 다릅니다</a></li><li><a href="about.html#facility">제작설비</a></li><li><a href="about.html#location">오시는길</a></li></ul>
+      <ul><li><a href="catalog-brochure.html">카탈로그 · 브로슈어</a></li><li><a href="leaflet-pamphlet.html">팜플렛 · 리플렛</a></li><li><a href="poster-flyer.html">포스터 · 전단지</a></li><li><a href="ci-logo.html">CI · 로고디자인</a></li><li><a href="package-label.html">패키지 · 라벨</a></li><li><a href="global-design.html">다국어디자인</a></li></ul>
+      <ul><li><a href="work.html">전체 포트폴리오</a></li><li><a href="work.html#catalog">카탈로그·브로슈어</a></li><li><a href="work.html#leaflet">팜플렛·리플렛</a></li><li><a href="work.html#poster">포스터·전단지</a></li><li><a href="work.html#ci">CI·로고디자인</a></li><li><a href="work.html#package">패키지·라벨</a></li><li><a href="work.html#global">다국어디자인</a></li></ul>
+      <ul><li><a href="board.html">칼럼</a></li></ul>
+      <ul><li><a href="contact.html">견적문의</a></li></ul>
     </div>
   </div>
 </header>
 
 <nav class="quick">
-  <a href="#"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14z"/></svg>온라인 예약</a>
-  <a href="#"><svg viewBox="0 0 24 24"><path d="M12 3C6.5 3 2 6.6 2 11c0 2.5 1.5 4.8 3.8 6.3L5 21l4.1-2.4c.9.2 1.9.4 2.9.4 5.5 0 10-3.6 10-8s-4.5-8-10-8z"/></svg>메신저 상담</a>
-  <a href="#"><svg viewBox="0 0 24 24"><path d="M3 17.3V21h3.8l11-11-3.8-3.8zM20.7 7a1 1 0 0 0 0-1.4l-2.3-2.3a1 1 0 0 0-1.4 0l-1.8 1.8 3.8 3.8z"/></svg>간편문의</a>
-  <a href="#"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>대표전화</a>
+  <a href="contact.html"><svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 16H5V9h14z"/></svg>견적문의</a>
+  <a href="work.html"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>포트폴리오</a>
+  <a href="mailto:sales@haodesign.co.kr"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2 2v.5l7 4.5 7-4.5V7z"/></svg>메일 문의</a>
+  <a href="tel:16662027"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>대표전화</a>
 </nav>
 
 <!-- HERO -->
@@ -617,27 +617,25 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
   </div>
 </section>
 
-<!-- NEWS -->
-<section class="news">
-  <div class="wrap">
-    <div class="rv-head reveal"><div><div class="eyebrow">News</div><h2 class="sec-title">병원 소식</h2></div><a class="btn btn-line" href="#">더 보기 <span class="arr">→</span></a></div>
-    <div class="news-grid">
-      <a class="nw reveal" href="#"><div class="ph" data-label="NEWS 01"></div><h4>10월 진료 일정 안내</h4><time>2026.09.22</time></a>
-      <a class="nw reveal" href="#"><div class="ph" data-label="NEWS 02"></div><h4>추석 연휴 휴진 안내</h4><time>2026.09.10</time></a>
-      <a class="nw reveal" href="#"><div class="ph" data-label="NEWS 03"></div><h4>신규 검사 장비 도입</h4><time>2026.08.28</time></a>
-      <a class="nw reveal" href="#"><div class="ph" data-label="NEWS 04"></div><h4>9월 진료 일정 안내</h4><time>2026.08.20</time></a>
-    </div>
+<!-- PARTNERS -->
+<section class="partners" aria-label="함께한 브랜드">
+  <div class="wrap center reveal">
+    <div class="eyebrow">Partners</div>
+    <h2 class="sec-title">고객과 함께 걸어가는 <em>하오디자인</em></h2>
   </div>
+  <div class="pt-mq"><div class="pt-track"><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p46.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p48.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p50.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p52.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p54.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p56.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p58.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p68.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p70.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p72.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p46.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p48.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p50.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p52.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p54.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p56.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p58.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p68.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p70.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p72.png" alt="" loading="lazy" decoding="async"></div></div></div>
+  <div class="pt-mq rev"><div class="pt-track"><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p74.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p76.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p78.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p80.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p89.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p91.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p93.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p95.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p97.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p99.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p74.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p76.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p78.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p80.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p89.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p91.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p93.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p95.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p97.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p99.png" alt="" loading="lazy" decoding="async"></div></div></div>
 </section>
+
 
 <footer>
   <div class="wrap">
     <div class="ft-top">
-      <div><a href="#" class="logo"><i></i>맑은눈안과</a><p>정확한 진단, 신중한 치료</p></div>
-      <div><h5>진료시간</h5><ul class="hours"><li><span>평일</span><span>09:00 – 18:00</span></li><li><span>토요일</span><span>09:00 – 13:00</span></li><li><span>점심시간</span><span>13:00 – 14:00</span></li><li><span>일·공휴일</span><span>휴진</span></li></ul></div>
-      <div><h5>대표전화</h5><div class="tel">000-0000-0000</div></div>
+      <div><a href="index.html" class="logo"><i></i>하오디자인</a><p>카탈로그 · 브로슈어 · 리플렛 · 패키지 디자인 인쇄 제작</p></div>
+      <div><h5>상담시간</h5><ul class="hours"><li><span>평일</span><span>09:00 – 18:00</span></li><li><span>주말·공휴일</span><span>휴무</span></li></ul></div>
+      <div><h5>대표전화</h5><div class="tel">1666-2027</div><p style="margin-top:8px">sales@haodesign.co.kr</p></div>
     </div>
-    <div class="ft-bot"><b>맑은눈안과</b> · 대표자 홍길동 · 사업자등록번호 000-00-00000<br>주소 OO시 OO구 OO로 00, 0층<br>© 2026 Clear Eye Clinic. Template.</div>
+    <div class="ft-bot"><b>하오디자인</b> · 서울특별시 광진구 · TEL 1666-2027 · sales@haodesign.co.kr<br>© 2026 HAO DESIGN. All rights reserved.</div>
   </div>
 </footer>
 
@@ -660,7 +658,7 @@ timer=setTimeout(()=>go(1),6000);
   const track=box.querySelector('.wk-track'),orig=[...track.children],n=orig.length;
   orig.forEach(s=>track.append(s.cloneNode(true)));orig.slice().reverse().forEach(s=>track.prepend(s.cloneNode(true)));
   const slides=[...track.children],dots=document.getElementById('wkDots');
-  orig.forEach((_,i)=>{const d=document.createElement('button');d.setAttribute('aria-label',`${i+1}번`);d.onclick=()=>go(n+i);dots.append(d)});
+  orig.forEach((_,i)=>{const d=document.createElement('button');d.setAttribute('aria-label',`${i+1}번`);d.onclick=()=>goAbs(n+i);dots.append(d)});
   let idx=n,timer;
   function place(anim){
     box.classList.toggle('jump',!anim);
@@ -676,17 +674,29 @@ timer=setTimeout(()=>go(1),6000);
     void track.offsetWidth;                       // 순간 이동을 먼저 반영
     requestAnimationFrame(()=>box.classList.remove('jump'));
   }
-  function go(i){normalize();idx=i;place(true);restart()}
-  track.addEventListener('transitionend',e=>{if(e.target===track)normalize()});
-  document.getElementById('wkPrev').onclick=()=>go(idx-1);
-  document.getElementById('wkNext').onclick=()=>go(idx+1);
-  slides.forEach((s,i)=>s.addEventListener('click',e=>{if(i!==idx){e.preventDefault();go(i)}}));
-  function restart(){clearInterval(timer);timer=setInterval(()=>go(idx+1),4000)}
-  box.addEventListener('mouseenter',()=>clearInterval(timer));box.addEventListener('mouseleave',restart);
+  // 넘어가는 중(0.6초)에는 새 입력을 받지 않음 → 중간에 끊기거나 순간 이동이 보이지 않게
+  let busy=false,hover=false,safety;
+  function done(){if(!busy)return;busy=false;clearTimeout(safety);normalize()}
+  // 이동은 '몇 칸'으로 계산 → 위치 정리(normalize) 뒤에 더해서 범위를 벗어나지 않음
+  function go(delta){
+    if(busy||!delta)return;
+    normalize();idx=Math.max(0,Math.min(slides.length-1,idx+delta));busy=true;place(true);
+    clearTimeout(safety);safety=setTimeout(done,650);   // transitionend가 안 오는 경우 대비
+    restart();
+  }
+  track.addEventListener('transitionend',e=>{if(e.target===track&&e.propertyName==='transform')done()});
+  function goAbs(t){if(busy)return;normalize();go(t-idx)}
+  document.getElementById('wkPrev').onclick=()=>go(-1);
+  document.getElementById('wkNext').onclick=()=>go(1);
+  slides.forEach((s,i)=>s.addEventListener('click',e=>{e.preventDefault();if(i!==idx)go(i-idx)}));
+  // 자동 넘김: 마우스가 올라가 있거나 탭이 안 보일 때는 멈춤
+  function restart(){clearInterval(timer);if(hover||document.hidden)return;timer=setInterval(()=>go(1),4000)}
+  box.addEventListener('mouseenter',()=>{hover=true;clearInterval(timer)});box.addEventListener('mouseleave',()=>{hover=false;restart()});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else{done();place(false);requestAnimationFrame(()=>box.classList.remove('jump'));restart()}});
   let sx=null;box.addEventListener('pointerdown',e=>{sx=e.clientX});
-  addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;sx=null;if(Math.abs(dx)>50)go(idx+(dx<0?1:-1))});
-  addEventListener('resize',()=>place(false));
-  requestAnimationFrame(()=>place(false));restart();
+  addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx;sx=null;if(Math.abs(dx)>50)go(dx<0?1:-1)});
+  addEventListener('resize',()=>{place(false);requestAnimationFrame(()=>box.classList.remove('jump'))});
+  requestAnimationFrame(()=>{place(false);requestAnimationFrame(()=>box.classList.remove('jump'))});restart();
 })();
 // designer section: 한 번만 재생
 const docSec=document.getElementById('designer');
