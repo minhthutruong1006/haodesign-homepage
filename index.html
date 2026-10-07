@@ -338,6 +338,26 @@ html.lenis,html.lenis body{height:auto}
 .plogo:hover img{filter:none;opacity:1}
 @media (max-width:760px){.plogo{width:148px;height:62px;border-radius:12px}.plogo img{max-width:78%;max-height:66%}.pt-track{gap:12px;animation-duration:30s}.pt-mq.rev .pt-track{animation-duration:36s}}
 
+/* FAQ: 질문 알약 + 오른쪽 + 버튼, 누르면 답 펼침, 5개 이후는 더보기 */
+.faqs{padding:clamp(60px,5vw,100px) 0 clamp(100px,8vw,150px)}
+.fq-list{margin:clamp(32px,2.8vw,52px) auto 0;max-width:900px;display:flex;flex-direction:column;gap:10px}
+.fq{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:start}
+.fq.more{display:none}.fq-list.all .fq.more{display:grid}
+.fq-q{justify-self:stretch;width:100%;text-align:left;font:inherit;font-size:clamp(15px,.95vw,17px);font-weight:600;letter-spacing:-.02em;color:var(--ink);background:#f7f7f7;border:0;border-radius:12px;padding:clamp(15px,1.05vw,19px) clamp(20px,1.4vw,26px);cursor:pointer;transition:background .3s,color .3s}
+.fq-pl{width:clamp(50px,3.3vw,60px);height:clamp(50px,3.3vw,60px);border:0;border-radius:12px;background:#f7f7f7;cursor:pointer;position:relative;transition:background .3s}
+.fq-pl i{position:absolute;left:50%;top:50%;width:11px;height:11px;border-right:2px solid var(--mint);border-bottom:2px solid var(--mint);transform:translate(-50%,-70%) rotate(45deg);transition:transform .35s,border-color .3s}
+.fq:hover .fq-q,.fq:hover .fq-pl{background:#f0eeed}
+.fq.open .fq-q{background:var(--mint);color:#fff}
+.fq.open .fq-pl{background:var(--ink)}
+.fq.open .fq-pl i{border-color:#fff;transform:translate(-50%,-30%) rotate(-135deg)}
+.fq-a{grid-column:1/-1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.16,1,.3,1)}
+.fq-a>div{overflow:hidden}
+.fq-a p{margin:0;padding:clamp(16px,1.15vw,20px) clamp(20px,1.4vw,26px);border-radius:12px;background:#fff6f3;color:#444;line-height:1.8;font-size:clamp(14px,.88vw,16px)}
+.fq.open .fq-a{grid-template-rows:1fr}
+.fq-more{margin-top:28px;font:inherit;font-size:14px;font-weight:600;padding:14px 30px;border:0;border-radius:12px;background:#f7f7f7;cursor:pointer;transition:background .3s}
+.fq-more:hover{background:#efedec}
+@media (max-width:640px){.fq{gap:8px}.fq-pl{width:48px;height:48px}}
+
 /* footer */
 footer{background:#1a1a1a;color:#aaa;padding:70px 0 50px;font-size:14px}
 .ft-top{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid #333}
@@ -627,6 +647,27 @@ footer h5{color:#fff;font-size:15px;margin-bottom:14px}
   <div class="pt-mq rev"><div class="pt-track"><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p74.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p76.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p78.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p80.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p89.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p91.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p93.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p95.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p97.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo"><img src="https://design.haoc.co.kr/assets/partners/p99.png" alt="파트너 로고" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p74.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p76.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p78.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p80.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p89.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p91.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p93.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p95.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p97.png" alt="" loading="lazy" decoding="async"></div><div class="plogo" aria-hidden="true"><img src="https://design.haoc.co.kr/assets/partners/p99.png" alt="" loading="lazy" decoding="async"></div></div></div>
 </section>
 
+<!-- FAQ -->
+<section class="faqs" id="faq">
+  <div class="wrap">
+    <div class="center reveal"><div class="eyebrow">FAQ</div><h2 class="sec-title">자주 묻는 질문</h2><p class="sec-desc">하오디자인에 궁금한 점을 확인하세요.</p></div>
+    <div class="fq-list reveal">
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>친환경 느낌이나 고급스러운 질감으로 만들 수 있나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>가능합니다. 친환경 느낌이나 고급스러운 인상은 색보다 종이와 후가공에서 결정됩니다. 유광 코팅 대신 무광이나 비코팅지를 쓰면 손에 닿는 순간 콘셉트가 전달돼요. 다만 비코팅지는 색이 한 톤 가라앉기 때문에 미리 색을 조정해야 하는데, 하오디자인은 인쇄를 내부에서 관리해 이런 종이별 색 차이를 디자인 단계에서 반영합니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>병원·의료기관 홍보물도 전문적으로 제작하나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>하오디자인은 병원 안내책자·브로슈어 작업을 꾸준히 해온 병원 인쇄 전문입니다. 진료과별 편집을 반복해와서, 신뢰가 중요한 진료과의 톤도 처음부터 안정감 있게 잡아드려요. 치료 과정을 단계 그림과 짧은 설명, 인포그래픽으로 정리해 환자분이 이해하기 쉽게 편집하는 데 강점이 있습니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>온라인 상세페이지와 패키지를 같이 맡길 수 있나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네, 함께 맡기시는 편을 권해드려요. 온라인 상세페이지와 실물 패키지가 따로 만들어지면 고객이 화면에서 본 제품과 배송받은 제품이 다르게 느껴지거든요. 같은 곳에서 하면 로고 위치, 제품명 서체, 라인 컬러를 하나의 규칙으로 묶어 화면과 실물이 이어집니다. 필요한 범위를 알려주시면 구성부터 제안해 드립니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>수출용 다국어(영문·중문 등) 카탈로그도 제작하나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네, 수출용이라면 영어·중국어·일본어·프랑스어 등 다국어 카탈로그와 홍보물을 내부에서 함께 처리합니다. 영문은 한글보다 문장이 길어지므로 처음부터 영문 기준으로 여백을 잡아, 번역 후 목차나 표가 밀리지 않게 해요. 별도 번역 업체를 거치지 않아 언어별 버전의 톤도 하나로 맞출 수 있습니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>수출용 영문 카탈로그·브로슈어도 제작하나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네, 해외 박람회나 수출을 준비하시는 경우 바이어용 영문 카탈로그·브로슈어를 제작합니다. 여러 기업이 함께 나가는 박람회 공동관에서 참여사 소개부터 전체 구성까지 하나의 영문 카탈로그로 통일해 정리한 사례가 있습니다. 원고 퀄리티가 제각각인 경우 윤문(문장 다듬기)까지 함께 대응합니다.</p></div></div></div>
+      <div class="fq more"><button class="fq-q" aria-expanded="false"><span>제품 사진이 없는데 촬영도 같이 해주나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네, 제품 촬영과 디자인을 함께 진행합니다. 촬영과 디자인이 붙어 있으면 처음부터 인쇄를 전제로 촬영 방향을 잡을 수 있어, 촬영 컷의 배경 톤과 인쇄물의 종이 톤이 어긋나지 않습니다. 어떤 인쇄물에 쓸 컷인지 미리 알려주시면 그에 맞춰 구도와 여백을 잡아 촬영합니다. 개정판 제작 시에도 촬영을 함께 하시면 새 장비·리모델링한 공간이 반영돼 최신 상태로 보입니다.</p></div></div></div>
+      <div class="fq more"><button class="fq-q" aria-expanded="false"><span>소량 제작도 가능한가요? 최소 수량이 있나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>소량 제작도 가능합니다. 소량은 디지털 인쇄로 진행하면 판(版) 비용이 들지 않아 수백 매 단위도 부담이 적습니다. 특히 신규 브랜드라면 처음부터 대량으로 찍기보다 필요한 만큼만 제작해 반응을 본 뒤 늘리는 편이 재고 손실이 적습니다. 정확한 최소 수량은 품목과 인쇄 방식에 따라 달라지므로 상담 시 안내해 드립니다.</p></div></div></div>
+      <div class="fq more"><button class="fq-q" aria-expanded="false"><span>디자인만 또는 인쇄만 따로 의뢰할 수 있나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네, 가능합니다. 디자인만 의뢰하시거나, 이미 완성된 인쇄용 파일이 있으시면 인쇄만 별도로 진행하실 수 있습니다. 다만 기획·디자인·인쇄를 함께 맡기시면 톤과 정보 구성이 자연스럽게 이어지고 일정도 단축되기 때문에, 처음 제작하시는 경우에는 원스톱으로 진행하시는 편을 권해드립니다.</p></div></div></div>
+      <div class="fq more"><button class="fq-q" aria-expanded="false"><span>기획부터 인쇄까지 한 곳에서 다 되나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네, 하오디자인은 기획·디자인·인쇄를 한 곳에서 진행하는 원스톱 방식입니다. 디자인과 인쇄가 분리되면 파일을 주고받는 시간이 생기지만, 한 곳에서 돌아가면 그 시간이 사라져 일정이 짧아지고 색·톤 관리도 일관됩니다. 제품 촬영까지 함께 대응하므로 촬영·디자인·인쇄를 하나로 묶어 진행할 수 있습니다.</p></div></div></div>
+      <div class="fq more"><button class="fq-q" aria-expanded="false"><span>카탈로그 제작 기간은 얼마나 걸리나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>16페이지 카탈로그 기준으로 디자인 1~2주, 인쇄 3~5일이 표준입니다. 하오디자인은 기획·디자인·인쇄를 한 곳에서 처리하는 원스톱 방식이라 파일을 주고받는 시간이 없어, 원고와 제품 사진이 준비돼 있으면 2주 일정까지도 맞출 수 있습니다. 일정에 여유를 두고 최소 3주 전 상담을 권장드립니다.</p></div></div></div>
+    </div>
+    <div class="center"><button class="fq-more" id="fqMore">더보기</button></div>
+  </div>
+</section>
+
+
 
 <footer>
   <div class="wrap">
@@ -841,6 +882,16 @@ if(window.Lenis){
   cards.forEach((c,i)=>{c.addEventListener('mouseenter',()=>show(i));c.addEventListener('click',()=>show(i));c.addEventListener('focus',()=>show(i))});
   const start=()=>{clearInterval(timer);timer=setInterval(()=>show((cur+1)%cards.length),5000)};
   list.addEventListener('mouseenter',()=>clearInterval(timer));list.addEventListener('mouseleave',start);start();
+})();
+// FAQ 펼치기 / 더보기
+(function(){
+  // 마우스를 올리면 열리고 내리면 닫힘 (터치 화면은 누르면 열고 닫음)
+  const hoverable=matchMedia('(hover:hover)').matches;
+  document.querySelectorAll('.fq').forEach(f=>{const set=o=>{f.classList.toggle('open',o);f.querySelector('.fq-q').setAttribute('aria-expanded',o)};
+    if(hoverable){f.addEventListener('mouseenter',()=>set(true));f.addEventListener('mouseleave',()=>set(false))}
+    const t=()=>set(!f.classList.contains('open'));f.querySelector('.fq-q').onclick=t;f.querySelector('.fq-pl').onclick=t});
+  const m=document.getElementById('fqMore'),l=document.querySelector('.fq-list');
+  if(m)m.onclick=()=>{const all=l.classList.toggle('all');m.textContent=all?'접기':'더보기'};
 })();
 // reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
