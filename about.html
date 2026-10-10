@@ -115,17 +115,35 @@
   <div class="loc reveal"><iframe loading="lazy" src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B4%91%EC%A7%84%EA%B5%AC&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title="오시는길 지도"></iframe><div class="info"><div><h4>ADDRESS</h4><p>서울특별시 광진구</p></div><div><h4>TEL</h4><p>1666-2027 (평일 09:00–18:00)</p></div><div><h4>EMAIL</h4><p>sales@haodesign.co.kr</p></div></div></div>
 </div></section>
 
-<section class="cta" id="contact"><div class="wrap"><div class="cta-panel reveal">
-  <div><p class="tag">START A PROJECT</p><h2>프로젝트를<br>함께 시작할까요?</h2><p class="d">간단한 내용만 남겨주세요.<br>담당자가 확인 후 빠르게 연락드립니다.</p><ul><li><span>TEL</span>1666-2027</li><li><span>MAIL</span>sales@haodesign.co.kr</li><li><span>TIME</span>평일 09:00 – 18:00</li></ul></div>
-  <form class="cform" novalidate>
-    <input name="name" placeholder="이름 / 회사명" required>
-    <input name="phone" type="tel" placeholder="연락처" required>
-    <select class="full" name="type"><option value="">문의 종류 선택</option><option>카탈로그 · 브로슈어</option><option>팜플렛 · 리플렛</option><option>포스터 · 전단지</option><option>CI · 로고디자인</option><option>패키지 · 라벨</option><option>다국어디자인</option><option>기타</option></select>
-    <textarea class="full" name="message" rows="4" placeholder="제작 내용, 수량, 일정 등을 자유롭게 적어주세요."></textarea>
-    <button class="btn" type="submit">문의 보내기 <span class="arr">→</span></button>
-    <p class="note"></p>
-  </form>
-</div></div></section>
+<section class="quote" id="contact">
+  <div class="wrap qt-in">
+    <div class="qt-info reveal">
+      <p class="qt-tag">START YOUR PROJECT</p>
+      <h2 class="qt-title">프로젝트를<br><em>함께 시작할까요?</em></h2>
+      <p class="qt-desc">어떤 프로젝트인지 짧게 들려주세요.<br>1:1 상담으로 브랜드에 맞는 방향을 함께 고민하겠습니다.</p>
+      <div class="qt-call"><span>빠른 상담</span><a href="tel:16662027">1666-2027</a></div>
+      <ul class="qt-rows">
+        <li><b>TIME</b>평일 09:00 – 18:00 (주말·공휴일 휴무)</li>
+        <li><b>MAIL</b><a href="mailto:sales@haodesign.co.kr">sales@haodesign.co.kr</a></li>
+        <li><b>ADDRESS</b>서울시 광진구 능동로49길 9, 2F</li>
+      </ul>
+    </div>
+    <form class="qf reveal" id="quoteForm" novalidate>
+      <div class="qf-grid">
+        <label class="qf-f"><span>회사/브랜드명</span><input name="company" placeholder="브랜드명" required></label>
+        <label class="qf-f"><span>담당자명</span><input name="name" placeholder="홍길동" required></label>
+        <label class="qf-f"><span>연락처</span><input name="phone" type="tel" placeholder="010-0000-0000" required></label>
+        <label class="qf-f"><span>이메일</span><input name="email" type="email" placeholder="name@email.com"></label>
+        <label class="qf-f full"><span>의뢰 분야</span><select name="type" required><option value="">선택해주세요</option><optgroup label="편집인쇄물"><option>카다로그 · 브로셔</option><option>리플렛</option><option>포스터 · 전단지</option><option>CI · 로고디자인</option></optgroup><optgroup label="디자인 & 솔루션"><option>패키지 · 라벨</option><option>촬영 서비스</option><option>다국어디자인</option></optgroup><optgroup label="비즈니스 컨설팅"><option>브랜딩 컨설팅</option><option>지원사업 컨설팅</option></optgroup><option>기타</option></select></label>
+        <label class="qf-f full"><span>프로젝트 내용 (선택)</span><textarea name="message" rows="3" placeholder="품목, 수량, 일정, 예산, 참고 자료 등을 자유롭게 적어주세요."></textarea></label>
+      </div>
+      <fieldset class="qf-route"><legend>어떤 경로로 하오디자인을 찾아주셨나요? <em>(필수)</em></legend><div class="qf-rs"><label class="qf-r"><input type="radio" name="route" value="네이버 블로그" required><span>네이버 블로그</span></label><label class="qf-r"><input type="radio" name="route" value="네이버 카페" required><span>네이버 카페</span></label><label class="qf-r"><input type="radio" name="route" value="언론(보도기사)" required><span>언론(보도기사)</span></label><label class="qf-r"><input type="radio" name="route" value="인스타그램" required><span>인스타그램</span></label><label class="qf-r"><input type="radio" name="route" value="AI 추천" required><span>AI 추천</span></label><label class="qf-r"><input type="radio" name="route" value="티스토리" required><span>티스토리</span></label><label class="qf-r"><input type="radio" name="route" value="지인 소개" required><span>지인 소개</span></label><label class="qf-r"><input type="radio" name="route" value="기타" required><span>기타</span></label></div></fieldset>
+      <label class="qf-agree"><input type="checkbox" name="agree" required><span>개인정보 수집·이용에 동의합니다. (견적 회신 목적, 보관 후 파기)</span></label>
+      <button class="qf-btn" type="submit">견적 요청하기</button>
+      <p class="qf-note" role="status"></p>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -294,6 +312,20 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
       chars.forEach(function(c,i){ c.classList.toggle('on',i<n); });
     }
     addEventListener('scroll',upd,{passive:true}); addEventListener('resize',upd); upd();
+  });
+})();
+</script>
+<script>
+// 견적 폼: 필수 항목 확인 (실제 전송은 서버 연결 후)
+(function(){
+  const f=document.getElementById('quoteForm');if(!f)return;const note=f.querySelector('.qf-note');
+  f.addEventListener('submit',e=>{e.preventDefault();
+    const miss=[];
+    if(!f.company.value.trim())miss.push('회사/브랜드명');if(!f.name.value.trim())miss.push('담당자명');
+    if(!f.phone.value.trim())miss.push('연락처');if(!f.type.value)miss.push('의뢰 분야');
+    if(!f.querySelector('input[name=route]:checked'))miss.push('유입 경로');if(!f.agree.checked)miss.push('개인정보 동의');
+    note.classList.toggle('err',miss.length>0);
+    note.textContent=miss.length?`다음 항목을 확인해주세요: ${miss.join(', ')}`:'템플릿 화면입니다. 실제 전송은 사이트 연결 후 동작합니다. 급한 문의는 1666-2027로 연락주세요.';
   });
 })();
 </script>
