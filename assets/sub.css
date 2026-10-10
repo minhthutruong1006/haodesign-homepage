@@ -646,6 +646,7 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .fp-title{margin:0 0 20px;display:flex;flex-direction:column;font-size:clamp(24px,1.9vw,38px);font-weight:700;line-height:1.4;letter-spacing:-.02em;color:var(--ink)}
 .fp-title em{font-style:normal;color:var(--mint)}
 .fp-desc p{margin:0;white-space:nowrap;font-size:clamp(15px,1.04vw,20px);line-height:1.7;letter-spacing:-.02em;color:#444}
+.fp-desc p.gap{margin-top:14px}
 .fp-desc b{color:var(--mint);font-weight:600}
 .fp-quote{margin:14px 0 0;font-size:clamp(16px,1.15vw,22px);font-weight:600;line-height:1.6;color:#333}
 @media (max-width:1024px){
