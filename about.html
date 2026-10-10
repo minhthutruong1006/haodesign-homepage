@@ -144,21 +144,23 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
 (function(){
   // 원이 스크롤에 따라 커져 화면을 덮은 뒤 사라지며 아래 '다릅니다' 섹션으로 이어짐
   const sec=document.getElementById('hwIntro');if(!sec)return;
-  const st=sec.querySelector('.hwi-sticky'),c=sec.querySelector('.hwi-circle'),t=sec.querySelector('.hwi-txt');
+  const st=sec.querySelector('.hwi-sticky'),c=sec.querySelector('.hwi-circle'),t=sec.querySelector('.hwi-txt'),way=document.getElementById('way');
   const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
   let raf=0;
   function tick(){raf=0;
-    if(innerWidth<=1024){st.style.opacity='';c.style.transform='';t.style.opacity='';return}
+    if(innerWidth<=1024){st.style.opacity='';c.style.transform='';t.style.opacity='';if(way)way.style.setProperty('--hwin',1);return}
     const r=sec.getBoundingClientRect(),run=sec.offsetHeight-innerHeight,p=clamp(-r.top/run);
     const need=Math.hypot(innerWidth,innerHeight)/c.offsetWidth*1.05;      // 화면 전체를 덮는 배율
-    const g=ease(clamp(p/.8));
+    const g=ease(clamp(p/.7));
     c.style.transform=`scale(${(1+(need-1)*g).toFixed(4)})`;
-    t.style.opacity=(1-clamp((p-.25)/.3)).toFixed(3);
+    t.style.opacity=(1-clamp((p-.2)/.25)).toFixed(3);
     t.style.transform=`scale(${(1/(1+(need-1)*g)*(1+g*.6)).toFixed(4)})`;  // 글자는 원보다 덜 커지게
-    st.style.opacity=(1-clamp((p-.86)/.14)).toFixed(3);
+    const f=ease(clamp((p-.68)/.3));                                       // 교차 구간
+    st.style.opacity=(1-f).toFixed(3);
+    if(way){way.style.setProperty('--hwin',f.toFixed(3))}
   }
-  const q=()=>{if(!raf)raf=requestAnimationFrame(tick)};
-  addEventListener('scroll',q,{passive:true});addEventListener('resize',q);tick();
+  // 스크롤과 같은 순간에 바로 계산 (한 박자 늦지 않게)
+  addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
 })();
 (function(){
   // 스크롤 위치에 따라 항목 전환 (섹션 높이 = 화면 4개분, 화면은 고정)
@@ -172,13 +174,14 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
   ps.forEach((im,i)=>{if(im.complete)i===0&&fit(0);else im.addEventListener('load',()=>{if(i===cur)fit(i)})});
   const show=i=>{if(i===cur)return;cur=i;[m,ps,ts,bg].forEach(L=>L.forEach((x,k)=>x.classList.toggle('on',k===i)));fit(i)};
   const mobile=()=>innerWidth<=1024;
-  function tick(){if(mobile())return;const r=sec.getBoundingClientRect(),run=sec.offsetHeight-innerHeight;
-    const p=Math.min(.999,Math.max(0,-r.top/run));show(Math.floor(p*n))}
+  const lead=()=>document.getElementById('hwIntro')&&!mobile()?innerHeight:0;   // 인트로와 겹치는 길이
+  function tick(){if(mobile())return;const r=sec.getBoundingClientRect(),L=lead(),run=sec.offsetHeight-innerHeight-L;
+    const p=Math.min(.999,Math.max(0,(-r.top-L)/run));show(Math.floor(p*n))}
   addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();fit(cur);
   // 목록 클릭 → 해당 항목 위치로 스크롤 (모바일은 바로 전환)
   m.forEach((x,i)=>x.querySelector('button').addEventListener('click',()=>{
     if(mobile()){show(i);return}
-    const top=sec.getBoundingClientRect().top+scrollY,run=sec.offsetHeight-innerHeight,y=top+run*(i+.5)/n;
+    const L=lead(),top=sec.getBoundingClientRect().top+scrollY+L,run=sec.offsetHeight-innerHeight-L,y=top+run*(i+.5)/n;
     if(window.__lenis)window.__lenis.scrollTo(y);else scrollTo({top:y,behavior:'smooth'})}));
   // 모바일: 자동 전환
   setInterval(()=>{if(mobile())show((cur+1)%n)},4500);
