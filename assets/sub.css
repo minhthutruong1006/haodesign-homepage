@@ -628,12 +628,12 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 
 /* 제작설비 '세 가지 특별함' — 왼쪽 제목+사진 고정, 오른쪽 01~03 글이 지나가며 사진이 아래→위로 교체 */
 .fpoint{position:relative;padding:clamp(100px,8vw,150px) 0 clamp(60px,5vw,100px);background:linear-gradient(180deg,#fff 0%,#fff6f3 50%,#fff 100%);overflow-x:clip}
-.fp-track{display:flex;align-items:flex-start;gap:clamp(32px,4.9vw,71px)}
-.fp-left{position:sticky;top:72px;height:calc(100vh - 72px);flex:0 0 49.58%;display:flex;flex-direction:column;justify-content:center;gap:clamp(18px,2vw,32px)}
+.fp-track{display:flex;align-items:flex-start;gap:clamp(28px,4vw,60px)}
+.fp-left{position:sticky;top:72px;height:calc(100vh - 72px);flex:0 0 56%;display:flex;flex-direction:column;justify-content:center;gap:clamp(18px,2vw,32px)}
 .fp-left .sp-tag{margin-bottom:-8px}
 .fp-heading{margin:0;font-size:clamp(30px,2.5vw,48px);font-weight:700;letter-spacing:-.02em;line-height:1.4;color:var(--ink)}
 .fp-heading em{font-style:normal;color:var(--mint)}
-.fp-stage{position:relative;width:100%;aspect-ratio:714/560;border-radius:clamp(28px,2.5vw,48px);overflow:hidden;background:#eee}
+.fp-stage{position:relative;width:100%;aspect-ratio:16/10;max-height:calc(100vh - 72px - 190px);border-radius:clamp(28px,2.5vw,48px);overflow:hidden;background:#eee}
 .fp-img{position:absolute;inset:0;will-change:clip-path;clip-path:inset(100% 0 0 0)}
 .fp-img.on{clip-path:inset(0 0 0 0)}
 .fp-img img{width:100%;height:100%;object-fit:cover;will-change:transform;transform-origin:50% 100%}
