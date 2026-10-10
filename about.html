@@ -64,6 +64,11 @@
   <p class="ab-orbit-foot" data-fill>좋은 디자인 뒤에는 좋은 <mark>과정</mark>이 있습니다</p>
 </div></section>
 
+<section class="hw-intro" id="hwIntro" aria-label="하오디자인은 무엇이 다를까요">
+  <div class="hwi-sticky">
+    <div class="hwi-circle"><p class="hwi-txt"><span>하오디자인은</span><span>무엇이 다를까요?</span></p></div>
+  </div>
+</section>
 <section class="hway2" id="way">
   <div class="hw-sticky">
     <div class="hw-bgs" aria-hidden="true"><i class="hw-bg b1 on"></i><i class="hw-bg b2"></i><i class="hw-bg b3"></i><i class="hw-bg b4"></i><span class="hw-wave"></span></div>
@@ -136,6 +141,25 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
   if(location.hash&&document.querySelector(location.hash))setTimeout(()=>lenis.scrollTo(location.hash,{offset:-80,immediate:true}),60)}
 </script>
 <script>
+(function(){
+  // 원이 스크롤에 따라 커져 화면을 덮은 뒤 사라지며 아래 '다릅니다' 섹션으로 이어짐
+  const sec=document.getElementById('hwIntro');if(!sec)return;
+  const st=sec.querySelector('.hwi-sticky'),c=sec.querySelector('.hwi-circle'),t=sec.querySelector('.hwi-txt');
+  const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v)),ease=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+  let raf=0;
+  function tick(){raf=0;
+    if(innerWidth<=1024){st.style.opacity='';c.style.transform='';t.style.opacity='';return}
+    const r=sec.getBoundingClientRect(),run=sec.offsetHeight-innerHeight,p=clamp(-r.top/run);
+    const need=Math.hypot(innerWidth,innerHeight)/c.offsetWidth*1.05;      // 화면 전체를 덮는 배율
+    const g=ease(clamp(p/.8));
+    c.style.transform=`scale(${(1+(need-1)*g).toFixed(4)})`;
+    t.style.opacity=(1-clamp((p-.25)/.3)).toFixed(3);
+    t.style.transform=`scale(${(1/(1+(need-1)*g)*(1+g*.6)).toFixed(4)})`;  // 글자는 원보다 덜 커지게
+    st.style.opacity=(1-clamp((p-.86)/.14)).toFixed(3);
+  }
+  const q=()=>{if(!raf)raf=requestAnimationFrame(tick)};
+  addEventListener('scroll',q,{passive:true});addEventListener('resize',q);tick();
+})();
 (function(){
   // 스크롤 위치에 따라 항목 전환 (섹션 높이 = 화면 4개분, 화면은 고정)
   const sec=document.getElementById('way');if(!sec)return;

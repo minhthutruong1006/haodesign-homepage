@@ -608,3 +608,16 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .hw-texts{min-height:240px;width:100%;max-width:520px}.hw-t .d{margin-inline:auto}
   .hw-mq{position:relative}
 }
+
+/* '다릅니다' 앞 원 확대 인트로: 화면 2개 높이 동안 고정, 원이 커져 화면을 덮고 사라짐 */
+.hw-intro{position:relative;height:200vh;z-index:5;pointer-events:none}
+.hwi-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center;background:#fff;will-change:opacity}
+.hwi-circle{width:min(46vh,460px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(98deg,#c42a0e 2%,#e83817 35%,#f2694a 62%,#f7a07c 100%);will-change:transform;transform-origin:50% 50%}
+.hwi-txt{display:flex;flex-direction:column;align-items:center;gap:6px;margin:0;color:#fff;font-weight:800;letter-spacing:-.03em;line-height:1.3;
+  font-size:clamp(28px,2.6vw,48px);text-align:center;will-change:transform,opacity}
+.hw-intro + .hway2{margin-top:-100vh}
+@media (max-width:1024px){
+  .hw-intro{height:auto}.hwi-sticky{position:relative;height:auto;padding:90px 0}
+  .hw-intro + .hway2{margin-top:0}
+}
