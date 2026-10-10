@@ -86,7 +86,7 @@
     <div class="fp-track">
       <div class="fp-left">
         <p class="sp-tag">FACILITY</p>
-        <h2 class="fp-heading">하오디자인 제작설비의<br><em>세 가지 특별함</em></h2>
+        <h2 class="fp-heading">하오디자인 제작설비의 <em>세 가지 특별함</em></h2>
         <div class="fp-stage" id="fpStage"><div class="fp-img on"><img src="assets/img/fac-sub1_2_video.gif" alt="하오디자인 제작설비 – 인쇄 공정" decoding="async"></div><div class="fp-img"><img src="assets/img/fac-sub1_2_06.jpg" alt="하오디자인 제작설비 – 후가공" decoding="async"></div><div class="fp-img"><img src="assets/img/fac-sub1_2_08.jpg" alt="하오디자인 제작설비 – 품질 관리" decoding="async"></div></div>
       </div>
       <div class="fp-right">
@@ -170,6 +170,11 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
   const sec=document.getElementById('facility');if(!sec||!sec.classList.contains('fpoint'))return;
   const imgs=[...sec.querySelectorAll('.fp-img')],blocks=[...sec.querySelectorAll('.fp-block')];
   const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+  // 오른쪽 글이 왼쪽 사진 높이 범위 안에서 가운데 오도록 (번호는 사진 윗선에 맞춤)
+  const left=sec.querySelector('.fp-left'),stage=sec.querySelector('.fp-stage');
+  function align(){if(innerWidth<=1024)return;const st=stage.offsetTop,H=left.offsetHeight;
+    sec.style.setProperty('--fpt',st+'px');sec.style.setProperty('--fpb',Math.max(0,H-st-stage.offsetHeight)+'px')}
+  addEventListener('resize',align);align();addEventListener('load',align);
   function tick(){
     if(innerWidth<=1024)return;
     const mid=innerHeight*.55;
