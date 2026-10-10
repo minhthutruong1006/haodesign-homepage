@@ -161,6 +161,20 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
   }
   // 스크롤과 같은 순간에 바로 계산 (한 박자 늦지 않게)
   addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
+  // 휠 한 번이면 원 확대 장면 끝(=01 시작)까지 자동으로 이동, 위로 한 번이면 원 장면 처음으로
+  let busy=false;
+  addEventListener('wheel',e=>{
+    if(innerWidth<=1024||e.ctrlKey||!window.__lenis)return;
+    const top=sec.getBoundingClientRect().top+scrollY,end=top+(sec.offsetHeight-innerHeight),y=window.__lenis.targetScroll??scrollY,pad=innerHeight*.12;
+    let to=null;
+    if(e.deltaY>0&&y>=top-pad&&y<end-2)to=end;
+    else if(e.deltaY<0&&y>top+2&&y<=end+pad)to=top;
+    if(to===null)return;
+    e.preventDefault();e.stopImmediatePropagation();
+    if(busy)return;busy=true;
+    window.__lenis.scrollTo(to,{duration:1.6,easing:t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,lock:true,force:true,onComplete:()=>setTimeout(()=>busy=false,200)});
+    setTimeout(()=>busy=false,2200);
+  },{passive:false,capture:true});
 })();
 (function(){
   // 스크롤 위치에 따라 항목 전환 (섹션 높이 = 화면 4개분, 화면은 고정)
