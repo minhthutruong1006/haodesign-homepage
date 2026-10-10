@@ -575,7 +575,7 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .hw-bg.b3{background:linear-gradient(98deg,#e86a4a 5%,#f29b7b 50%,#f6c7a0 92%)}
 .hw-bg.b4{background:linear-gradient(98deg,#f08a6a 5%,#e83817 50%,#b8300f 92%)}
 .hw-wave{position:absolute;left:0;right:0;top:-2vh;height:32vh;filter:blur(1.8vw);opacity:.9;pointer-events:none}
-.hw-wave::before{content:"";position:absolute;top:0;left:0;width:300%;height:100%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 0H1600V220C1400 220 1200 120 800 120C400 120 200 220 0 220Z'/%3E%3C/svg%3E") repeat-x 0 0/50% 100%;animation:hwWave 30s linear infinite}
+.hw-wave::before{content:"";position:absolute;top:0;left:0;width:300%;height:100%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 0H1600V220C1400 220 1200 120 800 120C400 120 200 220 0 220Z'/%3E%3C/svg%3E") repeat-x 0 0/50% 100%;animation:hwWave 14s linear infinite}
 @keyframes hwWave{to{transform:translateX(-50%)}}
 .hw-in{position:relative;z-index:2;height:100%;width:min(1600px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:1fr minmax(300px,30vw) 1fr;gap:clamp(30px,4vw,80px);align-items:center;padding-bottom:4vh}
 .hw-left{text-align:right}
