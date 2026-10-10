@@ -568,14 +568,16 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .hw-bgs{position:absolute;inset:0;z-index:0}
 .hw-bg{position:absolute;inset:0;opacity:0;transition:opacity .6s}
 .hw-bg.on{opacity:1}
-.hw-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 22%,rgba(255,255,255,0) 72%,#fff 100%)}
+.hw-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 8%,rgba(255,255,255,0) 72%,#fff 100%)}
 .hw-bgs::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;z-index:3;background:linear-gradient(180deg,rgba(255,255,255,0),#fff);pointer-events:none}
 .hw-bg.b1{background:linear-gradient(98deg,#c42a0e 2%,#e83817 35%,#f2694a 60%,#fbc9a4 98%)}
 .hw-bg.b2{background:linear-gradient(97deg,#8a2a1a 2%,#d4553a 45%,#f0a27e 92%)}
 .hw-bg.b3{background:linear-gradient(98deg,#e86a4a 5%,#f29b7b 50%,#f6c7a0 92%)}
 .hw-bg.b4{background:linear-gradient(98deg,#f08a6a 5%,#e83817 50%,#b8300f 92%)}
-.hw-wave{position:absolute;left:-10%;right:-10%;top:-8vh;height:30vh;background:radial-gradient(60% 100% at 30% 0,rgba(255,255,255,.95),transparent 70%),radial-gradient(50% 90% at 75% 0,rgba(255,255,255,.8),transparent 70%);filter:blur(3vw);animation:hwWave 10s ease-in-out infinite alternate}
-@keyframes hwWave{to{transform:translateX(6%)}}
+.hw-wave{position:absolute;left:0;right:0;top:-4vh;height:42vh;filter:blur(2.6vw);opacity:.95;pointer-events:none}
+.hw-wave::before,.hw-wave::after{content:"";position:absolute;top:0;left:0;width:200%;height:100%;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 400' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M0 0H1600V190C1480 250 1360 300 1200 260C1040 220 960 120 800 140C640 160 560 290 400 300C240 310 120 230 0 190Z'/%3E%3C/svg%3E") repeat-x 0 0/50% 100%;animation:hwWave 14s linear infinite}
+.hw-wave::after{opacity:.7;top:3vh;animation-duration:22s;animation-direction:reverse}
+@keyframes hwWave{to{transform:translateX(-50%)}}
 .hw-in{position:relative;z-index:2;height:100%;width:min(1600px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:1fr minmax(300px,30vw) 1fr;gap:clamp(30px,4vw,80px);align-items:center;padding-bottom:4vh}
 .hw-left{text-align:right}
 .hw-cap{font-size:clamp(14px,.95vw,18px);font-weight:600;opacity:.92;margin-bottom:clamp(24px,2vw,32px)}
