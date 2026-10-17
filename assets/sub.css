@@ -809,15 +809,18 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .ps-head,.ps-card{opacity:1;transform:none}
 }
 
-/* 서비스 소개 — insplanet 'Beyond UX' 방식: 왼쪽 큰 굵은 제목(진행 과정 제목과 같은 글꼴), 오른쪽 굵은 리드 + 본문, 배경에 옅은 큰 원 */
+/* 서비스 소개 — 왼쪽 큰 제목(빨간 막대 + 뒷부분 강조색) 화면 가운데 고정, 오른쪽 큰 번호·리드·본문 블록이 화면 가운데에 오면 선명해짐 */
 .bxs{position:relative;overflow-x:clip;background:#fff;padding:0}
-.bx-in{position:relative;z-index:1;width:min(1500px,88%);margin:0 auto;display:grid;grid-template-columns:1fr minmax(0,690px);gap:clamp(40px,6vw,120px);align-items:start}
-.bx-title{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;align-items:center;margin:0;align-self:start;font-size:clamp(24px,1.9vw,34px);font-weight:800;line-height:1.35;letter-spacing:-.03em;color:#191f28;word-break:keep-all}
-.bx-item{min-height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;opacity:.25;transform:translateY(24px);transition:opacity .6s,transform .8s cubic-bezier(.16,1,.3,1)}
+.bx-in{position:relative;z-index:1;width:min(1500px,88%);margin:0 auto;display:grid;grid-template-columns:1fr minmax(0,760px);gap:clamp(40px,5vw,100px);align-items:start}
+.bx-title{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;margin:0;align-self:start;font-size:clamp(32px,2.6vw,50px);font-weight:800;line-height:1.3;letter-spacing:-.035em;color:#191f28;word-break:keep-all}
+.bx-title::before{content:"";display:block;width:56px;height:5px;background:var(--mint);margin-bottom:clamp(22px,1.8vw,32px)}
+.bx-title em{font-style:normal;color:var(--mint)}
+.bx-item{min-height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center;opacity:.2;transform:translateY(30px);transition:opacity .6s,transform .8s cubic-bezier(.16,1,.3,1)}
 .bx-item.on{opacity:1;transform:none}
-.bx-no{display:block;font-family:'Jost',Pretendard,sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;color:var(--mint);margin-bottom:12px}
-.bx-lead{font-size:clamp(18px,1.2vw,22px);font-weight:700;letter-spacing:-.02em;color:#333;line-height:1.5}
-.bx-item p{margin-top:clamp(18px,1.6vw,28px);font-size:clamp(15px,.95vw,17px);line-height:1.85;color:#555;word-break:keep-all}
-.bx-tags{margin-top:clamp(44px,3.6vw,64px);padding-top:24px;border-top:1px solid #ececec;display:flex;flex-wrap:wrap;gap:8px}
-.bx-tags span{font-size:13px;color:#777;padding:7px 14px;border:1px solid #e6e6e6;border-radius:999px;background:#fff}
+.bx-no{display:block;font-family:'Jost',Pretendard,sans-serif;font-size:clamp(48px,3.6vw,70px);font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--mint);margin-bottom:clamp(16px,1.3vw,24px)}
+.bx-lead{font-size:clamp(24px,1.9vw,36px);font-weight:800;letter-spacing:-.03em;color:#191f28;line-height:1.35;word-break:keep-all}
+.bx-item p{margin-top:clamp(20px,1.7vw,30px);font-size:clamp(17px,1.2vw,21px);line-height:1.85;color:#444;word-break:keep-all}
+.bx-tags{margin-top:clamp(36px,3vw,56px);padding-top:24px;border-top:1px solid #ececec;display:flex;flex-wrap:wrap;gap:8px}
+.bx-tags span{font-size:14px;font-weight:500;color:#555;padding:8px 16px;border:1px solid #e3e3e3;border-radius:999px;background:#fff}
+.bx-item p.bx-tags{line-height:1}
 @media (max-width:1024px){.bxs{padding:70px 0}.bx-in{grid-template-columns:1fr}.bx-title{position:static;height:auto}.bx-item{min-height:0;padding:30px 0;opacity:1;transform:none}}
