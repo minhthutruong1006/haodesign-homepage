@@ -41,17 +41,23 @@
 </nav>
 
 <main>
-<section class="svc-cover"><div class="wrap">
-  <div class="reveal">
-    <p class="sp-crumb"><a href="index.html">HOME</a> / 서비스 / CI · 로고디자인</p>
-    <h1 class="kw">CI · 로고 디자인 제작</h1>
-    <p class="eng">CI &amp; LOGO</p>
-    <p class="head">브랜드를 기억하게 하는<br>가장 작은 디자인</p>
-    <p class="desc">기업의 정체성과 방향을 담아 다양한 매체에 활용 가능한 로고를 제작합니다.</p>
-    <div class="btns"><a class="btn" href="#contact">견적 문의 <span class="arr">→</span></a><a class="btn btn-line" href="work.html#ci">작업 사례 보기 <span class="arr">→</span></a></div>
+<section class="svc-cover svc-cover2">
+  <div class="sc-in">
+    <div class="sc-left reveal">
+      <p class="sp-crumb"><a href="index.html">HOME</a> / 서비스 / CI · 로고디자인</p>
+      <p class="sc-head"><span class="l1">브랜드를 기억하게 하는</span><span class="l2">가장 작은 디자인</span></p>
+      <span class="sc-bar" aria-hidden="true"></span>
+      <p class="sc-tag">#CI &amp; LOGO</p>
+      <h1 class="sc-kw">CI · 로고 디자인 제작</h1>
+      <p class="sc-desc">기업의 정체성과 방향을 담아 다양한 매체에 활용 가능한 로고를 제작합니다.</p>
+      <div class="btns"><a class="btn" href="#contact">견적 문의 <span class="arr">→</span></a><a class="btn btn-line" href="work.html#ci">작업 사례 보기 <span class="arr">→</span></a></div>
+    </div>
+    <div class="sc-gal">
+      <div class="sc-col"><a class="sc-card" href="work.html#ci"><span class="sc-img"><img src="assets/work-hd/thumb/w322.jpg" alt="하오디자인 코렘스 C.I" loading="lazy" decoding="async"></span><span class="sc-cap">코렘스 C.I</span></a><a class="sc-card" href="work.html#ci"><span class="sc-img"><img src="assets/work-hd/thumb/w320.jpg" alt="하오디자인 SMD 성산축산물 백화점 C.I" loading="lazy" decoding="async"></span><span class="sc-cap">SMD 성산축산물 백화점 C.I</span></a><a class="sc-card" href="work.html#ci"><span class="sc-img"><img src="assets/work-hd/thumb/w318.jpg" alt="하오디자인 루이빌 골프코리아 C.I" loading="lazy" decoding="async"></span><span class="sc-cap">루이빌 골프코리아 C.I</span></a></div>
+      <div class="sc-col sc-col2"><a class="sc-card" href="work.html#ci"><span class="sc-img"><img src="assets/work-hd/thumb/w321.jpg" alt="하오디자인 로지쎈 C.I" loading="lazy" decoding="async"></span><span class="sc-cap">로지쎈 C.I</span></a><a class="sc-card" href="work.html#ci"><span class="sc-img"><img src="assets/work-hd/thumb/w319.jpg" alt="하오디자인 하경코스메틱 C.I" loading="lazy" decoding="async"></span><span class="sc-cap">하경코스메틱 C.I</span></a><a class="sc-card" href="work.html#ci"><span class="sc-img"><img src="assets/work-hd/thumb/w317.jpg" alt="하오디자인 두산대학교 C.I" loading="lazy" decoding="async"></span><span class="sc-cap">두산대학교 C.I</span></a></div>
+    </div>
   </div>
-  <div class="cols" aria-hidden="true"><div class="track"><img src="assets/work-hd/thumb/w322.jpg" alt="" loading="lazy"><img src="assets/work-hd/thumb/w320.jpg" alt="" loading="lazy"><img src="assets/work-hd/thumb/w322.jpg" alt="" loading="lazy"><img src="assets/work-hd/thumb/w320.jpg" alt="" loading="lazy"></div><div class="track rev"><img src="assets/work-hd/thumb/w321.jpg" alt="" loading="lazy"><img src="assets/work-hd/thumb/w319.jpg" alt="" loading="lazy"><img src="assets/work-hd/thumb/w321.jpg" alt="" loading="lazy"><img src="assets/work-hd/thumb/w319.jpg" alt="" loading="lazy"></div></div>
-</div></section>
+</section>
 
 <section class="sp-sec"><div class="wrap">
   <div class="reveal"><p class="sp-tag">PROCESS</p><h2 class="sp-title">진행 과정</h2></div>
@@ -155,6 +161,13 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});(function r(t
     note.textContent=miss.length?`다음 항목을 확인해주세요: ${miss.join(', ')}`:'템플릿 화면입니다. 실제 전송은 사이트 연결 후 동작합니다. 급한 문의는 1666-2027로 연락주세요.';
   });
 })();
+</script>
+<script>
+// 서비스 표지: 오른쪽 두 번째 줄이 스크롤에 따라 조금 더 빠르게 올라감
+(function(){const g=document.querySelector('.svc-cover2 .sc-col2');if(!g)return;
+  function t(){if(innerWidth<=1024){g.style.transform='';return}const r=g.parentElement.getBoundingClientRect();
+    g.style.transform=`translate3d(0,${(r.top*.18).toFixed(1)}px,0)`}
+  addEventListener('scroll',t,{passive:true});addEventListener('resize',t);t()})();
 </script>
 </body>
 </html>
