@@ -701,7 +701,7 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .sc-bar{display:block;width:5px;height:clamp(44px,3.6vw,68px);background:#222;margin:clamp(28px,2.4vw,44px) 0}
 .sc-tag{font-family:'Jost',Pretendard,sans-serif;font-weight:600;font-size:clamp(22px,1.9vw,38px);letter-spacing:.01em;color:#2b2b2b}
 .sc-kw{margin-top:clamp(28px,2.2vw,40px);font-size:clamp(15px,1vw,18px);font-weight:700;color:var(--mint)}
-.sc-desc{margin-top:10px;max-width:460px;font-size:clamp(15px,1vw,18px);line-height:1.75;color:#555}
+.sc-desc{margin-top:10px;max-width:none;word-break:keep-all;font-size:clamp(15px,1vw,18px);line-height:1.75;color:#555}
 .sc-left .btns{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
 .sc-gal{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.2vw,40px);align-items:start}
 .sc-col{display:flex;flex-direction:column;gap:clamp(48px,4.5vw,90px)}
