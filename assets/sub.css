@@ -691,28 +691,27 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 @media (max-width:1024px){.qt-in{grid-template-columns:1fr}}
 @media (max-width:560px){.qf-grid,.qf-rs{grid-template-columns:1fr}}
 
-/* 서비스 표지 v2 — 따뜻한 회색 배경, 왼쪽 큰 제목(가는체+굵은체)·막대·해시태그 고정, 오른쪽 세로형 카드 두 줄(어긋나게) */
-.svc-cover2{padding:clamp(130px,9vw,180px) 0 clamp(80px,7vw,140px);background:#fdf1ee;overflow:visible}
-.sc-in{width:min(1500px,calc(100% - 48px));margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(40px,6vw,110px);align-items:start}
-.sc-left{position:sticky;top:120px}
-.sc-head{margin:6px 0 0;display:flex;flex-direction:column;font-size:clamp(38px,3.7vw,72px);line-height:1.22;letter-spacing:-.04em;color:#2b2b2b}
-.sc-head .l1{font-weight:300}.sc-head .l2{font-weight:800}
-@media (min-width:1025px){.sc-head span{white-space:nowrap}.sc-head{font-size:clamp(34px,3.1vw,60px)}}
-.sc-bar{display:block;width:5px;height:clamp(44px,3.6vw,68px);background:#222;margin:clamp(28px,2.4vw,44px) 0}
-.sc-tag{font-family:'Jost',Pretendard,sans-serif;font-weight:600;font-size:clamp(22px,1.9vw,38px);letter-spacing:.01em;color:#2b2b2b}
-.sc-kw{margin-top:clamp(28px,2.2vw,40px);font-size:clamp(15px,1vw,18px);font-weight:700;color:var(--mint)}
+/* 서비스 표지 v3 — eimokdesign 포트폴리오 섹션 배치: 왼쪽 글 고정(top 100px), 오른쪽 2열 카드, 짝수 카드 200px 아래로 */
+.svc-cover2{padding:clamp(130px,9vw,170px) 0 100px;background:#fdf1ee;overflow:visible}
+.sc-in{width:80%;max-width:1600px;margin:0 auto;display:flex;align-items:flex-start}
+.sc-left{flex:1 1 41.67%;min-width:0;position:sticky;top:100px;padding-right:20px}
+.sc-head{margin:6px 0 0;display:flex;flex-direction:column;font-size:clamp(36px,3vw,58px);line-height:1.12;word-break:keep-all;letter-spacing:-.04em;color:#2b2b2b}
+.sc-head .l1{font-weight:400;margin-bottom:10px}.sc-head .l2{font-weight:700}
+.sc-bar{display:block;width:8px;height:70px;background:#111;margin:40px 0}
+.sc-tag{font-family:'Jost',Pretendard,sans-serif;font-weight:500;font-size:clamp(28px,2.35vw,45px);line-height:1;color:#2b2b2b}
+.sc-kw{margin-top:40px;font-size:clamp(15px,1vw,18px);font-weight:700;color:var(--mint)}
 .sc-desc{margin-top:10px;max-width:none;word-break:keep-all;font-size:clamp(15px,1vw,18px);line-height:1.75;color:#555}
 .sc-left .btns{margin-top:28px;display:flex;gap:10px;flex-wrap:wrap}
-.sc-gal{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.2vw,40px);align-items:start}
-.sc-col{display:flex;flex-direction:column;gap:clamp(48px,4.5vw,90px)}
-.sc-col2{margin-top:clamp(120px,10vw,190px);will-change:transform}
-.sc-card{display:block}
-.sc-img{display:block;aspect-ratio:4/3.4;border-radius:clamp(14px,1.1vw,20px);overflow:hidden;background:#ddd}
+.sc-gal{flex:1 1 58.33%;min-width:0;list-style:none;margin:0;padding:0 0 200px;display:flex;flex-wrap:wrap;align-items:flex-start}
+.sc-gal li{width:50%;padding:0 20px;margin-bottom:80px;box-sizing:border-box}
+.sc-gal li:nth-child(2n){position:relative;top:200px}
+.sc-card{display:block;padding-top:50px}
+.sc-img{display:block;aspect-ratio:4/3.4;border-radius:20px;overflow:hidden;background:#ddd}
 .sc-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}
 .sc-card:hover .sc-img img{transform:scale(1.05)}
-.sc-cap{display:block;margin-top:12px;font-size:clamp(13px,.85vw,15px);color:#333}
+.sc-cap{display:block;margin-top:10px;font-size:15px;font-weight:400;color:#333}
 @media (max-width:1024px){
-  .sc-in{grid-template-columns:1fr}.sc-left{position:static}
-  .sc-col2{margin-top:60px}
+  .sc-in{width:93%;display:block}.sc-left{position:static;padding:0}
+  .sc-gal{padding-bottom:0;margin-top:20px}.sc-gal li{padding:0 8px;margin-bottom:30px}.sc-gal li:nth-child(2n){top:60px}
+  .sc-head{font-size:3.2em}.sc-bar{width:6px;height:60px}.sc-tag{font-size:2em}
 }
-@media (max-width:560px){.sc-gal{gap:14px}.sc-col{gap:28px}}
