@@ -778,7 +778,7 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .faqs{background:#fff}
 
 /* 진행 과정 — codle 'AI 교육의 표준' 방식: 화면 고정 후 세로 스크롤만큼 카드 줄이 왼쪽으로 이동 */
-.pscroll{position:relative;height:calc(var(--psh) + 200vh);--psh:clamp(380px,26vw,480px);background:#fff}
+.pscroll{position:relative;height:calc(var(--psh) + 110vh);--psh:clamp(380px,26vw,480px);background:#fff}
 .ps-pin{position:sticky;top:calc(50vh - var(--psh) / 2);height:var(--psh);overflow:hidden;display:flex;align-items:center}
 .ps-track{display:flex;align-items:center;gap:clamp(40px,3.6vw,70px);padding:0 10vw 0 10vw;will-change:transform}
 .ps-head{flex:0 0 auto;width:auto}
