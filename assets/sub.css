@@ -824,3 +824,40 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .bx-tags span{font-size:14px;font-weight:500;color:#555;padding:8px 16px;border:1px solid #e3e3e3;border-radius:999px;background:#fff}
 .bx-item p.bx-tags{line-height:1}
 @media (max-width:1024px){.bxs{padding:70px 0}.bx-in{grid-template-columns:1fr}.bx-title{position:static;height:auto}.bx-item{min-height:0;padding:30px 0;opacity:1;transform:none}}
+
+/* 포트폴리오 상세 보기(라이트박스) */
+#wgrid .wc{cursor:pointer}
+.wlb{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.wlb.open{opacity:1;visibility:visible}
+.wlb-bg{position:absolute;inset:0;background:rgba(15,15,18,.86)}
+.wlb-wrap{position:relative;display:flex;width:min(1320px,86vw);height:min(80vh,820px);background:#fff;border-radius:20px;overflow:hidden;transform:translateY(20px) scale(.98);transition:transform .45s cubic-bezier(.16,1,.3,1)}
+.wlb.open .wlb-wrap{transform:none}
+.wlb-box{flex:1 1 auto;min-width:0;margin:0;background:#f3f1f0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.wlb-img{max-width:100%;max-height:100%;object-fit:contain;transition:transform .2s;user-select:none;-webkit-user-drag:none}
+.wlb.zoomed .wlb-img{cursor:grab;transition:none}
+.wlb-info{flex:0 0 360px;padding:44px 36px;display:flex;flex-direction:column;overflow-y:auto}
+.wlb-cat{font-size:13px;font-weight:700;color:var(--mint)}
+.wlb-title{margin-top:10px;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.35;color:#191f28;word-break:keep-all}
+.wlb-desc{margin-top:16px;font-size:15px;line-height:1.75;color:#555;word-break:keep-all}
+.wlb-label{margin-top:34px;padding-bottom:12px;border-bottom:2px solid #191f28;font-family:'Jost',Pretendard,sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#191f28}
+.wlb-rows>div{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid #eee;font-size:14px}
+.wlb-rows b{flex:0 0 76px;font-weight:600;color:#888}
+.wlb-rows span{color:#222}
+.wlb-rows a{color:var(--mint);font-weight:600}
+.wlb-count{margin-top:auto;padding-top:24px;font-family:'Jost',sans-serif;font-size:13px;color:#999}
+.wlb-close{position:absolute;top:22px;right:26px;width:46px;height:46px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:30px;line-height:1;cursor:pointer;transition:background .25s}
+.wlb-nav{position:absolute;top:50%;transform:translateY(-50%);width:54px;height:54px;border:0;border-radius:50%;background:rgba(255,255,255,.14);color:#fff;font-size:34px;line-height:1;cursor:pointer;transition:background .25s}
+.wlb-nav:hover,.wlb-close:hover{background:var(--mint)}
+.wlb-nav.prev{left:max(10px,calc(7vw - 54px - 12px))}.wlb-nav.next{right:max(10px,calc(7vw - 54px - 12px))}
+.wlb-zoom{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:4px;padding:6px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff}
+.wlb-zoom button{width:34px;height:34px;border:0;border-radius:50%;background:transparent;color:#fff;font-size:18px;cursor:pointer}
+.wlb-zoom button:hover{background:rgba(255,255,255,.2)}
+.wlb-zval{min-width:46px;text-align:center;font-size:13px}
+@media (max-width:900px){
+  .wlb-wrap{flex-direction:column;width:94vw;height:84vh}
+  .wlb-box{flex:1 1 55%}.wlb-info{flex:1 1 45%;padding:22px 20px}
+  .wlb-title{font-size:20px}.wlb-label{margin-top:20px}
+  .wlb-nav{top:auto;bottom:12px;transform:none;width:44px;height:44px}
+  .wlb-close{top:10px;right:10px}
+  .wlb-zoom{display:none}
+}
