@@ -68,10 +68,18 @@
   <p class="more"><a class="btn btn-line" href="work.html#poster">포트폴리오에서 더 보기 <span class="arr">→</span></a></p>
 </div></section>
 
-<section class="sp-sec alt"><div class="wrap">
-  <div class="reveal"><p class="sp-tag">FAQ</p><h2 class="sp-title">포스터 · 전단지 자주 묻는 질문</h2></div>
-  <div class="faq reveal"><details><summary><span class="q">Q</span>포스터 제작 사이즈는 어떻게 정하나요?<i></i></summary><div class="a">부착 장소와 보는 거리를 고려해 A3부터 A0까지 제안드립니다. 멀리서 봐야 하는 장소일수록 큰 사이즈와 굵은 글자 위계가 필요합니다.</div></details><details><summary><span class="q">Q</span>전단지 인쇄는 어떤 방식으로 진행되나요?<i></i></summary><div class="a">배포 수량에 따라 소량은 디지털 인쇄, 대량은 옵셋 인쇄로 진행해 비용을 효율적으로 맞춥니다.</div></details><details><summary><span class="q">Q</span>행사 포스터를 급하게 제작할 수도 있나요?<i></i></summary><div class="a">포스터·전단지는 비교적 짧은 일정으로 제작 가능한 품목입니다. 일정을 먼저 알려주시면 가능한 범위를 안내드립니다.</div></details><details><summary><span class="q">Q</span>포스터 디자인 시안 수정은 가능한가요?<i></i></summary><div class="a">시안 확정 전까지 협의를 통해 수정을 진행합니다. 부착 환경에서 잘 읽히는지까지 검토해 완성합니다.</div></details><details><summary><span class="q">Q</span>전단지 디자인부터 인쇄·납품까지 한 번에 되나요?<i></i></summary><div class="a">네. 카피 위계 설계부터 디자인, 인쇄, 납품까지 원스톱으로 진행합니다.</div></details></div>
-</div></section>
+<section class="faqs" id="faq">
+  <div class="wrap">
+    <div class="center reveal"><div class="eyebrow">FAQ</div><h2 class="sec-title">포스터 · 전단지 자주 묻는 질문</h2><p class="sec-desc">하오디자인에 궁금한 점을 확인하세요.</p></div>
+    <div class="fq-list reveal">
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>포스터 제작 사이즈는 어떻게 정하나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>부착 장소와 보는 거리를 고려해 A3부터 A0까지 제안드립니다. 멀리서 봐야 하는 장소일수록 큰 사이즈와 굵은 글자 위계가 필요합니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>전단지 인쇄는 어떤 방식으로 진행되나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>배포 수량에 따라 소량은 디지털 인쇄, 대량은 옵셋 인쇄로 진행해 비용을 효율적으로 맞춥니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>행사 포스터를 급하게 제작할 수도 있나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>포스터·전단지는 비교적 짧은 일정으로 제작 가능한 품목입니다. 일정을 먼저 알려주시면 가능한 범위를 안내드립니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>포스터 디자인 시안 수정은 가능한가요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>시안 확정 전까지 협의를 통해 수정을 진행합니다. 부착 환경에서 잘 읽히는지까지 검토해 완성합니다.</p></div></div></div>
+      <div class="fq"><button class="fq-q" aria-expanded="false"><span>전단지 디자인부터 인쇄·납품까지 한 번에 되나요?</span></button><button class="fq-pl" aria-label="답변 열기" tabindex="-1"><i></i></button><div class="fq-a"><div><p>네. 카피 위계 설계부터 디자인, 인쇄, 납품까지 원스톱으로 진행합니다.</p></div></div></div>
+    </div>
+  </div>
+</section>
 
 <section class="quote" id="contact">
   <div class="wrap qt-in">
@@ -156,5 +164,17 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
 })();
 </script>
 <script src="assets/works-fan.js"></script>
+<script>
+// FAQ 펼치기 / 더보기
+(function(){
+  // 마우스를 올리면 열리고 내리면 닫힘 (터치 화면은 누르면 열고 닫음)
+  const hoverable=matchMedia('(hover:hover)').matches;
+  document.querySelectorAll('.fq').forEach(f=>{const set=o=>{f.classList.toggle('open',o);f.querySelector('.fq-q').setAttribute('aria-expanded',o)};
+    if(hoverable){f.addEventListener('mouseenter',()=>set(true));f.addEventListener('mouseleave',()=>set(false))}
+    const t=()=>set(!f.classList.contains('open'));f.querySelector('.fq-q').onclick=t;f.querySelector('.fq-pl').onclick=t});
+  const m=document.getElementById('fqMore'),l=document.querySelector('.fq-list');
+  if(m)m.onclick=()=>{const all=l.classList.toggle('all');m.textContent=all?'접기':'더보기'};
+})();
+</script>
 </body>
 </html>
