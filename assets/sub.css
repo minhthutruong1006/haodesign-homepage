@@ -809,13 +809,13 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .ps-head,.ps-card{opacity:1;transform:none}
 }
 
-/* 서비스 소개 — insplanet 'Beyond UX' 방식: 왼쪽 큰 세리프 제목, 오른쪽 굵은 리드 + 본문, 배경에 옅은 큰 원 */
+/* 서비스 소개 — insplanet 'Beyond UX' 방식: 왼쪽 큰 굵은 제목(진행 과정 제목과 같은 글꼴), 오른쪽 굵은 리드 + 본문, 배경에 옅은 큰 원 */
 .bxs{position:relative;overflow:hidden;background:#fff;padding:clamp(90px,8vw,160px) 0}
 .bxs::before,.bxs::after{content:"";position:absolute;border-radius:50%;border:1px solid #f0f0f0;pointer-events:none}
 .bxs::before{width:62vw;height:62vw;left:22vw;top:50%;transform:translateY(-50%)}
 .bxs::after{width:80vw;height:80vw;left:34vw;top:50%;transform:translateY(-50%)}
 .bx-in{position:relative;z-index:1;width:min(1500px,88%);margin:0 auto;display:grid;grid-template-columns:1fr minmax(0,690px);gap:clamp(40px,6vw,120px);align-items:start}
-.bx-title{align-self:center;font-family:'Noto Serif KR',serif;font-weight:600;font-size:clamp(36px,3.4vw,64px);line-height:1.18;letter-spacing:-.03em;color:#3b3b40;word-break:keep-all}
+.bx-title{align-self:center;font-size:clamp(40px,2.95vw,56px);font-weight:900;line-height:1.3;letter-spacing:-.02em;color:#191f28;word-break:keep-all}
 .bx-item+.bx-item{margin-top:clamp(44px,3.6vw,64px)}
 .bx-no{display:block;font-family:'Jost',Pretendard,sans-serif;font-size:14px;font-weight:600;letter-spacing:.08em;color:var(--mint);margin-bottom:12px}
 .bx-lead{font-size:clamp(18px,1.2vw,22px);font-weight:700;letter-spacing:-.02em;color:#333;line-height:1.5}
