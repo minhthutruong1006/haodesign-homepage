@@ -739,6 +739,17 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .wf-slide.active .wf-item:nth-child(4){transform:rotate(5.65deg) translate(0,-2%)}
 .wf-slide.active .wf-cap{opacity:1;transform:none}
 .wfan .more{margin-top:clamp(60px,5vw,100px)}
+/* 포스터 페이지: 작업 사진이 720×552라 카드도 같은 비율 */
+.wf-43 .wf-item{aspect-ratio:720/552}
+/* 작업 사례 둘째 줄(3장): 첫 줄과 같은 카드 크기로 가운데 정렬, 각자 다른 기울기 */
+.wf-slide.wf-r2{width:min(1170px,75%);grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(50px,4.5vw,90px)}
+.wf-r2 .wf-item:nth-child(1){transform:translate(100%,0)}
+.wf-r2 .wf-item:nth-child(2){transform:translate(0,0);z-index:3}
+.wf-r2 .wf-item:nth-child(3){transform:translate(-100%,0);z-index:auto}
+.wf-r2.active .wf-item:nth-child(1){transform:rotate(4.2deg) translate(0,4%)}
+.wf-r2.active .wf-item:nth-child(2){transform:rotate(-3.4deg) translate(0,-2%)}
+.wf-r2.active .wf-item:nth-child(3){transform:rotate(5deg) translate(0,6%)}
+@media (max-width:767px){.wf-slide.wf-r2{width:100%;grid-template-columns:1fr 1fr;margin-top:14px}}
 @media (max-width:767px){
   .wf-slide{grid-template-columns:1fr 1fr;gap:14px}
   .wf-slide .wf-item:nth-child(n),.wf-slide.active .wf-item:nth-child(n){transform:none}
