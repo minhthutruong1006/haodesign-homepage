@@ -741,6 +741,8 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .wfan .more{margin-top:clamp(60px,5vw,100px)}
 /* 포스터 페이지: 작업 사진이 720×552라 카드도 같은 비율 */
 .wf-43 .wf-item{aspect-ratio:720/552}
+/* CI·패키지 페이지: 사진 720×504 */
+.wf-107 .wf-item{aspect-ratio:720/504}
 /* 작업 사례 둘째 줄(3장): 첫 줄과 같은 카드 크기로 가운데 정렬, 각자 다른 기울기 */
 .wf-slide.wf-r2{width:min(1170px,75%);grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(50px,4.5vw,90px)}
 .wf-r2 .wf-item:nth-child(1){transform:translate(100%,0)}
