@@ -7,8 +7,10 @@
   function measure(){ dist = Math.max(0, track.scrollWidth - innerWidth); }
   function tick(){
     if (innerWidth <= 1024) { track.style.transform = ''; return; }
-    const r = sec.getBoundingClientRect(), run = sec.offsetHeight - innerHeight;
-    const p = Math.min(1, Math.max(0, -r.top / run));
+    // 고정 영역은 카드 높이만큼(화면 가운데) — 그 위치에 붙은 동안의 진행률
+    const pin = sec.querySelector('.ps-pin'), stick = (innerHeight - pin.offsetHeight) / 2;
+    const r = sec.getBoundingClientRect(), run = sec.offsetHeight - pin.offsetHeight;
+    const p = Math.min(1, Math.max(0, (stick - r.top) / run));
     track.style.transform = `translate3d(${(-p * dist).toFixed(1)}px,0,0)`;
   }
   let raf = 0; const req = () => { if (!raf) raf = requestAnimationFrame(() => { raf = 0; tick(); }); };
