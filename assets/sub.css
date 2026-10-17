@@ -715,3 +715,36 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .sc-gal{padding-bottom:0;margin-top:20px}.sc-gal li{padding:0 8px;margin-bottom:30px}.sc-gal li:nth-child(2n){top:60px}
   .sc-head{font-size:3.2em}.sc-bar{width:6px;height:60px}.sc-tag{font-size:2em}
 }
+
+/* 서비스 작업 사례 — insplanet 'Our Projects' 방식: 화면 고정, 큰 제목 → 왼쪽 라벨, 오른쪽 절반 사진 교체 */
+.wproj{position:relative;height:calc(100vh * (var(--wp-steps,4) * .6 + 1));background:#fff}
+.wp-pin{position:sticky;top:0;height:100vh;overflow:hidden}
+.wp-title{position:absolute;z-index:3;top:50%;left:clamp(48px,11vw,216px);transform:translateY(-50%);transform-origin:0 0;display:flex;flex-direction:column;gap:18px;will-change:transform}
+.wp-big{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:clamp(96px,8.3vw,160px);line-height:1.2;color:#3e3f44;opacity:0;filter:blur(16px);transition:opacity .65s,filter .65s}
+.wp-sub{font-size:clamp(18px,1.25vw,24px);font-weight:600;color:var(--mint);opacity:0;transition:opacity .65s .2s}
+.wp-big.in{opacity:1;filter:none}.wp-sub.in{opacity:1}
+.wp-visual{position:absolute;top:0;right:0;width:calc(50% - 16px);height:100%;overflow:hidden;opacity:0;pointer-events:none;z-index:1}
+.wp-vis{position:absolute;inset:0;opacity:0;transform-origin:50% 50%;will-change:transform,opacity}
+.wp-vis img{width:100%;height:100%;object-fit:cover}
+.wp-link{position:absolute;inset:0;z-index:6}
+.wp-ind{position:absolute;z-index:7;right:clamp(28px,3vw,64px);top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;pointer-events:none}
+.wp-dot{width:12px;height:12px;border-radius:50%;border:2px solid #fff;transition:background .35s}
+.wp-dot.on{background:#fff}
+.wp-info{position:absolute;z-index:2;left:clamp(48px,11vw,216px);top:0;height:100%;display:grid;grid-template-rows:minmax(16px,clamp(300px,24vw,458px)) auto 1fr auto;justify-items:start;padding-bottom:clamp(56px,4.2vw,80px);opacity:0;box-sizing:border-box}
+.wp-slide{grid-area:2/1;opacity:0;width:max-content}
+.wp-name{margin:0;font-size:clamp(32px,2.5vw,48px);font-weight:700;line-height:1.4;color:#3e3f44}
+.wp-meta{display:grid;grid-template-columns:auto auto;gap:clamp(20px,1.7vw,32px) clamp(56px,4.2vw,81px);margin:clamp(48px,4.2vw,80px) 0 0;font-size:clamp(14px,1.05vw,20px);line-height:1.5;color:#3e3f44}
+.wp-meta dt{font-weight:700}.wp-meta dd{margin:0}
+.wp-more{grid-area:4/1;display:inline-flex;align-items:center;gap:12px;padding:12px 12px 12px 16px;border:1px solid #3e3f44;border-radius:8px;background:#fff;color:#3e3f44;font-size:clamp(14px,.85vw,16px);font-weight:600;white-space:nowrap;transition:background .25s,color .25s}
+.wp-more svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wp-more:hover{background:#3e3f44;color:#fff}
+@media (max-width:1024px){
+  .wproj{height:auto;padding:80px 0}.wp-pin{position:relative;height:auto;overflow:visible}
+  .wp-title{position:relative;top:auto;left:auto;transform:none!important;padding:0 24px}
+  .wp-big{font-size:56px;opacity:1;filter:none}.wp-sub{opacity:1}
+  .wp-visual{position:relative;width:100%;height:60vw;margin-top:30px;opacity:1!important}
+  .wp-vis{opacity:0}.wp-vis:first-child{opacity:1}
+  .wp-info{position:relative;left:auto;height:auto;display:block;padding:24px;opacity:1!important}
+  .wp-slide{display:none}.wp-slide:first-child{display:block;opacity:1}
+  .wp-more{margin-top:24px}
+}
