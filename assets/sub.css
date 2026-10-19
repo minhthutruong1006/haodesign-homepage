@@ -861,3 +861,8 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .wlb-close{top:10px;right:10px}
   .wlb-zoom{display:none}
 }
+
+/* 메가메뉴 열 정렬: 메뉴 칸 150px = 아래 열 150px, 가운데 정렬 (시작 위치는 mega-align.js) */
+.gnb>li>a{padding:0;width:150px;text-align:center}
+.mega .wrap{justify-content:flex-start;padding:28px 0}
+.mega ul{width:150px;min-width:0;padding:0;text-align:center;flex:0 0 150px}
