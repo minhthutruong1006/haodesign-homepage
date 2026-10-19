@@ -124,7 +124,12 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});(function r(t
 cards.forEach(c=>c.removeAttribute('href'));
 function f(g){tabs.forEach(b=>b.classList.toggle('on',b.dataset.f===g));cards.forEach(c=>c.classList.toggle('hide',g!=='all'&&c.dataset.g!==g))}
 tabs.forEach(b=>b.onclick=()=>{f(b.dataset.f);history.replaceState(null,'',b.dataset.f==='all'?'work.html':'#'+b.dataset.f)});
-const h=location.hash.slice(1);if(h&&tabs.some(b=>b.dataset.f===h))f(h)})();
+// 주소의 #분야(메뉴의 포트폴리오 하위 항목)로 필터 — 이 페이지에 있을 때 메뉴를 눌러도 바로 바뀜
+function fromHash(scroll){const h=location.hash.slice(1)||'all';if(!tabs.some(b=>b.dataset.f===h))return;f(h);
+  if(scroll){const y=document.getElementById('ftabs').getBoundingClientRect().top+scrollY-110;window.__lenis?window.__lenis.scrollTo(y,{duration:.8}):scrollTo({top:y,behavior:'smooth'})}}
+fromHash(false);addEventListener('hashchange',()=>fromHash(true));
+document.querySelectorAll('a[href^="work.html"]').forEach(a=>a.addEventListener('click',e=>{if(a.closest('#wgrid'))return;const h=(a.getAttribute('href').split('#')[1]||'');e.preventDefault();
+  if(location.hash.slice(1)===h)fromHash(true);else if(h)location.hash=h;else{history.pushState(null,'',location.pathname+location.search);fromHash(true)}}))})();
 </script>
 <script>
 // 견적 폼: 필수 항목 확인 (실제 전송은 서버 연결 후)
