@@ -131,5 +131,12 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});(function r(t
   });
 })();
 </script>
+<script>
+// 채널톡: 기본 버튼은 숨기고 오른쪽 아래 빨간 상담 버튼으로 엽니다 (haodesign.co.kr과 같은 채널)
+(function(){var w=window;if(w.ChannelIO)return;var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(a){ch.q.push(a)};w.ChannelIO=ch;
+function l(){if(w.ChannelIOInitialized)return;w.ChannelIOInitialized=true;var s=document.createElement('script');s.async=true;s.src='https://cdn.channel.io/plugin/ch-plugin-web.js';document.head.appendChild(s)}
+if(document.readyState==='complete')l();else{w.addEventListener('DOMContentLoaded',l);w.addEventListener('load',l)}})();
+ChannelIO('boot',{pluginKey:'565202f5-f51b-4012-bc44-b1366adfaab3',hideChannelButtonOnBoot:true});
+</script>
 </body>
 </html>
