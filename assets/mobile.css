@@ -1,26 +1,19 @@
 /* =========================================================
-   휴대폰 전용 보정 (768px 이하에서만 적용 — 컴퓨터 화면은 그대로)
+   휴대폰·태블릿 전용 보정 (메뉴는 1024px 이하, 나머지는 768px 이하 — 컴퓨터 화면은 그대로)
    ========================================================= */
 
 /* 모바일 메뉴 버튼·패널은 컴퓨터에서 숨김 */
 .m-burger,.m-nav{display:none}
 
-@media (max-width:768px){
-  html{-webkit-text-size-adjust:100%}
-  body{font-size:15px}
-  .wrap{width:auto;padding-left:20px;padding-right:20px}
-
+@media (max-width:1024px){
   /* ---- 헤더 + 햄버거 메뉴 ---- */
-  header#hd{height:60px}
-  .hd{height:60px;gap:0;justify-content:space-between}
-  .logo img{height:32px!important;width:auto}
   .mega{display:none!important}
   .m-burger{display:flex;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;margin-right:-8px;padding:0 10px;border:0;background:none;cursor:pointer;position:relative;z-index:1001}
   .m-burger i{display:block;height:2px;border-radius:2px;background:#191f28;transition:transform .3s,opacity .3s}
   .m-open .m-burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .m-open .m-burger i:nth-child(2){opacity:0}
   .m-open .m-burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-  .m-nav{display:block;position:fixed;inset:60px 0 0 0;z-index:1000;background:#fff;overflow-y:auto;padding:8px 20px 40px;transform:translateX(100%);visibility:hidden;transition:transform .35s cubic-bezier(.16,1,.3,1),visibility .35s}
+  .m-nav{display:block;position:fixed;inset:72px 0 0 0;z-index:1000;background:#fff;overflow-y:auto;padding:8px 20px 40px;transform:translateX(100%);visibility:hidden;transition:transform .35s cubic-bezier(.16,1,.3,1),visibility .35s}
   .m-open .m-nav{transform:none;visibility:visible}
   .m-open{overflow:hidden}
   .m-grp{border-bottom:1px solid #eee}
@@ -32,6 +25,16 @@
   .m-grp li a{display:block;padding:9px 4px;font-size:15px;color:#555}
   .m-grp li a:active{color:var(--mint)}
   .m-call{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:28px;padding:16px;border-radius:14px;background:var(--mint);color:#fff;font-size:17px;font-weight:700}
+}
+
+@media (max-width:768px){
+  header#hd{height:60px}
+  .hd{height:60px;gap:0;justify-content:space-between}
+  .logo img{height:32px!important;width:auto}
+  .m-nav{inset:60px 0 0 0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-size:15px}
+  .wrap{width:auto;padding-left:20px;padding-right:20px}
 
   /* ---- 오른쪽 아래 상담 버튼: 작게 ---- */
   .fab{right:12px;bottom:14px;gap:8px}

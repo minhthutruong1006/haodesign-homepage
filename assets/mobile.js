@@ -22,5 +22,5 @@
   btn.addEventListener('click', () => set(!root.classList.contains('m-open')));
   nav.querySelectorAll('.m-grp>button').forEach(b => b.addEventListener('click', () => b.parentElement.classList.toggle('open')));
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
-  addEventListener('resize', () => { if (innerWidth > 768) set(false); });
+  addEventListener('resize', () => { if (innerWidth > 1024) set(false); });
 })();
