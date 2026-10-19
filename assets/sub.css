@@ -868,3 +868,13 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .mega .mega-sp{visibility:hidden;height:0;overflow:hidden;pointer-events:none}
 .mega-cols{flex:1;display:flex;justify-content:center}
 .mega ul{width:150px;min-width:0;padding:0;text-align:center;flex:0 0 150px}
+
+/* 견적문의 · FAQ 탭 (두 페이지 머리에 공통) */
+.ctabs{margin-top:34px;display:inline-flex;gap:6px;padding:6px;border-radius:999px;background:#f4f1ef}
+.ctabs a{padding:11px 30px;border-radius:999px;font-size:15px;font-weight:600;color:#555;transition:background .25s,color .25s}
+.ctabs a:hover{color:var(--mint)}
+.ctabs a.on{background:var(--mint);color:#fff}
+.faqs .fq-list{margin-top:0}
+.faq-cta{margin-top:40px;font-size:15px;color:#666}
+.faq-cta a{color:var(--mint);font-weight:600}
+.faq-cta span{margin:0 8px;color:#ccc}
