@@ -862,7 +862,9 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .wlb-zoom{display:none}
 }
 
-/* 메가메뉴 열 정렬: 메뉴 칸 150px = 아래 열 150px, 가운데 정렬 (시작 위치는 mega-align.js) */
+/* 메가메뉴 열 정렬: 헤더와 똑같은 구조(보이지 않는 로고 + 40px + 가운데 정렬 칸)로 만들어 각 열이 메뉴 바로 아래에 오게 함. 메뉴 칸 150px = 열 150px */
 .gnb>li>a{padding:0;width:150px;text-align:center}
-.mega .wrap{justify-content:flex-start;padding:28px 0}
+.mega .wrap{display:flex;align-items:flex-start;gap:40px;padding:28px 24px}
+.mega .mega-sp{visibility:hidden;height:0;overflow:hidden;pointer-events:none}
+.mega-cols{flex:1;display:flex;justify-content:center}
 .mega ul{width:150px;min-width:0;padding:0;text-align:center;flex:0 0 150px}
