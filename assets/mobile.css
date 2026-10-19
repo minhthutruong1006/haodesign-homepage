@@ -76,6 +76,7 @@
   .clinics{padding:64px 0 56px}
   .svc-blocks{gap:56px}
   .svc{gap:18px}
+  .svc-copy{flex:none}
   .svc-media{border-radius:18px}
   .svc-title{font-size:22px}
   .svc-desc{font-size:14.5px}
@@ -150,6 +151,26 @@
 
   /* 칼럼 */
   .cgrid{grid-template-columns:1fr!important;gap:16px}
+  .cc .m{aspect-ratio:16/9!important;height:auto!important}
+  .cc .b{padding:18px 18px 20px!important}
+  .cc h3{font-size:16.5px!important;line-height:1.45}
+  .cc p{font-size:13.5px!important}
+
+
+  /* 회사소개: 머리 문구, '하오디자인은 다릅니다' */
+  .sp-hero--vid h1{font-size:26px;line-height:1.4;word-break:keep-all}
+  .hw-sticky{padding-top:64px}
+  .hw-right{width:100%}
+  .hw-cap{font-size:13px;margin-bottom:16px}
+  .hw-menu{gap:12px}
+  .hw-menu button{font-size:14.5px}
+  .hw-menu li.on button{font-size:20px}
+  .hw-pic{width:min(300px,80vw)}
+  .hw-texts{min-height:200px;padding:0 4px}
+  .hw-t .en{font-size:14px}
+  .hw-t h3{font-size:23px}
+  .hw-t .d{margin-top:12px;font-size:14.5px;word-break:keep-all}
+  .hw-mq span{font-size:72px}
 
   /* 회사소개 */
   .fp-title{font-size:21px}
