@@ -56,6 +56,7 @@
     const p = br.closest('p, li, .d, .desc, .svc-desc, .doc-body');
     if (!p || p.closest('h1, h2, h3, h4, .sec-title, .hero-txt .h1, .m-nav')) return;
     if ((p.textContent || '').trim().length < 26) return;   // 짧은 두 줄 문구는 그대로
+    const prev = br.previousSibling; if (prev && /[.?!。]\s*$/.test(prev.textContent || '')) return;   // 문장이 끝난 자리의 줄바꿈은 그대로
     br.replaceWith(document.createTextNode(' '));
   });
 })();
