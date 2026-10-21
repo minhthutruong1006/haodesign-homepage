@@ -48,3 +48,14 @@
       circ.style.transform = `scale(${(.55 + p * .5).toFixed(3)})`; };
     addEventListener('scroll', f, { passive: true }); f(); }
 })();
+
+// 휴대폰(br 줄바꿈): 컴퓨터 화면 기준으로 넣은 본문 줄바꿈(<br>)은 좁은 화면에서 어색하게 끊기므로 띄어쓰기로 바꿈 (제목은 그대로)
+(function(){
+  if (!matchMedia('(max-width:768px)').matches) return;
+  document.querySelectorAll('p br, li br, .d br, .desc br, .svc-desc br, .doc-body br').forEach(br => {
+    const p = br.closest('p, li, .d, .desc, .svc-desc, .doc-body');
+    if (!p || p.closest('h1, h2, h3, h4, .sec-title, .hero-txt .h1, .m-nav')) return;
+    if ((p.textContent || '').trim().length < 26) return;   // 짧은 두 줄 문구는 그대로
+    br.replaceWith(document.createTextNode(' '));
+  });
+})();

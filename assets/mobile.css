@@ -2,6 +2,11 @@
    휴대폰·태블릿 전용 보정 (메뉴는 1024px 이하, 나머지는 768px 이하 — 컴퓨터 화면은 그대로)
    ========================================================= */
 
+/* 모든 화면 공통: 한글 단어 중간에서 줄이 끊기지 않게, 제목은 줄 길이를 고르게 */
+body{word-break:keep-all;overflow-wrap:break-word}
+h1,h2,h3,h4,.sec-title,.sp-title{text-wrap:balance}
+p,li,.d{text-wrap:pretty}
+
 /* 모바일 메뉴 버튼·패널은 컴퓨터에서 숨김 */
 .m-burger,.m-nav{display:none}
 
