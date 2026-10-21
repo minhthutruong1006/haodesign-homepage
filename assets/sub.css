@@ -172,7 +172,7 @@ html.lenis,html.lenis body{height:auto}
 .os-fill em .ch.done{color:var(--mint-d)}
 .os-fill .ch.now{color:var(--mint-d)}
 .os-fill .w{display:inline-block;white-space:nowrap}
-/* clinic split → 하오디자인 서비스 7종 (좌우 교차 + 곡선 장식, 스크롤 시 아래에서 떠오름) */
+/* clinic split → 하오 DESIGN 서비스 7종 (좌우 교차 + 곡선 장식, 스크롤 시 아래에서 떠오름) */
 .clinics{padding:calc(100vw * 150 / 1920) 0 calc(100vw * 130 / 1920);background:linear-gradient(180deg,#fff6f3 0%,#fdebe5 100%);position:relative;overflow:hidden}
 .clinics svg.curve{position:absolute;left:0;top:calc(100vw * 220 / 1920);width:100%;height:calc(100% - 100vw * 300 / 1920);opacity:.7;pointer-events:none;z-index:0;}
 .clinics svg.curve path{stroke-dasharray:1;stroke-dashoffset:var(--cd,1)}
@@ -562,7 +562,7 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
 .ab-orbit-foot .fc.on{color:#111}
 .ab-orbit-foot .fc.hl.on{color:var(--mint)}
 
-/* 회사소개 '하오디자인은 다릅니다' — 스크롤 고정(화면 4개분), 스크롤에 따라 목록·사진·글·배경색 전환, 아래 글자 흐름 */
+/* 회사소개 '하오 DESIGN은 다릅니다' — 스크롤 고정(화면 4개분), 스크롤에 따라 목록·사진·글·배경색 전환, 아래 글자 흐름 */
 .hway2{position:relative;height:400vh;color:#fff}
 .hw-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
 .hw-bgs{position:absolute;inset:0;z-index:0}
