@@ -1,0 +1,35 @@
+name: Bake site
+
+# 관리자(Supabase)에서 바꾼 내용을 정적 HTML에 굽는다.
+# - 30분마다 자동 / Actions 탭에서 수동 실행(Run workflow) / main 푸시 때도 한 번
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["tools/**", "admin/defaults.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bake
+  cancel-in-progress: false
+
+jobs:
+  bake:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Bake
+        run: node tools/bake.js
+      - name: Commit if changed
+        run: |
+          git config user.name "hao-bake-bot"
+          git config user.email "bake@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "변경 없음"; else git commit -m "bake: 관리자 변경 사항 반영" && git push; fi

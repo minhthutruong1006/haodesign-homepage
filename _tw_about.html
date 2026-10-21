@@ -79,7 +79,7 @@
     <div class="hw-in">
       <div class="hw-left"><p class="hw-cap">하오 DESIGN은 다릅니다</p><ul class="hw-menu" id="hwMenu"><li class="on"><button type="button">01. 원스톱 책임 제작</button></li><li class=""><button type="button">02. 업종의 언어로 디자인</button></li><li class=""><button type="button">03. 다국어 · 수출 대응</button></li><li class=""><button type="button">04. 만족할 때까지 수정</button></li></ul></div>
       <div class="hw-pic" id="hwPic"><img class="on" src="https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903281_5ukir5.jpg" alt="하오 DESIGN 원스톱 책임 제작" style="object-position:center" decoding="async"><img class="" src="https://design.haoc.co.kr/assets/work-hd/thumb/w341.jpg" alt="하오 DESIGN 업종의 언어로 디자인" style="object-position:center" decoding="async"><img class="" src="https://design.haoc.co.kr/assets/work-hd/thumb/w352.jpg" alt="하오 DESIGN 다국어 · 수출 대응" style="object-position:center" decoding="async"><img class="" src="https://design.haoc.co.kr/assets/work-hd/thumb/w386.jpg" alt="하오 DESIGN 만족할 때까지 수정" style="object-position:center" decoding="async"></div>
-      <div class="hw-right"><div class="hw-texts" id="hwTxt"><div class="hw-t on"><p class="en">One-stop Production</p><h3>원스톱 책임 제작</h3><p class="d">기획 · 카피 · 디자인 · 촬영 · 인쇄 · 납품까지 하나의 팀이 끝까지 책임집니다. 공정 사이의 어긋남이 없어 결과물의 톤이 처음부터 끝까지 일관됩니다.</p></div><div class="hw-t"><p class="en">Industry-fluent Design</p><h3>업종의 언어로 디자인</h3><p class="d">제조 · 뷰티 · 식품 · 의료 · IT — 업종이 다르면 언어도 다릅니다. 업종별 표현과 규제를 이해한 디자인으로 메시지가 정확히 닿게 합니다.</p></div><div class="hw-t"><p class="en">Global Edition</p><h3>다국어 · 수출 대응</h3><p class="d">영어 · 중국어 · 일본어 · 프랑스어 — 언어가 바뀌어도 톤은 흔들리지 않습니다. 다국어 편집으로 수출 시장까지 한 번에 대응합니다.</p></div><div class="hw-t"><p class="en">Until You're Satisfied</p><h3>만족할 때까지 수정</h3><p class="d">수정 횟수에 쫓기지 않습니다. 고객의 만족과 결과의 완성도가 하오 DESIGN의 기준입니다.</p></div></div><a class="hw-go" href="#contact" aria-label="상담 문의"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+      <div class="hw-right"><div class="hw-texts" id="hwTxt"><div class="hw-t on"><p class="en">One-stop Production</p><h3>원스톱 책임 제작</h3><p class="d">기획 · 카피 · 디자인 · 촬영 · 인쇄 · 납품까지 하나의 팀이 끝까지 책임집니다. 공정 사이의 어긋남이 없어 결과물의 톤이 처음부터 끝까지 일관됩니다.</p></div><div class="hw-t"><p class="en">Industry-fluent Design</p><h3>업종의 언어로 디자인</h3><p class="d">제조 · 뷰티 · 식품 · 의료 · IT — 업종이 다르면 언어도 다릅니다. 업종별 표현과 규제를 이해한 디자인으로 메시지가 정확히 닿게 합니다.</p></div><div class="hw-t"><p class="en">Global Edition</p><h3>다국어 · 수출 대응</h3><p class="d">영어 · 중국어 · 일본어 · 베트남어 — 언어가 바뀌어도 톤은 흔들리지 않습니다. 다국어 편집으로 수출 시장까지 한 번에 대응합니다.</p></div><div class="hw-t"><p class="en">Until You're Satisfied</p><h3>만족할 때까지 수정</h3><p class="d">수정 횟수에 쫓기지 않습니다. 고객의 만족과 결과의 완성도가 하오 DESIGN의 기준입니다.</p></div></div><a class="hw-go" href="#contact" aria-label="상담 문의"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
     </div>
     <div class="hw-mq" aria-hidden="true"><div class="hw-mq-track"><span>CATALOG — BROCHURE — POSTER — LEAFLET — CI · LOGO — PACKAGE — PHOTO — GLOBAL EDITION — </span><span>CATALOG — BROCHURE — POSTER — LEAFLET — CI · LOGO — PACKAGE — PHOTO — GLOBAL EDITION — </span></div></div>
   </div>
@@ -178,8 +178,6 @@ document.querySelectorAll('.reveal,.steps').forEach(el=>io.observe(el));
 // 숫자 카운트업
 document.querySelectorAll('[data-to]').forEach(el=>{new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();
   const to=+el.dataset.to,t0=performance.now();(function f(n){const k=1-Math.pow(1-Math.min(1,(n-t0)/2000),4);el.textContent=Math.round(to*k).toLocaleString('ko-KR');if(k<1)requestAnimationFrame(f)})(t0)},{threshold:.4}).observe(el)});
-// 문의 폼: 템플릿에서는 전송하지 않고 안내만
-document.querySelectorAll('form.cform').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();f.querySelector('.note').textContent='템플릿 화면입니다. 실제 전송은 사이트 연결 후 동작합니다. 급한 문의는 1666-2027로 연락주세요.'}));
 // 부드러운 스크롤
 if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__lenis=lenis;(function r(t){lenis.raf(t);requestAnimationFrame(r)})(performance.now());
   document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id,{offset:-80})}}));
@@ -318,20 +316,7 @@ if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});window.__leni
   });
 })();
 </script>
-<script>
-// 견적 폼: 필수 항목 확인 (실제 전송은 서버 연결 후)
-(function(){
-  const f=document.getElementById('quoteForm');if(!f)return;const note=f.querySelector('.qf-note');
-  f.addEventListener('submit',e=>{e.preventDefault();
-    const miss=[];
-    if(!f.company.value.trim())miss.push('회사/브랜드명');if(!f.name.value.trim())miss.push('담당자명');
-    if(!f.phone.value.trim())miss.push('연락처');if(!f.type.value)miss.push('의뢰 분야');
-    if(!f.querySelector('input[name=route]:checked'))miss.push('유입 경로');if(!f.agree.checked)miss.push('개인정보 동의');
-    note.classList.toggle('err',miss.length>0);
-    note.textContent=miss.length?`다음 항목을 확인해주세요: ${miss.join(', ')}`:'템플릿 화면입니다. 실제 전송은 사이트 연결 후 동작합니다. 급한 문의는 1666-2027로 연락주세요.';
-  });
-})();
-</script>
+<script src="assets/inquiry.js?v=1"></script>
 <script>
 // 채널톡: 기본 버튼은 숨기고 오른쪽 아래 빨간 상담 버튼으로 엽니다 (haodesign.co.kr과 같은 채널)
 (function(){var w=window;if(w.ChannelIO)return;var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(a){ch.q.push(a)};w.ChannelIO=ch;

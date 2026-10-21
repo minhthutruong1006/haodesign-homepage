@@ -45,17 +45,16 @@
 </nav>
 
 <main>
-<section class="sp-hero" style="padding-bottom:0"><div class="wrap center reveal">
+<section class="sp-hero" style="padding-bottom:0;background:linear-gradient(180deg,#fff 0%,#fff6f3 100%)"><div class="wrap center reveal">
   <p class="sp-crumb"><a href="index.html">HOME</a> / 견적문의</p>
   <h1>견적문의</h1><p class="lead">간단한 내용만 남겨주세요. 담당자가 확인 후 빠르게 연락드립니다.</p>
-  <div class="ctabs"><a href="contact.html" class="on">견적문의</a><a href="faq.html">FAQ</a></div>
 </div></section>
 <section class="quote" id="contact">
   <div class="wrap qt-in">
     <div class="qt-info reveal">
       <p class="qt-tag">START YOUR PROJECT</p>
-      <h2 class="qt-title">프로젝트를<br><em>함께 시작할까요?</em></h2>
-      <p class="qt-desc">어떤 프로젝트인지 짧게 들려주세요.<br>1:1 상담으로 브랜드에 맞는 방향을 함께 고민하겠습니다.</p>
+      <h2 class="qt-title"><!--B:copy.qt_title-->프로젝트를<br><em>함께 시작할까요?</em><!--/B:copy.qt_title--></h2>
+      <p class="qt-desc"><!--B:copy.qt_desc-->어떤 프로젝트인지 짧게 들려주세요.<br>1:1 상담으로 브랜드에 맞는 방향을 함께 고민하겠습니다.<!--/B:copy.qt_desc--></p>
       <div class="qt-call"><span>빠른 상담</span><a href="tel:16662027">1666-2027</a></div>
       <ul class="qt-rows">
         <li><b>TIME</b>평일 09:00 – 18:00 (주말·공휴일 휴무)</li>
@@ -109,28 +108,13 @@ document.querySelectorAll('.reveal,.steps').forEach(el=>io.observe(el));
 // 숫자 카운트업
 document.querySelectorAll('[data-to]').forEach(el=>{new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting)return;o.disconnect();
   const to=+el.dataset.to,t0=performance.now();(function f(n){const k=1-Math.pow(1-Math.min(1,(n-t0)/2000),4);el.textContent=Math.round(to*k).toLocaleString('ko-KR');if(k<1)requestAnimationFrame(f)})(t0)},{threshold:.4}).observe(el)});
-// 문의 폼: 템플릿에서는 전송하지 않고 안내만
-document.querySelectorAll('form.cform').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();f.querySelector('.note').textContent='템플릿 화면입니다. 실제 전송은 사이트 연결 후 동작합니다. 급한 문의는 1666-2027로 연락주세요.'}));
 // 부드러운 스크롤
 if(window.Lenis){const lenis=new Lenis({lerp:.1,smoothWheel:true});(function r(t){lenis.raf(t);requestAnimationFrame(r)})(performance.now());
   document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id,{offset:-80})}}));
   if(location.hash&&document.querySelector(location.hash))setTimeout(()=>lenis.scrollTo(location.hash,{offset:-80,immediate:true}),60)}
 </script>
 
-<script>
-// 견적 폼: 필수 항목 확인 (실제 전송은 서버 연결 후)
-(function(){
-  const f=document.getElementById('quoteForm');if(!f)return;const note=f.querySelector('.qf-note');
-  f.addEventListener('submit',e=>{e.preventDefault();
-    const miss=[];
-    if(!f.company.value.trim())miss.push('회사/브랜드명');if(!f.name.value.trim())miss.push('담당자명');
-    if(!f.phone.value.trim())miss.push('연락처');if(!f.type.value)miss.push('의뢰 분야');
-    if(!f.querySelector('input[name=route]:checked'))miss.push('유입 경로');if(!f.agree.checked)miss.push('개인정보 동의');
-    note.classList.toggle('err',miss.length>0);
-    note.textContent=miss.length?`다음 항목을 확인해주세요: ${miss.join(', ')}`:'템플릿 화면입니다. 실제 전송은 사이트 연결 후 동작합니다. 급한 문의는 1666-2027로 연락주세요.';
-  });
-})();
-</script>
+<script src="assets/inquiry.js?v=1"></script>
 <script>
 // 채널톡: 기본 버튼은 숨기고 오른쪽 아래 빨간 상담 버튼으로 엽니다 (haodesign.co.kr과 같은 채널)
 (function(){var w=window;if(w.ChannelIO)return;var ch=function(){ch.c(arguments)};ch.q=[];ch.c=function(a){ch.q.push(a)};w.ChannelIO=ch;

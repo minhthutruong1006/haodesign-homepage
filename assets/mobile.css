@@ -131,6 +131,7 @@ p,li,.d{text-wrap:pretty}
   .sc-kw{margin-top:22px;font-size:15px}
   .sc-desc{font-size:14.5px}
   .sc-desc br{display:none}
+  .svc-desc br{display:none}
   .sc-gal{margin-top:28px}
   .sc-gal li{padding:0 6px;margin-bottom:18px}
   .sc-gal li:nth-child(2n){top:40px}
@@ -148,7 +149,6 @@ p,li,.d{text-wrap:pretty}
 
   /* 서비스 페이지: 작업 사례 카드 */
   .wfan .wf-slide{margin-top:28px;gap:10px}
-  .wf-cap{padding:28px 12px 10px}
   .wf-cap b{font-size:13px}
   .wfan .more{margin-top:32px}
 

@@ -717,46 +717,26 @@ body:has(.sp-hero--video) header{background:#fff;border-color:var(--line)}
   .sc-head{font-size:3.2em}.sc-bar{width:6px;height:60px}.sc-tag{font-size:2em}
 }
 
-/* 서비스 작업 사례 — medi.soijeong 'Why' 카드 방식: 가운데 겹쳐 있다가 화면에 들어오면 기울어진 채 펼쳐짐 (카드 비율 3:2 = 작업 사진 비율) */
+/* 서비스 작업 사례 — 풀사이즈 그리드 4×3: 화면 폭 전체에 사진 12장, 제목·분류는 사진 아래 표기. 화면에 들어오면 한 번 떠오름 */
 .wfan{overflow:hidden}
 .wfan .wf-head{text-align:center}
-.wf-slide{position:relative;width:min(1560px,100%);margin:clamp(50px,4.5vw,90px) auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:start}
-.wf-item{position:relative;display:block;aspect-ratio:3/2;border-radius:clamp(14px,1.1vw,20px);overflow:hidden;background:#e9e4e2;box-shadow:0 20px 40px -24px rgba(0,0,0,.35);-webkit-mask-image:-webkit-radial-gradient(white,black);transition:transform .7s cubic-bezier(.22,1,.36,1) .2s}
-.wf-img,.wf-img img{position:absolute;inset:0;width:100%;height:100%}
-.wf-img img{object-fit:cover;transition:transform .8s cubic-bezier(.16,1,.3,1)}
-.wf-item:hover .wf-img img{transform:scale(1.05)}
-.wf-cap{position:absolute;left:0;right:0;bottom:0;z-index:1;display:flex;flex-direction:column;gap:4px;padding:clamp(40px,3vw,60px) clamp(16px,1.3vw,24px) clamp(14px,1.1vw,20px);background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55));color:#fff;opacity:0;transform:translateY(12px);transition:opacity .6s ease .75s,transform .6s ease .75s}
-.wf-cap b{font-size:clamp(14px,1vw,18px);font-weight:700;letter-spacing:-.02em}
-.wf-cap em{font-style:normal;font-size:clamp(11px,.75vw,13px);opacity:.85}
-/* 펼치기 전: 네 장이 가운데 한 자리에 겹침 */
-.wf-item:nth-child(1){transform:translate(150%,0)}
-.wf-item:nth-child(2){transform:translate(50%,0);z-index:3}
-.wf-item:nth-child(3){transform:translate(-50%,0);z-index:2}
-.wf-item:nth-child(4){transform:translate(-150%,0)}
-/* 펼친 뒤: 각자 기울기 */
-.wf-slide.active .wf-item:nth-child(1){transform:rotate(-6.43deg) translate(0,7%)}
-.wf-slide.active .wf-item:nth-child(2){transform:rotate(-2.78deg) translate(0,-3%)}
-.wf-slide.active .wf-item:nth-child(3){transform:rotate(3.65deg) translate(0,5%)}
-.wf-slide.active .wf-item:nth-child(4){transform:rotate(5.65deg) translate(0,-2%)}
-.wf-slide.active .wf-cap{opacity:1;transform:none}
+.wf-slide{position:relative;width:100vw;margin:clamp(40px,3.5vw,64px) 0 0 calc(50% - 50vw);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;align-items:start;opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)}
+.wf-slide.active{opacity:1;transform:none}
+.wf-item{display:block;color:var(--ink)}
+.wf-img{position:relative;display:block;aspect-ratio:3/2;overflow:hidden;background:#efebe9}
+.wf-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.wf-item:hover .wf-img img{transform:scale(1.04)}
+.wf-cap{display:flex;flex-direction:column;gap:4px;padding:14px 16px 24px}
+.wf-cap b{font-size:clamp(15px,1.05vw,18px);font-weight:700;letter-spacing:-.02em;line-height:1.4}
+.wf-cap em{font-style:normal;font-size:clamp(12px,.8vw,14px);color:#888}
 .wfan .more{margin-top:clamp(60px,5vw,100px)}
 /* 포스터 페이지: 작업 사진이 720×552라 카드도 같은 비율 */
-.wf-43 .wf-item{aspect-ratio:720/552}
+.wf-43 .wf-img{aspect-ratio:720/552}
 /* CI·패키지 페이지: 사진 720×504 */
-.wf-107 .wf-item{aspect-ratio:720/504}
-/* 작업 사례 둘째 줄(3장): 첫 줄과 같은 카드 크기로 가운데 정렬, 각자 다른 기울기 */
-.wf-slide.wf-r2{width:min(1170px,75%);grid-template-columns:repeat(3,minmax(0,1fr));margin-top:clamp(50px,4.5vw,90px)}
-.wf-r2 .wf-item:nth-child(1){transform:translate(100%,0)}
-.wf-r2 .wf-item:nth-child(2){transform:translate(0,0);z-index:3}
-.wf-r2 .wf-item:nth-child(3){transform:translate(-100%,0);z-index:auto}
-.wf-r2.active .wf-item:nth-child(1){transform:rotate(4.2deg) translate(0,4%)}
-.wf-r2.active .wf-item:nth-child(2){transform:rotate(-3.4deg) translate(0,-2%)}
-.wf-r2.active .wf-item:nth-child(3){transform:rotate(5deg) translate(0,6%)}
-@media (max-width:767px){.wf-slide.wf-r2{width:100%;grid-template-columns:1fr 1fr;margin-top:14px}}
+.wf-107 .wf-img{aspect-ratio:720/504}
 @media (max-width:767px){
-  .wf-slide{grid-template-columns:1fr 1fr;gap:14px}
-  .wf-slide .wf-item:nth-child(n),.wf-slide.active .wf-item:nth-child(n){transform:none}
-  .wf-cap{opacity:1;transform:none}
+  .wf-slide{grid-template-columns:1fr 1fr;gap:3px}
+  .wf-cap{padding:10px 12px 18px}
 }
 
 /* FAQ: 질문 알약 + 오른쪽 + 버튼, 누르면 답 펼침, 5개 이후는 더보기 */
