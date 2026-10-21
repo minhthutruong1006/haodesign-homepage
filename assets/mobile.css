@@ -188,7 +188,13 @@
   .hw-t .en{font-size:14px}
   .hw-t h3{font-size:23px}
   .hw-t .d{margin-top:12px;font-size:14.5px;word-break:keep-all}
-  .hw-mq span{font-size:72px}
+  .hw-mq span{font-size:72px;color:rgba(255,255,255,.4)}
+  /* 아래쪽 흰색 번짐을 줄여 흐르는 글자가 보이게 */
+  .hw-bg::after{background:linear-gradient(180deg,#fff 0%,rgba(255,255,255,0) 6%,rgba(255,255,255,0) 100%)}
+  .hw-bgs::after{height:36px}
+  .hw-mq{-webkit-mask-image:none;mask-image:none;padding-bottom:28px}
+  /* 위쪽 물결 낮게 */
+  .hw-wave{top:-3vh;height:17vh;filter:blur(8px)}
 
   /* 회사소개 */
   .fp-title{font-size:21px}
