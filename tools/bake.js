@@ -197,6 +197,14 @@ function columnPage(boardHtml, p, seo) {
     wrIfChanged("robots.txt", `User-agent: *\nAllow: /\nDisallow: /admin/\nSitemap: ${site}/sitemap.xml\n`);
   }
 
-  fs.writeFileSync(path.join(ROOT, "tools/bake-state.json"), JSON.stringify({ settings: S, bakedAt: new Date().toISOString() }, null, 1) + "\n");
+  /* 연락처 상태 파일은 값이 바뀌었을 때만 (매 굽기마다 커밋이 생기지 않도록) */
+  if (JSON.stringify(state.settings) !== JSON.stringify(S)) fs.writeFileSync(path.join(ROOT, "tools/bake-state.json"), JSON.stringify({ settings: S }, null, 1) + "\n");
   console.log(changed.length ? "변경된 파일:\n  " + changed.join("\n  ") : "변경 없음");
+  /* 마지막 굽기 시각은 Supabase(hd_bake)에 기록 → 관리자 '반영 대기' 계산에 사용 */
+  if (!process.argv.includes("--local")) {
+    try {
+      const r = await fetch(`${SB_URL}/rest/v1/overrides`, { method: "POST", headers: { apikey: SB_KEY, Authorization: "Bearer " + SB_KEY, "Content-Type": "application/json", Prefer: "resolution=merge-duplicates" }, body: JSON.stringify([{ k: PREFIX + "bake", v: { bakedAt: new Date().toISOString(), changed: changed }, updated_at: new Date().toISOString() }]) });
+      if (!r.ok) console.warn("hd_bake 기록 실패 HTTP " + r.status);
+    } catch (e) { console.warn("hd_bake 기록 실패:", e.message); }
+  }
 })().catch(e => { console.error(e); process.exit(1); });

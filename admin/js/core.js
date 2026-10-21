@@ -69,19 +69,19 @@ window.HD = (function () {
     return Promise.all([
       fetch("defaults.json?v=" + Date.now()).then(function (r) { return r.json(); }),
       sbGet("/rest/v1/overrides?select=k,v,updated_at&k=like." + P + "*").catch(function () { return []; }),
-      sbGet("/rest/v1/overrides?select=v&k=eq.hub_accounts").catch(function () { return []; }),
-      fetch("../tools/bake-state.json?v=" + Date.now()).then(function (r) { return r.json(); }).catch(function () { return {}; })
+      sbGet("/rest/v1/overrides?select=v&k=eq.hub_accounts").catch(function () { return []; })
     ]).then(function (a) {
       DEF = a[0];
       ["works", "posts", "hero", "copy", "settings", "mail", "slots", "faq", "svc", "seo"].forEach(function (k) { D[k] = clone(DEF[k]); });
       D.headcode = DEF.headcode || ""; D.accounts = []; D.inq_meta = {}; D.log = [];
       a[1].forEach(function (row) {
-        var k = row.k.slice(P.length); if (row.v == null || KEYS.indexOf(k) < 0) return;
+        var k = row.k.slice(P.length); if (row.v == null) return;
+        if (k === "bake") { bakedAt = row.v.bakedAt || null; return; } /* 마지막 굽기 시각 (bake.js가 기록) */
+        if (KEYS.indexOf(k) < 0) return;
         D[k] = (k === "copy" || k === "svc" || k === "seo" || k === "slots" || k === "settings") ? merge(clone(DEF[k] || {}), row.v) : row.v;
         META[k] = row.updated_at;
       });
       if (a[2][0] && Array.isArray(a[2][0].v) && a[2][0].v.length) hub = a[2][0].v;
-      bakedAt = a[3].bakedAt || null;
     });
   }
   function merge(a, b) { Object.keys(b || {}).forEach(function (k) { a[k] = (b[k] && typeof b[k] === "object" && !Array.isArray(b[k]) && a[k] && typeof a[k] === "object") ? merge(a[k], b[k]) : b[k]; }); return a; }
