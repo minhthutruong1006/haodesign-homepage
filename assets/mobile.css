@@ -66,6 +66,15 @@
   /* 메인: HAODESIGN 인트로 */
   .hz{--r:2.15vw!important}
   .hz-btn{border-width:2px}
+  /* HAODESIGN 인트로 사진 7장: 모두 화면 안에 (제목 위아래로 배치, 잘림 없음) */
+  .hz-img.n1{top:calc(9 * var(--r))!important;left:16%!important;width:calc(10 * var(--r))!important}
+  .hz-img.n5{top:calc(4 * var(--r))!important;left:66%!important;width:calc(19 * var(--r))!important}
+  .hz-img.n3{top:calc(26 * var(--r))!important;left:30%!important;width:calc(10 * var(--r))!important}
+  .hz-img.n7{top:calc(28 * var(--r))!important;left:84%!important;width:calc(9 * var(--r))!important}
+  .hz-img.n2{top:calc(71 * var(--r))!important;left:28%!important;width:calc(19 * var(--r))!important}
+  .hz-img.n4{top:calc(73 * var(--r))!important;left:76%!important;width:calc(10 * var(--r))!important}
+  .hz-img.n6{top:calc(88 * var(--r))!important;left:70%!important;width:calc(9 * var(--r))!important}
+
 
   /* 메인: 디자이너 소개 */
   .doctor .big{font-size:34px;top:40px}
