@@ -7,16 +7,19 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="admin.css?v=1" />
+  <link rel="stylesheet" href="admin.css?v=2" />
 </head>
 <body>
+  <p class="toast" id="toast" hidden></p>
+  <div class="modal" id="modal" hidden></div>
+
   <!-- 로그인 -->
   <div id="loginView">
     <div class="login-wrap">
       <form class="login" id="loginForm">
         <p class="eg">HAO DESIGN</p>
         <h1>하오 DESIGN 관리자</h1>
-        <p class="sub">포트폴리오 · 칼럼 · 문구 · 문의함</p>
+        <p class="sub">포트폴리오 · 칼럼 · 문구 · SEO · 문의함</p>
         <label for="loginId">아이디</label>
         <input type="text" id="loginId" autocomplete="username" />
         <label for="loginPw">비밀번호</label>
@@ -33,104 +36,148 @@
     <aside class="side">
       <div class="brand"><img src="../assets/logo.png" alt="하오 DESIGN" width="58" height="32" /><span>관리자</span></div>
       <nav id="sideMenu">
+        <p class="grp">현황</p>
         <button data-tab="dash" class="on">대시보드</button>
-        <button data-tab="hero">히어로 배너</button>
-        <button data-tab="copy">문구 수정</button>
-        <button data-tab="works">포트폴리오 <b id="cntWorks"></b></button>
-        <button data-tab="posts">칼럼 <b id="cntPosts"></b></button>
         <button data-tab="inq">견적 문의 <b id="cntInq"></b></button>
+        <p class="grp">콘텐츠</p>
+        <button data-tab="works">포트폴리오</button>
+        <button data-tab="posts">칼럼</button>
+        <button data-tab="faq">FAQ</button>
+        <p class="grp">화면</p>
+        <button data-tab="hero">히어로 배너</button>
+        <button data-tab="slots">사진 슬롯</button>
+        <button data-tab="copy">문구</button>
+        <p class="grp">설정</p>
+        <button data-tab="seo">SEO</button>
         <button data-tab="set">사이트 설정</button>
         <button data-tab="acc">관리자 계정</button>
+        <button data-tab="log">작업 기록</button>
       </nav>
       <div class="side-foot">
         <a href="../index.html" target="_blank">사이트 보기 ↗</a>
+        <span class="muted"><b id="whoami"></b> 님</span>
         <button id="logoutBtn" class="lite">로그아웃</button>
       </div>
     </aside>
 
     <main class="main">
-      <p class="toast" id="toast" hidden></p>
+      <div class="topbar"><div id="bakeStatus"></div><button class="save" id="bakeBtn">지금 반영</button></div>
 
       <!-- 대시보드 -->
       <section id="tab-dash" class="tab on">
         <h2>대시보드</h2>
         <div class="stats">
           <div class="st"><b id="stWorks">0</b><span>포트폴리오</span></div>
-          <div class="st"><b id="stPosts">0</b><span>칼럼</span></div>
-          <div class="st"><b id="stInq">0</b><span>문의</span></div>
-          <div class="st"><b id="stBaked">-</b><span>마지막 반영</span></div>
+          <div class="st"><b id="stPosts">0</b><span>공개 칼럼</span></div>
+          <div class="st"><b id="stFaq">0</b><span>FAQ</span></div>
+          <div class="st"><b><span id="stInqNew">0</span><small>/<span id="stInq">0</span></small></b><span>신규 문의 / 전체</span></div>
         </div>
-        <div class="panel note">
-          <b>반영 방식</b><br />
-          저장하면 관리자 데이터는 바로 저장됩니다. 사이트 화면에는 <b>30분마다 자동으로 반영</b>됩니다(GitHub Actions가 정적 페이지를 다시 굽습니다).
-          바로 반영하려면 GitHub 저장소 → Actions → <b>Bake site</b> → Run workflow 를 누르세요.
+        <div class="cols">
+          <div class="panel"><h3>반영 대기</h3><div id="dashPending"></div></div>
+          <div class="panel"><h3>최근 문의</h3><div id="dashInq"></div></div>
+        </div>
+        <h3>서비스 페이지 작업 사례 <small>분류별 노출 장수 / 보유 사진</small></h3>
+        <div class="stats six" id="dashSvc"></div>
+        <div class="cols">
+          <div class="panel"><h3>최근 작업</h3><div id="dashLog"></div></div>
+          <div class="panel note"><h3>반영 방식</h3>저장하면 관리자 데이터는 바로 저장됩니다. 사이트 화면에는 <b>30분마다 자동 반영</b>됩니다(GitHub Actions가 정적 페이지를 다시 굽습니다). 상단 <b>지금 반영</b>을 누르면 바로 시작되고 2~3분 뒤 사이트에 보입니다. (설정 탭에 GitHub 토큰을 넣어두면 버튼 한 번으로 실행됩니다.)</div>
         </div>
       </section>
 
       <!-- 히어로 -->
       <section id="tab-hero" class="tab">
-        <h2>히어로 배너 <small>홈 상단 슬라이드 3장</small></h2>
+        <h2>히어로 배너 <small>홈 상단 슬라이드 · 끌어서 순서 변경</small><span class="grow"></span><button class="lite" id="heroAdd">+ 슬라이드 추가</button><button class="save" id="heroSave">히어로 저장</button></h2>
         <div id="heroList"></div>
-        <button class="save" id="heroSave">히어로 저장</button>
+      </section>
+
+      <!-- 사진 슬롯 -->
+      <section id="tab-slots" class="tab">
+        <h2>사진 슬롯 <small>홈에 고정으로 쓰이는 사진</small><span class="grow"></span><button class="save" id="slotsSave">슬롯 저장</button></h2>
+        <h3>홈 포트폴리오 띠 <small>7장 · 끌어서 순서 변경</small></h3>
+        <div id="bandList" class="grid band"></div>
+        <h3>홈 CREATIVE 섹션 사진 <small>세로 타원 프레임(520×718)에 들어갑니다</small></h3>
+        <div class="hcard"><div><div class="pv tall"><img id="crImgPv" alt="" /></div></div><div class="fs">
+          <div><label>이미지 URL</label><div class="imgrow"><input type="text" id="crImg" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="crImg" hidden /></label><button type="button" class="lite" id="crPick">포트폴리오에서</button></div></div>
+          <div><label>프레임 안 위치 <small>object-position, 예: 62% 78% / center 20%</small></label><input type="text" id="crPos" /></div></div></div>
+        <h3>서비스 페이지 상단 갤러리 <small>자동: 포트폴리오 탭의 분류별 순서 그대로 상위 10장</small></h3>
+        <div class="panel" id="galInfo"></div>
       </section>
 
       <!-- 문구 -->
       <section id="tab-copy" class="tab">
-        <h2>문구 수정 <small>줄바꿈은 &lt;br&gt;, 강조는 &lt;em&gt;…&lt;/em&gt;</small></h2>
+        <h2>문구 <small>줄바꿈은 &lt;br&gt;, 강조는 &lt;em&gt;…&lt;/em&gt; · Ctrl+S 저장</small><span class="grow"></span><button class="save" id="copySave">문구 저장</button></h2>
         <div id="copyList"></div>
-        <button class="save" id="copySave">문구 저장</button>
       </section>
 
       <!-- 포트폴리오 -->
       <section id="tab-works" class="tab">
-        <h2>포트폴리오 <small>포트폴리오 페이지와 서비스별 작업 사례(4×3)에 쓰입니다</small></h2>
+        <h2>포트폴리오 <small>포트폴리오 페이지 · 서비스 페이지 작업 사례(4×3) · 서비스 상단 갤러리에 쓰입니다</small></h2>
         <div class="bar">
           <div class="chips" id="workChips"></div>
-          <button class="save" id="workAdd">+ 작품 추가</button>
+          <div class="acts"><input type="search" id="workSearch" placeholder="제목 검색" /><button class="lite" id="workView">목록으로</button><label class="lite up">사진 여러 장 추가<input type="file" id="wMulti" accept="image/*" multiple hidden /></label><button class="save" id="workAdd">+ 작품 추가</button></div>
         </div>
+        <p class="muted" id="workCount"></p>
+        <div class="selbar" id="wSelBar" hidden><b><span id="wSelN">0</span>장 선택</b><button class="lite" id="wSelAll">전체 선택/해제</button><span class="sep"></span><select id="wSelCat"></select><button class="lite" id="wBulkCat">분류 변경</button><button class="lite" id="wBulkSvc">서비스 우선 토글</button><button class="lite danger" id="wBulkDel">삭제</button><span class="grow"></span><button class="lite" id="wSelClear">선택 해제</button></div>
         <form id="workForm" class="frm panel" hidden>
           <input type="hidden" id="wIdx" />
           <div><label>제목</label><input type="text" id="wTitle" required /></div>
           <div><label>분류</label><select id="wCat"></select></div>
-          <div class="full"><label>이미지 (파일 업로드 또는 URL)</label>
-            <div class="imgrow"><input type="file" id="wFile" accept="image/*" /><input type="text" id="wImgUrl" placeholder="https://…" /><img id="wPrev" alt="" /></div></div>
+          <div class="full"><label>이미지</label><div class="imgrow"><input type="text" id="wImg" placeholder="https://… 또는 파일 선택" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="wImg" hidden /></label><img id="wImgPv" alt="" /></div></div>
           <div class="full"><label class="chk"><input type="checkbox" id="wSvc" /> 서비스 페이지 작업 사례에 우선 노출</label></div>
-          <div class="full acts"><button type="submit" class="save">저장</button><button type="button" class="lite" id="workCancel">취소</button></div>
+          <div class="full acts"><button type="submit" class="save">저장</button><button type="button" class="lite" id="workCancel">취소 (Esc)</button></div>
         </form>
-        <div id="workList" class="grid"></div>
+        <div id="workDrop" class="dropzone"><div id="workList" class="grid"></div><p class="dropHint">사진 파일을 여기에 끌어다 놓으면 현재 분류로 한 번에 추가됩니다 · 카드를 끌어서 순서 변경 · 제목 두 번 클릭으로 수정</p></div>
       </section>
 
       <!-- 칼럼 -->
       <section id="tab-posts" class="tab">
-        <h2>칼럼 <small>본문을 쓰면 column-번호.html 상세 페이지가 생성되고, 외부 링크를 넣으면 그 주소로 연결됩니다</small></h2>
-        <div class="bar"><span></span><button class="save" id="postAdd">+ 글 추가</button></div>
+        <h2>칼럼 <small id="postCount"></small><span class="grow"></span><input type="search" id="postSearch" placeholder="제목·요약 검색" /><button class="save" id="postAdd">+ 글 추가</button></h2>
         <form id="postForm" class="frm panel" hidden>
           <input type="hidden" id="pIdx" />
           <div class="full"><label>제목</label><input type="text" id="pTitle" required /></div>
           <div><label>날짜</label><input type="date" id="pDate" /></div>
-          <div><label class="chk" style="margin-top:28px"><input type="checkbox" id="pNew" /> NEW 표시</label></div>
-          <div class="full"><label>썸네일 (파일 업로드 또는 URL)</label>
-            <div class="imgrow"><input type="file" id="pFile" accept="image/*" /><input type="text" id="pImgUrl" placeholder="https://…" /><img id="pPrev" alt="" /></div></div>
-          <div class="full"><label>요약 (카드에 표시, 비우면 본문 앞 60자)</label><input type="text" id="pSummary" /></div>
-          <div class="full"><label>외부 링크 (있으면 본문 대신 이 주소로 이동)</label><input type="text" id="pUrl" placeholder="https://design.haoc.co.kr/column-42.html" /></div>
+          <div class="acts" style="margin-top:26px"><label class="chk"><input type="checkbox" id="pNew" /> NEW 표시</label><label class="chk"><input type="checkbox" id="pHidden" /> 숨김(사이트에 안 보임)</label></div>
+          <div class="full"><label>썸네일</label><div class="imgrow"><input type="text" id="pImg" placeholder="https://… 또는 파일 선택" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="pImg" hidden /></label><img id="pImgPv" alt="" /></div></div>
+          <div class="full"><label>요약 <small>카드와 검색 설명에 표시 · 비우면 본문 앞 60자</small></label><input type="text" id="pSummary" /></div>
+          <div class="two full"><div><label>외부 링크 <small>있으면 본문 대신 이 주소로 이동</small></label><input type="text" id="pUrl" placeholder="https://design.haoc.co.kr/column-42.html" /></div><div><label>키워드 <small>쉼표 구분, 메모용</small></label><input type="text" id="pKeywords" /></div></div>
           <div class="full"><label>본문</label>
-            <div class="tools" id="pTools"><button type="button" data-cmd="bold">굵게</button><button type="button" data-cmd="h3">소제목</button><button type="button" data-cmd="p">본문</button><button type="button" data-cmd="hr">구분선</button><button type="button" data-cmd="removeFormat">서식 지우기</button><label class="lite">사진 삽입<input type="file" id="pBodyImg" accept="image/*" hidden /></label></div>
-            <div id="pEditor" class="editor" contenteditable="true"></div></div>
-          <div class="full acts"><button type="submit" class="save">저장</button><button type="button" class="lite" id="postCancel">취소</button><button type="button" class="lite danger" id="postDel" hidden>삭제</button></div>
+            <div class="tools" id="pTools"><button type="button" data-cmd="bold"><b>B</b></button><button type="button" data-cmd="italic"><i>I</i></button><button type="button" data-cmd="h2">큰 소제목</button><button type="button" data-cmd="h3">소제목(강조박스)</button><button type="button" data-cmd="p">본문</button><button type="button" data-cmd="blockquote">인용</button><button type="button" data-cmd="insertUnorderedList">목록</button><button type="button" data-cmd="link">링크</button><button type="button" data-cmd="hr">구분선</button><button type="button" data-cmd="removeFormat">서식 지우기</button><label class="up">사진 삽입<input type="file" id="pBodyImg" accept="image/*" hidden /></label><button type="button" data-cmd="html">HTML</button></div>
+            <div id="pEditor" class="editor" contenteditable="true"></div><textarea id="pHtml" class="editor code" hidden></textarea></div>
+          <div class="full"><label>글 FAQ <small>검색 결과에 질문·답변으로 노출(구조화 데이터)</small> <button type="button" class="lite xs" id="pFaqAdd">+ 추가</button></label><div id="pFaqs"></div></div>
+          <div class="full acts"><button type="submit" class="save">저장</button><button type="button" class="lite" id="pPreview">미리보기</button><button type="button" class="lite" id="postCancel">취소 (Esc)</button><span class="grow"></span><button type="button" class="lite danger" id="postDel" hidden>삭제</button></div>
         </form>
         <div id="postList"></div>
       </section>
 
+      <!-- FAQ -->
+      <section id="tab-faq" class="tab">
+        <h2>FAQ <small>홈(앞 5개)과 FAQ 페이지(전체)에 같이 쓰입니다 · 끌어서 순서 변경</small><span class="grow"></span><button class="lite" id="faqAdd">+ 질문 추가</button><button class="save" id="faqSave">FAQ 저장</button></h2>
+        <div id="faqList"></div>
+      </section>
+
       <!-- 문의 -->
       <section id="tab-inq" class="tab">
-        <h2>견적 문의 <small>사이트 견적 폼으로 접수된 문의</small> <button class="lite" id="inqRefresh">새로고침</button></h2>
+        <h2>견적 문의 <small id="inqCount"></small><span class="grow"></span><input type="search" id="inqSearch" placeholder="이름·연락처·내용·메모 검색" /><button class="lite" id="inqCsv">CSV 내려받기</button><button class="lite" id="inqRefresh">새로고침</button></h2>
         <div class="chips" id="inqChips"></div>
         <div id="inqList" class="panel"></div>
+      </section>
+
+      <!-- SEO -->
+      <section id="tab-seo" class="tab">
+        <h2>SEO <small>페이지 제목·검색 설명·공유 이미지 · sitemap/robots 자동 생성</small><span class="grow"></span><button class="save" id="seoSave">SEO 저장</button></h2>
+        <div class="frm panel">
+          <div><label>사이트 주소 <small>canonical·sitemap에 사용</small></label><input type="text" id="seoSite" placeholder="https://www.haodesign.co.kr" /></div>
+          <div><label>공통 공유 이미지 (og:image, 1200×630 권장)</label><div class="imgrow"><input type="text" id="seoOg" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="seoOg" hidden /></label><img id="seoOgPv" alt="" /></div></div>
+        </div>
+        <h3>점검</h3><ul class="issues" id="seoIssues"></ul>
+        <h3>페이지별</h3>
+        <div id="seoPages"></div>
       </section>
 
       <!-- 설정 -->
       <section id="tab-set" class="tab">
         <h2>사이트 설정</h2>
+        <h3>연락처 <small>헤더·푸터·견적 섹션 전부에 반영</small></h3>
         <div class="frm panel">
           <div><label>대표 전화</label><input type="text" id="sTel" /></div>
           <div><label>이메일</label><input type="text" id="sEmail" /></div>
@@ -141,19 +188,30 @@
         <div class="frm panel">
           <div class="full"><label class="chk"><input type="checkbox" id="mOn" /> 문의 접수 시 메일 보내기</label></div>
           <div><label>받는 메일</label><input type="text" id="mTo" /></div>
-          <div><label>Apps Script /exec 주소</label><input type="text" id="mUrl" placeholder="https://script.google.com/macros/s/…/exec" /></div>
-          <div class="full acts"><button class="save" id="mailSave">메일 설정 저장</button></div>
+          <div><label>Google Apps Script /exec 주소</label><input type="text" id="mUrl" placeholder="https://script.google.com/macros/s/…/exec" /></div>
+          <div class="full acts"><button class="save" id="mailSave">메일 설정 저장</button><button class="lite" id="mailTest">테스트 메일</button></div>
         </div>
+        <h3>헤드 코드 <small>GA·네이버 서치어드바이저·픽셀 등, 전 페이지 &lt;head&gt;에 삽입</small></h3>
+        <div class="frm panel"><div class="full"><textarea id="headCode" class="code" placeholder="<meta name=&quot;naver-site-verification&quot; content=&quot;…&quot;>&#10;<script async src=&quot;https://www.googletagmanager.com/gtag/js?id=G-XXXX&quot;></script>"></textarea></div><div class="full acts"><button class="save" id="headSave">헤드 코드 저장</button></div></div>
+        <h3>바로 반영 (선택) <small>GitHub 토큰 — 이 브라우저에만 저장, 서버에 올라가지 않음</small></h3>
+        <div class="frm panel"><div class="full"><label>Fine-grained 토큰 (저장소 minhthutruong1006/haodesign-homepage · Actions: Read and write)</label><input type="text" id="ghToken" placeholder="github_pat_…" autocomplete="off" /></div><div class="full acts"><button class="lite" id="ghSave">토큰 저장</button><span class="muted">토큰이 없으면 '지금 반영' 버튼이 Actions 페이지를 열어줍니다.</span></div></div>
       </section>
 
       <!-- 계정 -->
       <section id="tab-acc" class="tab">
-        <h2>관리자 계정 <small>이 사이트 전용 계정. 통합 관리자 계정은 항상 로그인됩니다</small></h2>
-        <div class="panel"><div id="accList"></div><button class="lite" id="accAdd">+ 계정 추가</button> <button class="save" id="accSave">저장</button><p class="msg" id="accMsg"></p></div>
+        <h2>관리자 계정 <small>이 사이트 전용 계정 · 통합 관리자 계정은 항상 로그인됩니다 · 현재: <b id="accMe"></b></small></h2>
+        <div class="panel"><div id="accList"></div><div class="acts" style="margin-top:12px"><button class="lite" id="accAdd">+ 계정 추가</button><button class="save" id="accSave">계정 저장</button></div><p class="muted" style="margin-top:10px">비밀번호는 접근 제한용으로 평문 저장됩니다. 중요한 계정 비밀번호를 쓰지 마세요.</p></div>
+      </section>
+
+      <!-- 로그 -->
+      <section id="tab-log" class="tab">
+        <h2>작업 기록 <small>최근 120건</small></h2>
+        <div class="panel" id="logList"></div>
       </section>
     </main>
   </div>
 
-  <script src="admin.js?v=1"></script>
+  <script src="js/core.js?v=2"></script>
+  <script src="js/app.js?v=2"></script>
 </body>
 </html>

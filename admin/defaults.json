@@ -1,1158 +1,1340 @@
 {
-    "works":  [
-                  {
-                      "id":  1,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903281_5ukir5.jpg",
-                      "t":  "칸디자인 카탈로그",
-                      "s":  true,
-                      "so":  8
-                  },
-                  {
-                      "id":  2,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_dtgvw4.jpg",
-                      "t":  "넥스바이오 팜플렛",
-                      "s":  true,
-                      "so":  8
-                  },
-                  {
-                      "id":  3,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w401.jpg",
-                      "t":  "신한라이프 포스터",
-                      "s":  true,
-                      "so":  8
-                  },
-                  {
-                      "id":  4,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w322.jpg",
-                      "t":  "코렘스 C.I",
-                      "s":  true,
-                      "so":  8
-                  },
-                  {
-                      "id":  5,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w347.jpg",
-                      "t":  "엠킨 마린락토이너 클렌저 패키지",
-                      "s":  true,
-                      "so":  8
-                  },
-                  {
-                      "id":  6,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w380.jpg",
-                      "t":  "촬영포트폴리오_오뚜기"
-                  },
-                  {
-                      "id":  7,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w357.jpg",
-                      "t":  "재생의료진흥재단 영문 카다로그",
-                      "s":  true,
-                      "so":  8
-                  },
-                  {
-                      "id":  8,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_5ugwvi.jpg",
-                      "t":  "픽소니어 카탈로그",
-                      "s":  true,
-                      "so":  9
-                  },
-                  {
-                      "id":  9,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_514ga.jpg",
-                      "t":  "글로벌하우징 하이브 팜플렛",
-                      "s":  true,
-                      "so":  9
-                  },
-                  {
-                      "id":  10,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w391.jpg",
-                      "t":  "노원구 웹포스터",
-                      "s":  true,
-                      "so":  9
-                  },
-                  {
-                      "id":  11,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w321.jpg",
-                      "t":  "로지쎈 C.I"
-                  },
-                  {
-                      "id":  12,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w346.jpg",
-                      "t":  "파워예스정 패키지",
-                      "s":  true,
-                      "so":  7
-                  },
-                  {
-                      "id":  13,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w379.jpg",
-                      "t":  "촬영포트폴리오_서울우유"
-                  },
-                  {
-                      "id":  14,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w356.jpg",
-                      "t":  "카멜로테크 영문 카다로그"
-                  },
-                  {
-                      "id":  15,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903283_am2a9f.jpg",
-                      "t":  "유니버스 카탈로그",
-                      "s":  true,
-                      "so":  10
-                  },
-                  {
-                      "id":  16,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_bzmzme.jpg",
-                      "t":  "청초원 3단 팜플렛",
-                      "s":  true,
-                      "so":  10
-                  },
-                  {
-                      "id":  17,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w386.jpg",
-                      "t":  "전북음악아카데미 포스터",
-                      "s":  true,
-                      "so":  10
-                  },
-                  {
-                      "id":  18,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w320.jpg",
-                      "t":  "SMD 성산축산물 백화점 C.I"
-                  },
-                  {
-                      "id":  19,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w345.jpg",
-                      "t":  "한국농산 패키지",
-                      "s":  true,
-                      "so":  6
-                  },
-                  {
-                      "id":  20,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w378.jpg",
-                      "t":  "촬영포트폴리오_연세유업"
-                  },
-                  {
-                      "id":  21,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w355.jpg",
-                      "t":  "바잉스퀘어 중문 카다로그"
-                  },
-                  {
-                      "id":  22,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_a7vh1r.jpg",
-                      "t":  "에이치투시스템스 카탈로그",
-                      "s":  true,
-                      "so":  11
-                  },
-                  {
-                      "id":  23,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_34173f.jpg",
-                      "t":  "마이로지스틱스 2단 팜플렛",
-                      "s":  true,
-                      "so":  11
-                  },
-                  {
-                      "id":  24,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w385.jpg",
-                      "t":  "제스트업 포스터",
-                      "s":  true,
-                      "so":  11
-                  },
-                  {
-                      "id":  25,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w319.jpg",
-                      "t":  "하경코스메틱 C.I",
-                      "s":  true,
-                      "so":  7
-                  },
-                  {
-                      "id":  26,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w344.jpg",
-                      "t":  "엑세스파마 패키지",
-                      "s":  true,
-                      "so":  5
-                  },
-                  {
-                      "id":  27,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w377.jpg",
-                      "t":  "촬영포트폴리오_리서쳐스"
-                  },
-                  {
-                      "id":  28,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w354.jpg",
-                      "t":  "동원파츠 영문 카다로그",
-                      "s":  true,
-                      "so":  7
-                  },
-                  {
-                      "id":  29,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903284_8pi0nd.jpg",
-                      "t":  "에이원에프앤비 카탈로그",
-                      "s":  true,
-                      "so":  12
-                  },
-                  {
-                      "id":  30,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_g1s83x.jpg",
-                      "t":  "에코데이인터내셔널 팜플렛",
-                      "s":  true,
-                      "so":  12
-                  },
-                  {
-                      "id":  31,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w312.jpg",
-                      "t":  "이화여대 포스터",
-                      "s":  true,
-                      "so":  12
-                  },
-                  {
-                      "id":  32,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w318.jpg",
-                      "t":  "루이빌 골프코리아 C.I",
-                      "s":  true,
-                      "so":  6
-                  },
-                  {
-                      "id":  33,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w343.jpg",
-                      "t":  "자보 섹시백 패키지",
-                      "s":  true,
-                      "so":  4
-                  },
-                  {
-                      "id":  34,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w376.jpg",
-                      "t":  "촬영포트폴리오_열정코리아"
-                  },
-                  {
-                      "id":  35,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w353.jpg",
-                      "t":  "큐시스 영문 카다로그",
-                      "s":  true,
-                      "so":  6
-                  },
-                  {
-                      "id":  36,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_6c0mn2.jpg",
-                      "t":  "상원아이앤디 카탈로그"
-                  },
-                  {
-                      "id":  37,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_fwhhmd.jpg",
-                      "t":  "성율회계법인 2단 팜플렛"
-                  },
-                  {
-                      "id":  38,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w311.jpg",
-                      "t":  "현대에너지 솔루션 팜플렛"
-                  },
-                  {
-                      "id":  39,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w317.jpg",
-                      "t":  "두산대학교 C.I",
-                      "s":  true,
-                      "so":  5
-                  },
-                  {
-                      "id":  40,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w342.jpg",
-                      "t":  "양지술곳간 모든날에 라벨",
-                      "s":  true,
-                      "so":  3
-                  },
-                  {
-                      "id":  41,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w375.jpg",
-                      "t":  "촬영포트폴리오_비스비바"
-                  },
-                  {
-                      "id":  42,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w352.jpg",
-                      "t":  "엔비피 헬스케어 영문 카다로그",
-                      "s":  true,
-                      "so":  5
-                  },
-                  {
-                      "id":  43,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903284_azc0mo.jpg",
-                      "t":  "비타빈스 카탈로그"
-                  },
-                  {
-                      "id":  44,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_6zqur8.jpg",
-                      "t":  "JH2 양면팜플렛"
-                  },
-                  {
-                      "id":  45,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w310.jpg",
-                      "t":  "한국스포츠과학기술포럼 포스터"
-                  },
-                  {
-                      "id":  46,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w316.jpg",
-                      "t":  "원앤탑 C.I",
-                      "s":  true,
-                      "so":  4
-                  },
-                  {
-                      "id":  47,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w341.jpg",
-                      "t":  "뷰티밤 주당의 비결 패키지",
-                      "s":  true,
-                      "so":  2
-                  },
-                  {
-                      "id":  48,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w374.jpg",
-                      "t":  "촬영포트폴리오_농협"
-                  },
-                  {
-                      "id":  49,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w351.jpg",
-                      "t":  "미러로이드 영문 카다로그",
-                      "s":  true,
-                      "so":  4
-                  },
-                  {
-                      "id":  50,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_8fx05s.jpg",
-                      "t":  "자동차손해배상진흥원 브로슈어"
-                  },
-                  {
-                      "id":  51,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_477kuq.jpg",
-                      "t":  "신아건설 팜플렛"
-                  },
-                  {
-                      "id":  52,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w309.jpg",
-                      "t":  "교찾회 포스터"
-                  },
-                  {
-                      "id":  53,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w315.jpg",
-                      "t":  "늘품 C.I",
-                      "s":  true,
-                      "so":  3
-                  },
-                  {
-                      "id":  54,
-                      "c":  "package",
-                      "img":  "assets/work-hd/thumb/w340.jpg",
-                      "t":  "싸토리우스 종이카드 라벨",
-                      "s":  true,
-                      "so":  1
-                  },
-                  {
-                      "id":  55,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w373.jpg",
-                      "t":  "촬영포트폴리오_서울우유"
-                  },
-                  {
-                      "id":  56,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w350.jpg",
-                      "t":  "함라에이원 영문 카다로그",
-                      "s":  true,
-                      "so":  3
-                  },
-                  {
-                      "id":  57,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_di1umd.jpg",
-                      "t":  "텔리카 브로슈어"
-                  },
-                  {
-                      "id":  58,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_aa4xxt.jpg",
-                      "t":  "팔라디움인더스트리얼 팜플렛"
-                  },
-                  {
-                      "id":  59,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w308.jpg",
-                      "t":  "보레다바이오텍 전시회 포스터"
-                  },
-                  {
-                      "id":  60,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w314.jpg",
-                      "t":  "명가푸드시스템 C.I",
-                      "s":  true,
-                      "so":  2
-                  },
-                  {
-                      "id":  61,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w372.jpg",
-                      "t":  "촬영포트폴리오_한독 레디큐"
-                  },
-                  {
-                      "id":  62,
-                      "c":  "global",
-                      "img":  "assets/work-hd/thumb/w349.jpg",
-                      "t":  "마케톤 주식회사 영문 카다로그",
-                      "s":  true,
-                      "so":  2
-                  },
-                  {
-                      "id":  63,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_b5f0dz.jpg",
-                      "t":  "케이티앤지 브로슈어"
-                  },
-                  {
-                      "id":  64,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_7ezt0d.jpg",
-                      "t":  "자바네트웍스 팜플렛"
-                  },
-                  {
-                      "id":  65,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w307.jpg",
-                      "t":  "동행재가방문 요양센터 전단지"
-                  },
-                  {
-                      "id":  66,
-                      "c":  "ci",
-                      "img":  "assets/work-hd/thumb/w313.jpg",
-                      "t":  "내당동제일골목 C.I",
-                      "s":  true,
-                      "so":  1
-                  },
-                  {
-                      "id":  67,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w371.jpg",
-                      "t":  "촬영포트폴리오_한독 레디큐"
-                  },
-                  {
-                      "id":  68,
-                      "c":  "global",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903296_5zvzcx.jpg",
-                      "t":  "NF 영문 카탈로그",
-                      "s":  true,
-                      "so":  1
-                  },
-                  {
-                      "id":  69,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_aho8ap.jpg",
-                      "t":  "삼원마린시스템 브로슈어",
-                      "s":  true,
-                      "so":  1
-                  },
-                  {
-                      "id":  70,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_geyh1m.jpg",
-                      "t":  "42번가 베이글 팜플렛",
-                      "s":  true,
-                      "so":  1
-                  },
-                  {
-                      "id":  71,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w306.jpg",
-                      "t":  "렉터소프트 포스터",
-                      "s":  true,
-                      "so":  1
-                  },
-                  {
-                      "id":  72,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w370.jpg",
-                      "t":  "촬영포트폴리오_롯데백화점"
-                  },
-                  {
-                      "id":  73,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_7qxzfn.jpg",
-                      "t":  "휴라 브로슈어",
-                      "s":  true,
-                      "so":  2
-                  },
-                  {
-                      "id":  74,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_fgg1pj.jpg",
-                      "t":  "노화융합연구단 3단 팜플렛",
-                      "s":  true,
-                      "so":  2
-                  },
-                  {
-                      "id":  75,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w305.jpg",
-                      "t":  "서플러스 글로벌 보건 경영 방침 포스터",
-                      "s":  true,
-                      "so":  2
-                  },
-                  {
-                      "id":  76,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w369.jpg",
-                      "t":  "촬영포트폴리오_광동생활건강"
-                  },
-                  {
-                      "id":  77,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_7duweh.jpg",
-                      "t":  "넥스바이오 브로슈어",
-                      "s":  true,
-                      "so":  3
-                  },
-                  {
-                      "id":  78,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903289_1nlqtd.jpg",
-                      "t":  "케이티디에스 CATO 2단 팜플렛",
-                      "s":  true,
-                      "so":  3
-                  },
-                  {
-                      "id":  79,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w304.jpg",
-                      "t":  "한국지식재산보호원 포스터",
-                      "s":  true,
-                      "so":  3
-                  },
-                  {
-                      "id":  80,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w368.jpg",
-                      "t":  "촬영포트폴리오_미니멜츠"
-                  },
-                  {
-                      "id":  81,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_dhz181.jpg",
-                      "t":  "뉴파워프라즈마 카탈로그",
-                      "s":  true,
-                      "so":  4
-                  },
-                  {
-                      "id":  82,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903289_d2vob6.jpg",
-                      "t":  "한빛레이저 팜플렛",
-                      "s":  true,
-                      "so":  4
-                  },
-                  {
-                      "id":  83,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w303.jpg",
-                      "t":  "서초구청 포스터",
-                      "s":  true,
-                      "so":  4
-                  },
-                  {
-                      "id":  84,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w367.jpg",
-                      "t":  "촬영포트폴리오_고삼농협"
-                  },
-                  {
-                      "id":  85,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_c8x75f.jpg",
-                      "t":  "극동크리트 카탈로그",
-                      "s":  true,
-                      "so":  5
-                  },
-                  {
-                      "id":  86,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_5huzzy.jpg",
-                      "t":  "주케이엑스넥스지 팜플렛",
-                      "s":  true,
-                      "so":  5
-                  },
-                  {
-                      "id":  87,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w302.jpg",
-                      "t":  "성동 공업고등학교 포스터",
-                      "s":  true,
-                      "so":  5
-                  },
-                  {
-                      "id":  88,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w366.jpg",
-                      "t":  "촬영포트폴리오_서울우유"
-                  },
-                  {
-                      "id":  89,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_eu37uo.jpg",
-                      "t":  "도터라인 카탈로그",
-                      "s":  true,
-                      "so":  6
-                  },
-                  {
-                      "id":  90,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_1dwbmo.jpg",
-                      "t":  "OSP 베트남 비자 팜플렛",
-                      "s":  true,
-                      "so":  6
-                  },
-                  {
-                      "id":  91,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w301.jpg",
-                      "t":  "한국스포츠과학기술포럼 포스터",
-                      "s":  true,
-                      "so":  6
-                  },
-                  {
-                      "id":  92,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w365.jpg",
-                      "t":  "촬영포트폴리오_한독 레디큐"
-                  },
-                  {
-                      "id":  93,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_3a9k5l.jpg",
-                      "t":  "한영기연 카탈로그",
-                      "s":  true,
-                      "so":  7
-                  },
-                  {
-                      "id":  94,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681748348_9vhtm4.jpg",
-                      "t":  "현대인프라 리플렛",
-                      "s":  true,
-                      "so":  7
-                  },
-                  {
-                      "id":  95,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w300.jpg",
-                      "t":  "(주)오수아 포스터",
-                      "s":  true,
-                      "so":  7
-                  },
-                  {
-                      "id":  96,
-                      "c":  "photo",
-                      "img":  "assets/work-hd/thumb/w364.jpg",
-                      "t":  "촬영포트폴리오_광동생활건강"
-                  },
-                  {
-                      "id":  97,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_1izzy.jpg",
-                      "t":  "심플즈 카탈로그"
-                  },
-                  {
-                      "id":  98,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781687778190_2hx5nb.jpg",
-                      "t":  "비추미글래스 리플렛"
-                  },
-                  {
-                      "id":  99,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w299.jpg",
-                      "t":  "JWCG 사이토카인 팜플렛"
-                  },
-                  {
-                      "id":  100,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_98femg.jpg",
-                      "t":  "비전실업 카탈로그"
-                  },
-                  {
-                      "id":  101,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781687819106_co7tn1.jpg",
-                      "t":  "리맥스 리플렛"
-                  },
-                  {
-                      "id":  102,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w298.jpg",
-                      "t":  "지투비 잡지광고"
-                  },
-                  {
-                      "id":  103,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_5bbmpm.jpg",
-                      "t":  "에프오엑스덴 카탈로그"
-                  },
-                  {
-                      "id":  104,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781688450555_63mpdy.jpg",
-                      "t":  "스마트시티 리플렛"
-                  },
-                  {
-                      "id":  105,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w297.jpg",
-                      "t":  "카테노이드 팜플렛"
-                  },
-                  {
-                      "id":  106,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_g898gt.jpg",
-                      "t":  "씨엔에이치아이앤씨 카탈로그"
-                  },
-                  {
-                      "id":  107,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781688794305_droy34.jpg",
-                      "t":  "티디앤 3단 리플렛"
-                  },
-                  {
-                      "id":  108,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w296.jpg",
-                      "t":  "에스피메드 잡지광고"
-                  },
-                  {
-                      "id":  109,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_arlqog.jpg",
-                      "t":  "대봉금속 카탈로그"
-                  },
-                  {
-                      "id":  110,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781689509513_2tjj2a.jpg",
-                      "t":  "디지캡 3단리플렛"
-                  },
-                  {
-                      "id":  111,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w295.jpg",
-                      "t":  "연세대 포스터"
-                  },
-                  {
-                      "id":  112,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_cu85jj.jpg",
-                      "t":  "화우심 카탈로그"
-                  },
-                  {
-                      "id":  113,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781689793724_e6l5w2.jpg",
-                      "t":  "바른길 리플렛"
-                  },
-                  {
-                      "id":  114,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w294.jpg",
-                      "t":  "명신 ENG 포스터"
-                  },
-                  {
-                      "id":  115,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_1dv0lb.jpg",
-                      "t":  "비엣빌드 카달로그"
-                  },
-                  {
-                      "id":  116,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781689817986_2dasfl.jpg",
-                      "t":  "국민체육진흥공단 스포츠산업일자리센터 리플렛"
-                  },
-                  {
-                      "id":  117,
-                      "c":  "poster",
-                      "img":  "assets/work-hd/thumb/w293.jpg",
-                      "t":  "에스피매드 단면광고"
-                  },
-                  {
-                      "id":  118,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_1wwoop.jpg",
-                      "t":  "한국은행 카달로그"
-                  },
-                  {
-                      "id":  119,
-                      "c":  "leaflet",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781690742000_ghvye2.jpg",
-                      "t":  "한솔아이원스 3단 리플렛"
-                  },
-                  {
-                      "id":  120,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_epy989.jpg",
-                      "t":  "완도사랑 카탈로그"
-                  },
-                  {
-                      "id":  121,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w384.jpg",
-                      "t":  "제스트업 3단 리플렛"
-                  },
-                  {
-                      "id":  122,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_1619m4.jpg",
-                      "t":  "해븐코리아 카탈로그"
-                  },
-                  {
-                      "id":  123,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w383.jpg",
-                      "t":  "이지큐어 EZ-IM 2단 리플렛"
-                  },
-                  {
-                      "id":  124,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_26dki8.jpg",
-                      "t":  "공진 신규 카탈로그"
-                  },
-                  {
-                      "id":  125,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w382.jpg",
-                      "t":  "동경티엔씨 2단 리플렛"
-                  },
-                  {
-                      "id":  126,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_fuqd7f.jpg",
-                      "t":  "신우기술 카탈로그"
-                  },
-                  {
-                      "id":  127,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w381.jpg",
-                      "t":  "대한보건의료정보관리사협회 3단 리플렛"
-                  },
-                  {
-                      "id":  128,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_8ak0hj.jpg",
-                      "t":  "엠씨웍스 카탈로그"
-                  },
-                  {
-                      "id":  129,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w291.jpg",
-                      "t":  "연세대학교 대한민국 청소년 정신건강연구 3단 리플렛"
-                  },
-                  {
-                      "id":  130,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_dl97hw.jpg",
-                      "t":  "LHE 카탈로그"
-                  },
-                  {
-                      "id":  131,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w290.jpg",
-                      "t":  "하다엔터 3단 리플렛"
-                  },
-                  {
-                      "id":  132,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_bh8a1w.jpg",
-                      "t":  "바이오 테크놀로지 솔루션 카탈로그"
-                  },
-                  {
-                      "id":  133,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w289.jpg",
-                      "t":  "SK 루키 소개 2단 리플렛"
-                  },
-                  {
-                      "id":  134,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_e1ju2h.jpg",
-                      "t":  "남양씨피엠 브로슈어"
-                  },
-                  {
-                      "id":  135,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w288.jpg",
-                      "t":  "세종대학교 2단 리플렛"
-                  },
-                  {
-                      "id":  136,
-                      "c":  "catalog",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903296_578p98.jpg",
-                      "t":  "예천수출협회 카탈로그"
-                  },
-                  {
-                      "id":  137,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w287.jpg",
-                      "t":  "쏠 커머스 2단 리플렛"
-                  },
-                  {
-                      "id":  138,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w286.jpg",
-                      "t":  "명진정공 3단 리플렛"
-                  },
-                  {
-                      "id":  139,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w285.jpg",
-                      "t":  "멘로시큐리티 정보책자"
-                  },
-                  {
-                      "id":  140,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w284.jpg",
-                      "t":  "골프존 3단 리플렛"
-                  },
-                  {
-                      "id":  141,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w283.jpg",
-                      "t":  "휴레이포지티브 2단 리플렛"
-                  },
-                  {
-                      "id":  142,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w282.jpg",
-                      "t":  "컬티그로스 2단 리플렛"
-                  },
-                  {
-                      "id":  143,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w281.jpg",
-                      "t":  "엔스테이지 3단 리플렛"
-                  },
-                  {
-                      "id":  144,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w280.jpg",
-                      "t":  "코드마인드 2단 리플렛"
-                  },
-                  {
-                      "id":  145,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w279.jpg",
-                      "t":  "화성아름보호 작업장 2단 리플렛"
-                  },
-                  {
-                      "id":  146,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w278.jpg",
-                      "t":  "일미식품 회사소개서"
-                  },
-                  {
-                      "id":  147,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w277.jpg",
-                      "t":  "메인스토리 2단 리플렛"
-                  },
-                  {
-                      "id":  148,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w276.jpg",
-                      "t":  "명성골프 2단 리플렛"
-                  },
-                  {
-                      "id":  149,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w275.jpg",
-                      "t":  "한미기술 2단 리플렛"
-                  },
-                  {
-                      "id":  150,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w274.jpg",
-                      "t":  "찬스아이 2단 리플렛"
-                  },
-                  {
-                      "id":  151,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w273.jpg",
-                      "t":  "스탠다드 학원 3단 리플렛"
-                  },
-                  {
-                      "id":  152,
-                      "c":  "leaflet",
-                      "img":  "assets/work-hd/thumb/w272.jpg",
-                      "t":  "한국백신 4단 리플렛"
-                  }
-              ],
-    "cats":  [
-                 {
-                     "k":  "catalog",
-                     "label":  "카탈로그·브로슈어"
-                 },
-                 {
-                     "k":  "leaflet",
-                     "label":  "리플렛"
-                 },
-                 {
-                     "k":  "poster",
-                     "label":  "포스터·전단지"
-                 },
-                 {
-                     "k":  "ci",
-                     "label":  "CI·로고디자인"
-                 },
-                 {
-                     "k":  "package",
-                     "label":  "패키지·라벨"
-                 },
-                 {
-                     "k":  "photo",
-                     "label":  "촬영서비스"
-                 },
-                 {
-                     "k":  "global",
-                     "label":  "다국어디자인"
-                 }
-             ],
-    "posts":  [
-                  {
-                      "id":  1,
-                      "title":  "전자제품 영문 스펙 팜플렛디자인, 수출바우처로 되는 곳",
-                      "summary":  "전자제품 영문 스펙 팜플렛디자인은 수출바우처 수행기관을 통해 기획부터 인쇄까지 진행할 수 있어요",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/electronicsenglishspecpamphletdesignexportvoucher.haoc.co.kr",
-                      "date":  "2026-10-05",
-                      "url":  "https://design.haoc.co.kr/column-42.html",
-                      "bodyHtml":  "",
-                      "isNew":  true
-                  },
-                  {
-                      "id":  2,
-                      "title":  "가구 쇼룸 카다로그인쇄, 혁신바우처로 맡길 수행기관은?",
-                      "summary":  "가구 제조사 쇼룸 카다로그인쇄는 혁신바우처로 디자인부터 인쇄까지 한 번에 진행할 수 있어요",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/furnitureshowroomcatalogprintinginnovationvoucher.haoc.co.kr",
-                      "date":  "2026-10-02",
-                      "url":  "https://design.haoc.co.kr/column-40.html",
-                      "bodyHtml":  "",
-                      "isNew":  false
-                  },
-                  {
-                      "id":  3,
-                      "title":  "신제품 리플렛제작, 판로개척지원사업으로 인쇄까지 맡기는 곳",
-                      "summary":  "판로개척지원사업으로 신제품 리플렛을 기획·디자인부터 인쇄까지 한 번에 진행할 수 있어요",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/newproductleafletdesignprintingmarketsupportprogram.haoc.co.kr",
-                      "date":  "2026-10-01",
-                      "url":  "https://design.haoc.co.kr/column-39.html",
-                      "bodyHtml":  "",
-                      "isNew":  false
-                  },
-                  {
-                      "id":  4,
-                      "title":  "바이어 미팅용 영문 브로슈어, 수출바우처로 맡길 곳은?",
-                      "summary":  "바이어 미팅용 영문 브로슈어는 수출바우처 수행기관에서 번역부터 인쇄까지 준비할 수 있어요",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/englishbrochurebuyermeetingexportvoucheragency.haoc.co.kr",
-                      "date":  "2026-09-25",
-                      "url":  "https://design.haoc.co.kr/column-35.html",
-                      "bodyHtml":  "",
-                      "isNew":  false
-                  },
-                  {
-                      "id":  5,
-                      "title":  "공공기관 행사 포스터 디자인, 판로개척지원사업으로 가능한 곳",
-                      "summary":  "기관 직접 발주는 조달, 참여 기업·단체 몫의 홍보물은 판로개척지원사업으로 포스터 제작이 가능해요.",
-                      "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1787305114580_f9b38i.jpg",
-                      "date":  "2026-08-21",
-                      "url":  "https://design.haoc.co.kr/column-24.html",
-                      "bodyHtml":  "",
-                      "isNew":  false
-                  }
-              ],
-    "hero":  [
-                 {
-                     "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1782102917677_l4u6v.jpg",
-                     "badge":  "만족할 때까지, 완성도로 답합니다",
-                     "title":  "예쁘기만한 디자인이 아닌\u003cbr\u003e\u003cem\u003e선택받는 디자인\u003c/em\u003e",
-                     "desc":  "카탈로그, 브로슈어, 패키지부터 전시회 홍보물까지.\u003cbr\u003e브랜드가 선택받는 순간을 디자인합니다.",
-                     "href":  "#"
-                 },
-                 {
-                     "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1782102910527_5gwxvl.jpg",
-                     "badge":  "기획 · 디자인 · 인쇄 · 촬영 원스톱",
-                     "title":  "흩어진 과정 없이\u003cbr\u003e한 곳에서 끝내는 \u003cem\u003e원스톱 제작\u003c/em\u003e",
-                     "desc":  "디자인부터 사진촬영·인쇄까지,\u003cbr\u003e팀으로 구성되어 처음부터 끝까지 책임집니다.",
-                     "href":  "#"
-                 },
-                 {
-                     "img":  "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1782102902455_86zm1p.jpg",
-                     "badge":  "누적 4,500건 · 10년의 경험",
-                     "title":  "브랜드의 첫인상을\u003cbr\u003e\u003cem\u003e10년의 노하우\u003c/em\u003e로 설계합니다.",
-                     "desc":  "업종별 특성을 이해하는 디자이너가\u003cbr\u003e브랜드의 가치를 한 장에 담아냅니다.",
-                     "href":  "#"
-                 }
-             ],
-    "copy":  {
-                 "cr_title":  "최상의 마케팅과 크리에이티브,\u003cbr\u003e\u003cem\u003e10년 이상 경력\u003c/em\u003e의 디자이너.",
-                 "cr_p1":  "\u003cp\u003e복잡하지 않으면서 확실한 맥을 짚는 디자인,\u003c/p\u003e\n          \u003cp\u003e고객 만족도가 항상 최고인 이유입니다.\u003c/p\u003e",
-                 "cr_p2":  "\u003cp\u003e우정사업본부, SK, 이화여대, KFC 등 다수 기업·기관과 함께\u003c/p\u003e\n          \u003cp\u003e카탈로그·브로슈어·리플렛 디자인을 제작해 왔습니다.\u003c/p\u003e",
-                 "qt_title":  "프로젝트를\u003cbr\u003e\u003cem\u003e함께 시작할까요?\u003c/em\u003e",
-                 "qt_desc":  "어떤 프로젝트인지 짧게 들려주세요.\u003cbr\u003e1:1 상담으로 브랜드에 맞는 방향을 함께 고민하겠습니다."
-             },
-    "settings":  {
-                     "tel":  "1666-2027",
-                     "email":  "sales@haodesign.co.kr",
-                     "address":  "서울시 광진구 능동로49길 9, 2F"
-                 },
-    "mail":  {
-                 "on":  false,
-                 "to":  "sales@haodesign.co.kr",
-                 "url":  ""
-             }
+ "works": [
+  {
+   "id": 1,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903281_5ukir5.jpg",
+   "t": "칸디자인 카탈로그",
+   "s": true,
+   "so": 8
+  },
+  {
+   "id": 2,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_dtgvw4.jpg",
+   "t": "넥스바이오 팜플렛",
+   "s": true,
+   "so": 8
+  },
+  {
+   "id": 3,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w401.jpg",
+   "t": "신한라이프 포스터",
+   "s": true,
+   "so": 8
+  },
+  {
+   "id": 4,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w322.jpg",
+   "t": "코렘스 C.I",
+   "s": true,
+   "so": 8
+  },
+  {
+   "id": 5,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w347.jpg",
+   "t": "엠킨 마린락토이너 클렌저 패키지",
+   "s": true,
+   "so": 8
+  },
+  {
+   "id": 6,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w380.jpg",
+   "t": "촬영포트폴리오_오뚜기"
+  },
+  {
+   "id": 7,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w357.jpg",
+   "t": "재생의료진흥재단 영문 카다로그",
+   "s": true,
+   "so": 8
+  },
+  {
+   "id": 8,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_5ugwvi.jpg",
+   "t": "픽소니어 카탈로그",
+   "s": true,
+   "so": 9
+  },
+  {
+   "id": 9,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_514ga.jpg",
+   "t": "글로벌하우징 하이브 팜플렛",
+   "s": true,
+   "so": 9
+  },
+  {
+   "id": 10,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w391.jpg",
+   "t": "노원구 웹포스터",
+   "s": true,
+   "so": 9
+  },
+  {
+   "id": 11,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w321.jpg",
+   "t": "로지쎈 C.I"
+  },
+  {
+   "id": 12,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w346.jpg",
+   "t": "파워예스정 패키지",
+   "s": true,
+   "so": 7
+  },
+  {
+   "id": 13,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w379.jpg",
+   "t": "촬영포트폴리오_서울우유"
+  },
+  {
+   "id": 14,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w356.jpg",
+   "t": "카멜로테크 영문 카다로그"
+  },
+  {
+   "id": 15,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903283_am2a9f.jpg",
+   "t": "유니버스 카탈로그",
+   "s": true,
+   "so": 10
+  },
+  {
+   "id": 16,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_bzmzme.jpg",
+   "t": "청초원 3단 팜플렛",
+   "s": true,
+   "so": 10
+  },
+  {
+   "id": 17,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w386.jpg",
+   "t": "전북음악아카데미 포스터",
+   "s": true,
+   "so": 10
+  },
+  {
+   "id": 18,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w320.jpg",
+   "t": "SMD 성산축산물 백화점 C.I"
+  },
+  {
+   "id": 19,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w345.jpg",
+   "t": "한국농산 패키지",
+   "s": true,
+   "so": 6
+  },
+  {
+   "id": 20,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w378.jpg",
+   "t": "촬영포트폴리오_연세유업"
+  },
+  {
+   "id": 21,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w355.jpg",
+   "t": "바잉스퀘어 중문 카다로그"
+  },
+  {
+   "id": 22,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_a7vh1r.jpg",
+   "t": "에이치투시스템스 카탈로그",
+   "s": true,
+   "so": 11
+  },
+  {
+   "id": 23,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_34173f.jpg",
+   "t": "마이로지스틱스 2단 팜플렛",
+   "s": true,
+   "so": 11
+  },
+  {
+   "id": 24,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w385.jpg",
+   "t": "제스트업 포스터",
+   "s": true,
+   "so": 11
+  },
+  {
+   "id": 25,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w319.jpg",
+   "t": "하경코스메틱 C.I",
+   "s": true,
+   "so": 7
+  },
+  {
+   "id": 26,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w344.jpg",
+   "t": "엑세스파마 패키지",
+   "s": true,
+   "so": 5
+  },
+  {
+   "id": 27,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w377.jpg",
+   "t": "촬영포트폴리오_리서쳐스"
+  },
+  {
+   "id": 28,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w354.jpg",
+   "t": "동원파츠 영문 카다로그",
+   "s": true,
+   "so": 7
+  },
+  {
+   "id": 29,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903284_8pi0nd.jpg",
+   "t": "에이원에프앤비 카탈로그",
+   "s": true,
+   "so": 12
+  },
+  {
+   "id": 30,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_g1s83x.jpg",
+   "t": "에코데이인터내셔널 팜플렛",
+   "s": true,
+   "so": 12
+  },
+  {
+   "id": 31,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w312.jpg",
+   "t": "이화여대 포스터",
+   "s": true,
+   "so": 12
+  },
+  {
+   "id": 32,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w318.jpg",
+   "t": "루이빌 골프코리아 C.I",
+   "s": true,
+   "so": 6
+  },
+  {
+   "id": 33,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w343.jpg",
+   "t": "자보 섹시백 패키지",
+   "s": true,
+   "so": 4
+  },
+  {
+   "id": 34,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w376.jpg",
+   "t": "촬영포트폴리오_열정코리아"
+  },
+  {
+   "id": 35,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w353.jpg",
+   "t": "큐시스 영문 카다로그",
+   "s": true,
+   "so": 6
+  },
+  {
+   "id": 36,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_6c0mn2.jpg",
+   "t": "상원아이앤디 카탈로그"
+  },
+  {
+   "id": 37,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903293_fwhhmd.jpg",
+   "t": "성율회계법인 2단 팜플렛"
+  },
+  {
+   "id": 38,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w311.jpg",
+   "t": "현대에너지 솔루션 팜플렛"
+  },
+  {
+   "id": 39,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w317.jpg",
+   "t": "두산대학교 C.I",
+   "s": true,
+   "so": 5
+  },
+  {
+   "id": 40,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w342.jpg",
+   "t": "양지술곳간 모든날에 라벨",
+   "s": true,
+   "so": 3
+  },
+  {
+   "id": 41,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w375.jpg",
+   "t": "촬영포트폴리오_비스비바"
+  },
+  {
+   "id": 42,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w352.jpg",
+   "t": "엔비피 헬스케어 영문 카다로그",
+   "s": true,
+   "so": 5
+  },
+  {
+   "id": 43,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903284_azc0mo.jpg",
+   "t": "비타빈스 카탈로그"
+  },
+  {
+   "id": 44,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_6zqur8.jpg",
+   "t": "JH2 양면팜플렛"
+  },
+  {
+   "id": 45,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w310.jpg",
+   "t": "한국스포츠과학기술포럼 포스터"
+  },
+  {
+   "id": 46,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w316.jpg",
+   "t": "원앤탑 C.I",
+   "s": true,
+   "so": 4
+  },
+  {
+   "id": 47,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w341.jpg",
+   "t": "뷰티밤 주당의 비결 패키지",
+   "s": true,
+   "so": 2
+  },
+  {
+   "id": 48,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w374.jpg",
+   "t": "촬영포트폴리오_농협"
+  },
+  {
+   "id": 49,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w351.jpg",
+   "t": "미러로이드 영문 카다로그",
+   "s": true,
+   "so": 4
+  },
+  {
+   "id": 50,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_8fx05s.jpg",
+   "t": "자동차손해배상진흥원 브로슈어"
+  },
+  {
+   "id": 51,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_477kuq.jpg",
+   "t": "신아건설 팜플렛"
+  },
+  {
+   "id": 52,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w309.jpg",
+   "t": "교찾회 포스터"
+  },
+  {
+   "id": 53,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w315.jpg",
+   "t": "늘품 C.I",
+   "s": true,
+   "so": 3
+  },
+  {
+   "id": 54,
+   "c": "package",
+   "img": "assets/work-hd/thumb/w340.jpg",
+   "t": "싸토리우스 종이카드 라벨",
+   "s": true,
+   "so": 1
+  },
+  {
+   "id": 55,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w373.jpg",
+   "t": "촬영포트폴리오_서울우유"
+  },
+  {
+   "id": 56,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w350.jpg",
+   "t": "함라에이원 영문 카다로그",
+   "s": true,
+   "so": 3
+  },
+  {
+   "id": 57,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_di1umd.jpg",
+   "t": "텔리카 브로슈어"
+  },
+  {
+   "id": 58,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_aa4xxt.jpg",
+   "t": "팔라디움인더스트리얼 팜플렛"
+  },
+  {
+   "id": 59,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w308.jpg",
+   "t": "보레다바이오텍 전시회 포스터"
+  },
+  {
+   "id": 60,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w314.jpg",
+   "t": "명가푸드시스템 C.I",
+   "s": true,
+   "so": 2
+  },
+  {
+   "id": 61,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w372.jpg",
+   "t": "촬영포트폴리오_한독 레디큐"
+  },
+  {
+   "id": 62,
+   "c": "global",
+   "img": "assets/work-hd/thumb/w349.jpg",
+   "t": "마케톤 주식회사 영문 카다로그",
+   "s": true,
+   "so": 2
+  },
+  {
+   "id": 63,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_b5f0dz.jpg",
+   "t": "케이티앤지 브로슈어"
+  },
+  {
+   "id": 64,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_7ezt0d.jpg",
+   "t": "자바네트웍스 팜플렛"
+  },
+  {
+   "id": 65,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w307.jpg",
+   "t": "동행재가방문 요양센터 전단지"
+  },
+  {
+   "id": 66,
+   "c": "ci",
+   "img": "assets/work-hd/thumb/w313.jpg",
+   "t": "내당동제일골목 C.I",
+   "s": true,
+   "so": 1
+  },
+  {
+   "id": 67,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w371.jpg",
+   "t": "촬영포트폴리오_한독 레디큐"
+  },
+  {
+   "id": 68,
+   "c": "global",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903296_5zvzcx.jpg",
+   "t": "NF 영문 카탈로그",
+   "s": true,
+   "so": 1
+  },
+  {
+   "id": 69,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_aho8ap.jpg",
+   "t": "삼원마린시스템 브로슈어",
+   "s": true,
+   "so": 1
+  },
+  {
+   "id": 70,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_geyh1m.jpg",
+   "t": "42번가 베이글 팜플렛",
+   "s": true,
+   "so": 1
+  },
+  {
+   "id": 71,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w306.jpg",
+   "t": "렉터소프트 포스터",
+   "s": true,
+   "so": 1
+  },
+  {
+   "id": 72,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w370.jpg",
+   "t": "촬영포트폴리오_롯데백화점"
+  },
+  {
+   "id": 73,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_7qxzfn.jpg",
+   "t": "휴라 브로슈어",
+   "s": true,
+   "so": 2
+  },
+  {
+   "id": 74,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903294_fgg1pj.jpg",
+   "t": "노화융합연구단 3단 팜플렛",
+   "s": true,
+   "so": 2
+  },
+  {
+   "id": 75,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w305.jpg",
+   "t": "서플러스 글로벌 보건 경영 방침 포스터",
+   "s": true,
+   "so": 2
+  },
+  {
+   "id": 76,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w369.jpg",
+   "t": "촬영포트폴리오_광동생활건강"
+  },
+  {
+   "id": 77,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_7duweh.jpg",
+   "t": "넥스바이오 브로슈어",
+   "s": true,
+   "so": 3
+  },
+  {
+   "id": 78,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903289_1nlqtd.jpg",
+   "t": "케이티디에스 CATO 2단 팜플렛",
+   "s": true,
+   "so": 3
+  },
+  {
+   "id": 79,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w304.jpg",
+   "t": "한국지식재산보호원 포스터",
+   "s": true,
+   "so": 3
+  },
+  {
+   "id": 80,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w368.jpg",
+   "t": "촬영포트폴리오_미니멜츠"
+  },
+  {
+   "id": 81,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_dhz181.jpg",
+   "t": "뉴파워프라즈마 카탈로그",
+   "s": true,
+   "so": 4
+  },
+  {
+   "id": 82,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903289_d2vob6.jpg",
+   "t": "한빛레이저 팜플렛",
+   "s": true,
+   "so": 4
+  },
+  {
+   "id": 83,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w303.jpg",
+   "t": "서초구청 포스터",
+   "s": true,
+   "so": 4
+  },
+  {
+   "id": 84,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w367.jpg",
+   "t": "촬영포트폴리오_고삼농협"
+  },
+  {
+   "id": 85,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_c8x75f.jpg",
+   "t": "극동크리트 카탈로그",
+   "s": true,
+   "so": 5
+  },
+  {
+   "id": 86,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_5huzzy.jpg",
+   "t": "주케이엑스넥스지 팜플렛",
+   "s": true,
+   "so": 5
+  },
+  {
+   "id": 87,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w302.jpg",
+   "t": "성동 공업고등학교 포스터",
+   "s": true,
+   "so": 5
+  },
+  {
+   "id": 88,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w366.jpg",
+   "t": "촬영포트폴리오_서울우유"
+  },
+  {
+   "id": 89,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_eu37uo.jpg",
+   "t": "도터라인 카탈로그",
+   "s": true,
+   "so": 6
+  },
+  {
+   "id": 90,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_1dwbmo.jpg",
+   "t": "OSP 베트남 비자 팜플렛",
+   "s": true,
+   "so": 6
+  },
+  {
+   "id": 91,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w301.jpg",
+   "t": "한국스포츠과학기술포럼 포스터",
+   "s": true,
+   "so": 6
+  },
+  {
+   "id": 92,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w365.jpg",
+   "t": "촬영포트폴리오_한독 레디큐"
+  },
+  {
+   "id": 93,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_3a9k5l.jpg",
+   "t": "한영기연 카탈로그",
+   "s": true,
+   "so": 7
+  },
+  {
+   "id": 94,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681748348_9vhtm4.jpg",
+   "t": "현대인프라 리플렛",
+   "s": true,
+   "so": 7
+  },
+  {
+   "id": 95,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w300.jpg",
+   "t": "(주)오수아 포스터",
+   "s": true,
+   "so": 7
+  },
+  {
+   "id": 96,
+   "c": "photo",
+   "img": "assets/work-hd/thumb/w364.jpg",
+   "t": "촬영포트폴리오_광동생활건강"
+  },
+  {
+   "id": 97,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903285_1izzy.jpg",
+   "t": "심플즈 카탈로그"
+  },
+  {
+   "id": 98,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781687778190_2hx5nb.jpg",
+   "t": "비추미글래스 리플렛"
+  },
+  {
+   "id": 99,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w299.jpg",
+   "t": "JWCG 사이토카인 팜플렛"
+  },
+  {
+   "id": 100,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_98femg.jpg",
+   "t": "비전실업 카탈로그"
+  },
+  {
+   "id": 101,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781687819106_co7tn1.jpg",
+   "t": "리맥스 리플렛"
+  },
+  {
+   "id": 102,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w298.jpg",
+   "t": "지투비 잡지광고"
+  },
+  {
+   "id": 103,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_5bbmpm.jpg",
+   "t": "에프오엑스덴 카탈로그"
+  },
+  {
+   "id": 104,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781688450555_63mpdy.jpg",
+   "t": "스마트시티 리플렛"
+  },
+  {
+   "id": 105,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w297.jpg",
+   "t": "카테노이드 팜플렛"
+  },
+  {
+   "id": 106,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_g898gt.jpg",
+   "t": "씨엔에이치아이앤씨 카탈로그"
+  },
+  {
+   "id": 107,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781688794305_droy34.jpg",
+   "t": "티디앤 3단 리플렛"
+  },
+  {
+   "id": 108,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w296.jpg",
+   "t": "에스피메드 잡지광고"
+  },
+  {
+   "id": 109,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_arlqog.jpg",
+   "t": "대봉금속 카탈로그"
+  },
+  {
+   "id": 110,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781689509513_2tjj2a.jpg",
+   "t": "디지캡 3단리플렛"
+  },
+  {
+   "id": 111,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w295.jpg",
+   "t": "연세대 포스터"
+  },
+  {
+   "id": 112,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_cu85jj.jpg",
+   "t": "화우심 카탈로그"
+  },
+  {
+   "id": 113,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781689793724_e6l5w2.jpg",
+   "t": "바른길 리플렛"
+  },
+  {
+   "id": 114,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w294.jpg",
+   "t": "명신 ENG 포스터"
+  },
+  {
+   "id": 115,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903286_1dv0lb.jpg",
+   "t": "비엣빌드 카달로그"
+  },
+  {
+   "id": 116,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781689817986_2dasfl.jpg",
+   "t": "국민체육진흥공단 스포츠산업일자리센터 리플렛"
+  },
+  {
+   "id": 117,
+   "c": "poster",
+   "img": "assets/work-hd/thumb/w293.jpg",
+   "t": "에스피매드 단면광고"
+  },
+  {
+   "id": 118,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_1wwoop.jpg",
+   "t": "한국은행 카달로그"
+  },
+  {
+   "id": 119,
+   "c": "leaflet",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781690742000_ghvye2.jpg",
+   "t": "한솔아이원스 3단 리플렛"
+  },
+  {
+   "id": 120,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_epy989.jpg",
+   "t": "완도사랑 카탈로그"
+  },
+  {
+   "id": 121,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w384.jpg",
+   "t": "제스트업 3단 리플렛"
+  },
+  {
+   "id": 122,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_1619m4.jpg",
+   "t": "해븐코리아 카탈로그"
+  },
+  {
+   "id": 123,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w383.jpg",
+   "t": "이지큐어 EZ-IM 2단 리플렛"
+  },
+  {
+   "id": 124,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_26dki8.jpg",
+   "t": "공진 신규 카탈로그"
+  },
+  {
+   "id": 125,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w382.jpg",
+   "t": "동경티엔씨 2단 리플렛"
+  },
+  {
+   "id": 126,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_fuqd7f.jpg",
+   "t": "신우기술 카탈로그"
+  },
+  {
+   "id": 127,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w381.jpg",
+   "t": "대한보건의료정보관리사협회 3단 리플렛"
+  },
+  {
+   "id": 128,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903287_8ak0hj.jpg",
+   "t": "엠씨웍스 카탈로그"
+  },
+  {
+   "id": 129,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w291.jpg",
+   "t": "연세대학교 대한민국 청소년 정신건강연구 3단 리플렛"
+  },
+  {
+   "id": 130,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903292_dl97hw.jpg",
+   "t": "LHE 카탈로그"
+  },
+  {
+   "id": 131,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w290.jpg",
+   "t": "하다엔터 3단 리플렛"
+  },
+  {
+   "id": 132,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_bh8a1w.jpg",
+   "t": "바이오 테크놀로지 솔루션 카탈로그"
+  },
+  {
+   "id": 133,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w289.jpg",
+   "t": "SK 루키 소개 2단 리플렛"
+  },
+  {
+   "id": 134,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903288_e1ju2h.jpg",
+   "t": "남양씨피엠 브로슈어"
+  },
+  {
+   "id": 135,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w288.jpg",
+   "t": "세종대학교 2단 리플렛"
+  },
+  {
+   "id": 136,
+   "c": "catalog",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903296_578p98.jpg",
+   "t": "예천수출협회 카탈로그"
+  },
+  {
+   "id": 137,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w287.jpg",
+   "t": "쏠 커머스 2단 리플렛"
+  },
+  {
+   "id": 138,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w286.jpg",
+   "t": "명진정공 3단 리플렛"
+  },
+  {
+   "id": 139,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w285.jpg",
+   "t": "멘로시큐리티 정보책자"
+  },
+  {
+   "id": 140,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w284.jpg",
+   "t": "골프존 3단 리플렛"
+  },
+  {
+   "id": 141,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w283.jpg",
+   "t": "휴레이포지티브 2단 리플렛"
+  },
+  {
+   "id": 142,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w282.jpg",
+   "t": "컬티그로스 2단 리플렛"
+  },
+  {
+   "id": 143,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w281.jpg",
+   "t": "엔스테이지 3단 리플렛"
+  },
+  {
+   "id": 144,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w280.jpg",
+   "t": "코드마인드 2단 리플렛"
+  },
+  {
+   "id": 145,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w279.jpg",
+   "t": "화성아름보호 작업장 2단 리플렛"
+  },
+  {
+   "id": 146,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w278.jpg",
+   "t": "일미식품 회사소개서"
+  },
+  {
+   "id": 147,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w277.jpg",
+   "t": "메인스토리 2단 리플렛"
+  },
+  {
+   "id": 148,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w276.jpg",
+   "t": "명성골프 2단 리플렛"
+  },
+  {
+   "id": 149,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w275.jpg",
+   "t": "한미기술 2단 리플렛"
+  },
+  {
+   "id": 150,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w274.jpg",
+   "t": "찬스아이 2단 리플렛"
+  },
+  {
+   "id": 151,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w273.jpg",
+   "t": "스탠다드 학원 3단 리플렛"
+  },
+  {
+   "id": 152,
+   "c": "leaflet",
+   "img": "assets/work-hd/thumb/w272.jpg",
+   "t": "한국백신 4단 리플렛"
+  }
+ ],
+ "cats": [
+  {
+   "k": "catalog",
+   "label": "카탈로그·브로슈어"
+  },
+  {
+   "k": "leaflet",
+   "label": "리플렛"
+  },
+  {
+   "k": "poster",
+   "label": "포스터·전단지"
+  },
+  {
+   "k": "ci",
+   "label": "CI·로고디자인"
+  },
+  {
+   "k": "package",
+   "label": "패키지·라벨"
+  },
+  {
+   "k": "photo",
+   "label": "촬영서비스"
+  },
+  {
+   "k": "global",
+   "label": "다국어디자인"
+  }
+ ],
+ "posts": [
+  {
+   "id": 1,
+   "title": "전자제품 영문 스펙 팜플렛디자인, 수출바우처로 되는 곳",
+   "summary": "전자제품 영문 스펙 팜플렛디자인은 수출바우처 수행기관을 통해 기획부터 인쇄까지 진행할 수 있어요",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/electronicsenglishspecpamphletdesignexportvoucher.haoc.co.kr",
+   "date": "2026-10-05",
+   "url": "https://design.haoc.co.kr/column-42.html",
+   "bodyHtml": "",
+   "isNew": true
+  },
+  {
+   "id": 2,
+   "title": "가구 쇼룸 카다로그인쇄, 혁신바우처로 맡길 수행기관은?",
+   "summary": "가구 제조사 쇼룸 카다로그인쇄는 혁신바우처로 디자인부터 인쇄까지 한 번에 진행할 수 있어요",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/furnitureshowroomcatalogprintinginnovationvoucher.haoc.co.kr",
+   "date": "2026-10-02",
+   "url": "https://design.haoc.co.kr/column-40.html",
+   "bodyHtml": "",
+   "isNew": false
+  },
+  {
+   "id": 3,
+   "title": "신제품 리플렛제작, 판로개척지원사업으로 인쇄까지 맡기는 곳",
+   "summary": "판로개척지원사업으로 신제품 리플렛을 기획·디자인부터 인쇄까지 한 번에 진행할 수 있어요",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/newproductleafletdesignprintingmarketsupportprogram.haoc.co.kr",
+   "date": "2026-10-01",
+   "url": "https://design.haoc.co.kr/column-39.html",
+   "bodyHtml": "",
+   "isNew": false
+  },
+  {
+   "id": 4,
+   "title": "바이어 미팅용 영문 브로슈어, 수출바우처로 맡길 곳은?",
+   "summary": "바이어 미팅용 영문 브로슈어는 수출바우처 수행기관에서 번역부터 인쇄까지 준비할 수 있어요",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/englishbrochurebuyermeetingexportvoucheragency.haoc.co.kr",
+   "date": "2026-09-25",
+   "url": "https://design.haoc.co.kr/column-35.html",
+   "bodyHtml": "",
+   "isNew": false
+  },
+  {
+   "id": 5,
+   "title": "공공기관 행사 포스터 디자인, 판로개척지원사업으로 가능한 곳",
+   "summary": "기관 직접 발주는 조달, 참여 기업·단체 몫의 홍보물은 판로개척지원사업으로 포스터 제작이 가능해요.",
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1787305114580_f9b38i.jpg",
+   "date": "2026-08-21",
+   "url": "https://design.haoc.co.kr/column-24.html",
+   "bodyHtml": "",
+   "isNew": false
+  }
+ ],
+ "hero": [
+  {
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1782102917677_l4u6v.jpg",
+   "badge": "만족할 때까지, 완성도로 답합니다",
+   "title": "예쁘기만한 디자인이 아닌<br><em>선택받는 디자인</em>",
+   "desc": "카탈로그, 브로슈어, 패키지부터 전시회 홍보물까지.<br>브랜드가 선택받는 순간을 디자인합니다.",
+   "href": "#"
+  },
+  {
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1782102910527_5gwxvl.jpg",
+   "badge": "기획 · 디자인 · 인쇄 · 촬영 원스톱",
+   "title": "흩어진 과정 없이<br>한 곳에서 끝내는 <em>원스톱 제작</em>",
+   "desc": "디자인부터 사진촬영·인쇄까지,<br>팀으로 구성되어 처음부터 끝까지 책임집니다.",
+   "href": "#"
+  },
+  {
+   "img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1782102902455_86zm1p.jpg",
+   "badge": "누적 4,500건 · 10년의 경험",
+   "title": "브랜드의 첫인상을<br><em>10년의 노하우</em>로 설계합니다.",
+   "desc": "업종별 특성을 이해하는 디자이너가<br>브랜드의 가치를 한 장에 담아냅니다.",
+   "href": "#"
+  }
+ ],
+ "copy": {
+  "cr_title": "최상의 마케팅과 크리에이티브,<br><em>10년 이상 경력</em>의 디자이너.",
+  "cr_p1": "<p>복잡하지 않으면서 확실한 맥을 짚는 디자인,</p>\n          <p>고객 만족도가 항상 최고인 이유입니다.</p>",
+  "cr_p2": "<p>우정사업본부, SK, 이화여대, KFC 등 다수 기업·기관과 함께</p>\n          <p>카탈로그·브로슈어·리플렛 디자인을 제작해 왔습니다.</p>",
+  "qt_title": "프로젝트를<br><em>함께 시작할까요?</em>",
+  "qt_desc": "어떤 프로젝트인지 짧게 들려주세요.<br>1:1 상담으로 브랜드에 맞는 방향을 함께 고민하겠습니다.",
+  "pg_work_h1": "Portfolio",
+  "pg_work_lead": "하오 DESIGN이 직접 기획하고 완성한 실제 작업물입니다.",
+  "pg_board_h1": "Column",
+  "pg_board_lead": "인쇄와 디자인, 알아두면 좋은 이야기를 전합니다.",
+  "pg_contact_h1": "견적문의",
+  "pg_contact_lead": "간단한 내용만 남겨주세요. 담당자가 확인 후 빠르게 연락드립니다.",
+  "pg_faq_h1": "FAQ",
+  "pg_faq_lead": "하오 DESIGN에 궁금한 점을 확인하세요."
+ },
+ "settings": {
+  "tel": "1666-2027",
+  "email": "sales@haodesign.co.kr",
+  "address": "서울시 광진구 능동로49길 9, 2F"
+ },
+ "mail": {
+  "on": false,
+  "to": "sales@haodesign.co.kr",
+  "url": ""
+ },
+ "slots": {
+  "band": [
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781663778969_968988338.jpg",
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781663779736_245292462.jpg",
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781663776691_622959752.jpg",
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903295_dhz181.jpg",
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781663773862_779403046.jpg",
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781663778277_539306514.jpg",
+   "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903291_di1umd.jpg"
+  ],
+  "creative_img": "https://oaqrjrrgntlqmyxxovfn.supabase.co/storage/v1/object/public/images/img_1781681903290_a7vh1r.jpg",
+  "creative_pos": "62% 78%"
+ },
+ "faq": [
+  {
+   "q": "친환경 느낌이나 고급스러운 질감으로 만들 수 있나요?",
+   "a": "<p>가능합니다. 친환경 느낌이나 고급스러운 인상은 색보다 종이와 후가공에서 결정됩니다. 유광 코팅 대신 무광이나 비코팅지를 쓰면 손에 닿는 순간 콘셉트가 전달돼요. 다만 비코팅지는 색이 한 톤 가라앉기 때문에 미리 색을 조정해야 하는데, 하오 DESIGN은 인쇄를 내부에서 관리해 이런 종이별 색 차이를 디자인 단계에서 반영합니다.</p>"
+  },
+  {
+   "q": "병원·의료기관 홍보물도 전문적으로 제작하나요?",
+   "a": "<p>하오 DESIGN은 병원 안내책자·브로슈어 작업을 꾸준히 해온 병원 인쇄 전문입니다. 진료과별 편집을 반복해와서, 신뢰가 중요한 진료과의 톤도 처음부터 안정감 있게 잡아드려요. 치료 과정을 단계 그림과 짧은 설명, 인포그래픽으로 정리해 환자분이 이해하기 쉽게 편집하는 데 강점이 있습니다.</p>"
+  },
+  {
+   "q": "온라인 상세페이지와 패키지를 같이 맡길 수 있나요?",
+   "a": "<p>네, 함께 맡기시는 편을 권해드려요. 온라인 상세페이지와 실물 패키지가 따로 만들어지면 고객이 화면에서 본 제품과 배송받은 제품이 다르게 느껴지거든요. 같은 곳에서 하면 로고 위치, 제품명 서체, 라인 컬러를 하나의 규칙으로 묶어 화면과 실물이 이어집니다. 필요한 범위를 알려주시면 구성부터 제안해 드립니다.</p>"
+  },
+  {
+   "q": "수출용 다국어(영문·중문 등) 카탈로그도 제작하나요?",
+   "a": "<p>네, 수출용이라면 영어·중국어·일본어·베트남어 등 다국어 카탈로그와 홍보물을 내부에서 함께 처리합니다. 영문은 한글보다 문장이 길어지므로 처음부터 영문 기준으로 여백을 잡아, 번역 후 목차나 표가 밀리지 않게 해요. 별도 번역 업체를 거치지 않아 언어별 버전의 톤도 하나로 맞출 수 있습니다.</p>"
+  },
+  {
+   "q": "수출용 영문 카탈로그·브로슈어도 제작하나요?",
+   "a": "<p>네, 해외 박람회나 수출을 준비하시는 경우 바이어용 영문 카탈로그·브로슈어를 제작합니다. 여러 기업이 함께 나가는 박람회 공동관에서 참여사 소개부터 전체 구성까지 하나의 영문 카탈로그로 통일해 정리한 사례가 있습니다. 원고 퀄리티가 제각각인 경우 윤문(문장 다듬기)까지 함께 대응합니다.</p>"
+  },
+  {
+   "q": "제품 사진이 없는데 촬영도 같이 해주나요?",
+   "a": "<p>네, 제품 촬영과 디자인을 함께 진행합니다. 촬영과 디자인이 붙어 있으면 처음부터 인쇄를 전제로 촬영 방향을 잡을 수 있어, 촬영 컷의 배경 톤과 인쇄물의 종이 톤이 어긋나지 않습니다. 어떤 인쇄물에 쓸 컷인지 미리 알려주시면 그에 맞춰 구도와 여백을 잡아 촬영합니다. 개정판 제작 시에도 촬영을 함께 하시면 새 장비·리모델링한 공간이 반영돼 최신 상태로 보입니다.</p>"
+  },
+  {
+   "q": "소량 제작도 가능한가요? 최소 수량이 있나요?",
+   "a": "<p>소량 제작도 가능합니다. 소량은 디지털 인쇄로 진행하면 판(版) 비용이 들지 않아 수백 매 단위도 부담이 적습니다. 특히 신규 브랜드라면 처음부터 대량으로 찍기보다 필요한 만큼만 제작해 반응을 본 뒤 늘리는 편이 재고 손실이 적습니다. 정확한 최소 수량은 품목과 인쇄 방식에 따라 달라지므로 상담 시 안내해 드립니다.</p>"
+  },
+  {
+   "q": "디자인만 또는 인쇄만 따로 의뢰할 수 있나요?",
+   "a": "<p>네, 가능합니다. 디자인만 의뢰하시거나, 이미 완성된 인쇄용 파일이 있으시면 인쇄만 별도로 진행하실 수 있습니다. 다만 기획·디자인·인쇄를 함께 맡기시면 톤과 정보 구성이 자연스럽게 이어지고 일정도 단축되기 때문에, 처음 제작하시는 경우에는 원스톱으로 진행하시는 편을 권해드립니다.</p>"
+  },
+  {
+   "q": "기획부터 인쇄까지 한 곳에서 다 되나요?",
+   "a": "<p>네, 하오 DESIGN은 기획·디자인·인쇄를 한 곳에서 진행하는 원스톱 방식입니다. 디자인과 인쇄가 분리되면 파일을 주고받는 시간이 생기지만, 한 곳에서 돌아가면 그 시간이 사라져 일정이 짧아지고 색·톤 관리도 일관됩니다. 제품 촬영까지 함께 대응하므로 촬영·디자인·인쇄를 하나로 묶어 진행할 수 있습니다.</p>"
+  },
+  {
+   "q": "카탈로그 제작 기간은 얼마나 걸리나요?",
+   "a": "<p>16페이지 카탈로그 기준으로 디자인 1~2주, 인쇄 3~5일이 표준입니다. 하오 DESIGN은 기획·디자인·인쇄를 한 곳에서 처리하는 원스톱 방식이라 파일을 주고받는 시간이 없어, 원고와 제품 사진이 준비돼 있으면 2주 일정까지도 맞출 수 있습니다. 일정에 여유를 두고 최소 3주 전 상담을 권장드립니다.</p>"
+  }
+ ],
+ "faq_home_visible": 5,
+ "faq_page_visible": 10,
+ "svc": {
+  "catalog": {
+   "l1": "좋은 카탈로그는",
+   "l2": "브랜드를 대신해 말합니다",
+   "tag": "#CATALOG & BROCHURE",
+   "h1": "카탈로그 · 브로슈어 디자인 제작",
+   "desc": "제품의 특징과 브랜드의 강점을 명확하게 전달하는<br>카탈로그 · 브로슈어를 제작합니다.",
+   "gal_n": 10
+  },
+  "leaflet": {
+   "l1": "가볍게 펼쳐도",
+   "l2": "브랜드는 선명하게",
+   "tag": "#PAMPHLET & LEAFLET",
+   "h1": "팜플렛 · 리플렛 디자인 제작",
+   "desc": "제품 · 서비스 · 행사 정보를 보기 쉽게 담아내는<br>리플렛 · 팜플렛을 제작합니다.",
+   "gal_n": 10
+  },
+  "poster": {
+   "l1": "지나가는 시선도",
+   "l2": "멈추게 만드는 디자인",
+   "tag": "#POSTER & FLYER",
+   "h1": "포스터 · 전단지 디자인 제작",
+   "desc": "홍보 목적과 노출 환경에 맞춰<br>주목도 높은 포스터와 전단지를 제작합니다.",
+   "gal_n": 10
+  },
+  "ci": {
+   "l1": "브랜드를 기억하게 하는",
+   "l2": "가장 작은 디자인",
+   "tag": "#CI & LOGO",
+   "h1": "CI · 로고 디자인 제작",
+   "desc": "기업의 정체성과 방향을 담아<br>다양한 매체에 활용 가능한 로고를 제작합니다.",
+   "gal_n": 10
+  },
+  "package": {
+   "l1": "제품을 더 돋보이게 하는",
+   "l2": "패키지 디자인",
+   "tag": "#PACKAGE & LABEL",
+   "h1": "패키지 · 라벨 디자인 제작",
+   "desc": "제품 콘셉트와 판매 채널에 맞춰<br>브랜드에 어울리는 패키지를 만듭니다.",
+   "gal_n": 8
+  },
+  "global": {
+   "l1": "언어가 바뀌어도",
+   "l2": "메시지는 흔들리지 않게",
+   "tag": "#GLOBAL EDITION",
+   "h1": "다국어 카탈로그 · 브로슈어 디자인",
+   "desc": "번역된 내용을 디자인에 자연스럽게 반영해<br>국내외에서 일관된 브랜드 이미지를 유지합니다.",
+   "gal_n": 10
+  }
+ },
+ "seo": {
+  "siteUrl": "https://minhthutruong1006.github.io/haodesign-homepage",
+  "ogImage": "",
+  "pages": {
+   "about.html": {
+    "title": "회사소개 | 하오 DESIGN",
+    "desc": "2013년부터 카탈로그·브로슈어·팜플렛·리플렛 인쇄 디자인 한 길\n기획·디자인·촬영·인쇄·납품까지 원스톱으로 제공하는 디자인 전문 회사, 하오 DESIGN.",
+    "noindex": false
+   },
+   "board.html": {
+    "title": "칼럼 | 인쇄와 디자인 이야기 | 하오 DESIGN",
+    "desc": "인쇄와 디자인, 알아두면 좋은 이야기를 전합니다.",
+    "noindex": false
+   },
+   "catalog-brochure.html": {
+    "title": "카탈로그 제작·브로슈어 디자인 | 회사소개서 편집디자인 | 하오 DESIGN",
+    "desc": "회사소개서·제품 카탈로그·브로슈어 편집디자인부터 인쇄·후가공까지 원스톱. 기획·디자인·제작을 한 팀이 책임지는 하오 DESIGN 카탈로그 제작 서비스.",
+    "noindex": false
+   },
+   "ci-logo.html": {
+    "title": "로고 제작·CI 디자인 | 브랜드 로고·명함 디자인 | 하오 DESIGN",
+    "desc": "회사 로고 제작과 CI 디자인. 명함·서식 등 기본 응용 시스템과 인쇄·온라인 겸용 파일까지 제공하는 하오 DESIGN 브랜딩 서비스.",
+    "noindex": false
+   },
+   "contact.html": {
+    "title": "견적문의 | 하오 DESIGN",
+    "desc": "간단한 내용만 남겨주세요. 담당자가 확인 후 빠르게 연락드립니다.",
+    "noindex": false
+   },
+   "faq.html": {
+    "title": "FAQ 자주 묻는 질문 | 하오 DESIGN",
+    "desc": "카탈로그·브로슈어·리플렛 제작 기간, 소량 제작, 다국어 카탈로그, 촬영까지 — 하오 DESIGN에 자주 묻는 질문을 확인하세요.",
+    "noindex": false
+   },
+   "global-design.html": {
+    "title": "다국어 카탈로그·영문 브로슈어 제작 | 수출 디자인 | 하오 DESIGN",
+    "desc": "영문·중문·일문 다국어 카탈로그·브로슈어 제작. 원본 톤을 유지한 다국어 편집과 수출바우처 연계 제작까지 하오 DESIGN이 지원합니다.",
+    "noindex": false
+   },
+   "index.html": {
+    "title": "하오 DESIGN | 카탈로그·브로슈어·리플렛 디자인 인쇄 제작",
+    "desc": "안과 홈페이지 레이아웃 템플릿 - 샘플 문구와 플레이스홀더 이미지로 구성",
+    "noindex": true
+   },
+   "leaflet-pamphlet.html": {
+    "title": "팜플렛·리플렛 제작 | 2단·3단 접지 리플렛 디자인 | 하오 DESIGN",
+    "desc": "행사·매장·제품 안내 팜플렛·리플렛 제작. 2단·3단·대문접지 등 목적에 맞는 리플렛 디자인과 인쇄를 하오 DESIGN이 원스톱으로 제작합니다.",
+    "noindex": false
+   },
+   "package-label.html": {
+    "title": "패키지 디자인·라벨 제작 | 단상자·스티커 디자인 | 하오 DESIGN",
+    "desc": "단상자·라벨·스티커·쇼핑백 등 패키지 디자인 제작. 구조 설계부터 재질·후가공, 소량 제작과 양산까지 하오 DESIGN이 함께합니다.",
+    "noindex": false
+   },
+   "poster-flyer.html": {
+    "title": "포스터 제작·전단지 디자인 | 행사·홍보 포스터 인쇄 | 하오 DESIGN",
+    "desc": "행사·공연·모집 포스터, 판촉 전단지 제작. 멀리서도 읽히는 포스터 디자인부터 인쇄·납품까지 하오 DESIGN이 한 번에 진행합니다.",
+    "noindex": false
+   },
+   "work.html": {
+    "title": "포트폴리오 | 하오 DESIGN 제작 사례",
+    "desc": "하오 DESIGN이 직접 기획하고 완성한 카탈로그·브로슈어·리플렛·포스터·CI·패키지·다국어 디자인 작업물입니다.",
+    "noindex": false
+   }
+  }
+ },
+ "headcode": ""
 }
