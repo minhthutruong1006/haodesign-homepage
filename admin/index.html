@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="admin.css?v=6" />
+  <link rel="stylesheet" href="admin.css?v=8" />
 </head>
 <body>
   <p class="toast" id="toast" hidden></p>
@@ -42,7 +42,6 @@
         <p class="grp">콘텐츠</p>
         <button data-tab="works">포트폴리오</button>
         <button data-tab="posts">칼럼</button>
-        <button data-tab="faq">FAQ</button>
         <p class="grp">화면</p>
         <button data-tab="hero">히어로 배너</button>
         <button data-tab="slots">사진 슬롯</button>
@@ -103,8 +102,11 @@
 
       <!-- 문구 -->
       <section id="tab-copy" class="tab">
-        <h2>문구 <small>줄바꿈은 &lt;br&gt;, 강조는 &lt;em&gt;…&lt;/em&gt; · Ctrl+S 저장</small><span class="grow"></span><button class="save" id="copySave">문구 저장</button></h2>
+        <h2>문구 <small id="copyCount"></small><span class="grow"></span><input type="search" id="copySearch" placeholder="문구 검색" /><a class="lite" id="copyEditLink" href="../index.html?edit=1" target="_blank">화면에서 직접 수정 ↗</a><button class="save" id="copySave">문구 저장</button></h2>
+        <div class="inqbar"><div class="seg" id="copyPages"></div></div>
+        <p class="hint">페이지를 고르면 그 페이지의 모든 문구가 순서대로 나옵니다. 줄바꿈은 &lt;br&gt;, 강조는 &lt;em&gt;…&lt;/em&gt; · 고친 항목은 <span class="mod">수정됨</span> 표시 · Ctrl+S 저장. <b>화면에서 직접 수정</b>을 누르면 사이트 화면에서 글자를 바로 고칠 수 있습니다.</p>
         <div id="copyList"></div>
+        <div id="faqWrap" hidden><h3>FAQ <small>홈(앞 5개)과 FAQ 페이지(전체)에 같이 쓰입니다 · 끌어서 순서 변경</small><span class="grow"></span><button class="lite" id="faqAdd">+ 질문 추가</button></h3><div id="faqList"></div></div>
       </section>
 
       <!-- 포트폴리오 -->
@@ -142,12 +144,6 @@
           <div class="full acts"><button type="submit" class="save">저장</button><button type="button" class="lite" id="pPreview">미리보기</button><button type="button" class="lite" id="postCancel">취소 (Esc)</button><span class="grow"></span><button type="button" class="lite danger" id="postDel" hidden>삭제</button></div>
         </form>
         <div id="postList"></div>
-      </section>
-
-      <!-- FAQ -->
-      <section id="tab-faq" class="tab">
-        <h2>FAQ <small>홈(앞 5개)과 FAQ 페이지(전체)에 같이 쓰입니다 · 끌어서 순서 변경</small><span class="grow"></span><button class="lite" id="faqAdd">+ 질문 추가</button><button class="save" id="faqSave">FAQ 저장</button></h2>
-        <div id="faqList"></div>
       </section>
 
       <!-- 문의 -->
@@ -206,7 +202,7 @@
     </main>
   </div>
 
-  <script src="js/core.js?v=6"></script>
-  <script src="js/app.js?v=6"></script>
+  <script src="js/core.js?v=8"></script>
+  <script src="js/app.js?v=8"></script>
 </body>
 </html>

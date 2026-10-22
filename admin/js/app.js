@@ -70,22 +70,49 @@ window.HDApp = (function () {
   }
 
   /* ================= 문구 ================= */
-  var COPY_GROUPS = [
-    { title: "홈 · CREATIVE 섹션", keys: [["cr_title", "제목 (HTML)"], ["cr_p1", "설명 1 (<p> 두 줄)"], ["cr_p2", "설명 2 (<p> 두 줄)"]] },
-    { title: "전 페이지 · 견적 섹션", keys: [["qt_title", "제목"], ["qt_desc", "설명"]] },
-    { title: "서브페이지 상단", keys: [["pg_work_h1", "포트폴리오 제목"], ["pg_work_lead", "포트폴리오 설명"], ["pg_board_h1", "칼럼 제목"], ["pg_board_lead", "칼럼 설명"], ["pg_faq_h1", "FAQ 제목"], ["pg_faq_lead", "FAQ 설명"], ["pg_contact_h1", "견적문의 제목"], ["pg_contact_lead", "견적문의 설명"]] }
-  ];
-  function renderCopy() {
-    $("copyList").innerHTML = COPY_GROUPS.map(function (g) {
-      return '<h3>' + esc(g.title) + '</h3>' + g.keys.map(function (k) { var v = D.copy[k[0]] != null ? D.copy[k[0]] : (DEF.copy[k[0]] || ""); var multi = /<|\n/.test(v) || v.length > 40; return '<div class="ccard"><label>' + esc(k[1]) + (D.copy[k[0]] !== DEF.copy[k[0]] ? '<small class="mod">수정됨</small>' : "") + '</label>' + (multi ? '<textarea data-c="' + k[0] + '">' + esc(v) + '</textarea>' : '<input type="text" data-c="' + k[0] + '" value="' + esc(v) + '">') + '<div class="pv" id="cpv_' + k[0] + '">' + v + '</div></div>'; }).join("");
-    }).join("") + '<h3>서비스 페이지 상단 <small>6개 서비스 페이지의 첫 화면 문구</small></h3>' + SERVICE.map(function (s) {
-      var v = D.svc[s[0]];
-      return '<div class="ccard svc"><label>' + esc(s[1]) + ' <small><a href="../' + SVC_PAGE[s[0]] + '" target="_blank">페이지 보기 ↗</a></small></label><div class="two"><div><small>인용 첫 줄</small><input type="text" data-s="' + s[0] + '" data-k="l1" value="' + esc(v.l1) + '"></div><div><small>인용 둘째 줄</small><input type="text" data-s="' + s[0] + '" data-k="l2" value="' + esc(v.l2) + '"></div><div><small>해시태그</small><input type="text" data-s="' + s[0] + '" data-k="tag" value="' + esc(v.tag) + '"></div><div><small>H1 제목</small><input type="text" data-s="' + s[0] + '" data-k="h1" value="' + esc(v.h1) + '"></div></div><small>설명 (&lt;br&gt; 줄바꿈)</small><textarea data-s="' + s[0] + '" data-k="desc">' + esc(v.desc) + '</textarea></div>';
-    }).join("");
+  /* 페이지별 전체 문구: defaults.copy_pages (seed3 가 만든 키 목록) + 특수 키(히어로 제외한 섹션 문구) */
+  var copyPage = "index.html", copyQ = "";
+  var PAGE_ORDER = ["index.html", "about.html", "catalog-brochure.html", "leaflet-pamphlet.html", "poster-flyer.html", "ci-logo.html", "package-label.html", "global-design.html", "work.html", "board.html", "faq.html", "contact.html"];
+  var TAG_LABEL = { h1: "큰 제목", h2: "제목", h3: "소제목", h4: "소제목", h5: "소제목", p: "문단", li: "항목", dt: "항목명", dd: "항목 내용", span: "짧은 글", blockquote: "인용", figcaption: "캡션" };
+  var SEC_LABEL = { "sp-hero": "상단", "svc-cover": "상단", hz: "포트폴리오 띠", designer: "CREATIVE", osFill: "원스톱", onestop: "원스톱", diff: "차별점", dvList: "차별점", "services-hao": "서비스 소개", work: "작업 사례", works: "작업 사례", reviews: "고객 후기", partners: "파트너", faq: "FAQ", quote: "견적 섹션", contact: "견적 섹션", common: "공통 (견적 섹션 · 푸터, 전 페이지 동일)", process: "진행 과정", story: "회사 이야기", promise: "약속", hwIntro: "하오는 다릅니다", way: "하오는 다릅니다", hwTxt: "하오는 다릅니다", facility: "제작설비", fpStage: "제작설비", location: "오시는 길", "about-service": "서비스 소개" };
+  var SPECIAL = { "index.html": [["cr_title", "CREATIVE 제목"], ["cr_p1", "CREATIVE 설명 1"], ["cr_p2", "CREATIVE 설명 2"]], "work.html": [["pg_work_h1", "상단 제목"], ["pg_work_lead", "상단 설명"]], "board.html": [["pg_board_h1", "상단 제목"], ["pg_board_lead", "상단 설명"]], "faq.html": [["pg_faq_h1", "상단 제목"], ["pg_faq_lead", "상단 설명"]], "contact.html": [["pg_contact_h1", "상단 제목"], ["pg_contact_lead", "상단 설명"]] };
+  function copyItemsFor(page) {
+    var items = (SPECIAL[page] || []).map(function (s) { return { k: s[0], label: s[1], sec: "상단" }; });
+    var svcKey = Object.keys(SVC_PAGE).filter(function (k) { return SVC_PAGE[k] === page; })[0];
+    if (svcKey) items = items.concat([["l1", "인용 첫 줄"], ["l2", "인용 둘째 줄"], ["tag", "해시태그"], ["h1", "H1 제목"], ["desc", "설명"]].map(function (f) { return { svc: svcKey, f: f[0], label: f[1], sec: "상단" }; }));
+    items = items.concat((DEF.copy_pages[page] || []).map(function (c) { return { k: c.k, label: TAG_LABEL[c.tag] || c.tag, sec: SEC_LABEL[c.sec] || c.sec || "본문" }; }));
+    if (page !== "index.html" && page !== "faq.html") items.push({ k: "qt_title", label: "견적 섹션 제목 (전 페이지 공통)", sec: "견적 섹션" }, { k: "qt_desc", label: "견적 섹션 설명 (전 페이지 공통)", sec: "견적 섹션" });
+    if (page === "index.html") items.push({ k: "qt_title", label: "견적 섹션 제목 (전 페이지 공통)", sec: "견적 섹션" }, { k: "qt_desc", label: "견적 섹션 설명 (전 페이지 공통)", sec: "견적 섹션" });
+    return items;
   }
+  function copyVal(it) { return it.svc ? D.svc[it.svc][it.f] : (D.copy[it.k] != null ? D.copy[it.k] : (DEF.copy[it.k] || "")); }
+  function copyDef(it) { return it.svc ? (DEF.svc[it.svc] || {})[it.f] : (DEF.copy[it.k] || ""); }
+  function renderCopy() {
+    var modCount = {}; PAGE_ORDER.forEach(function (p) { modCount[p] = copyItemsFor(p).filter(function (it) { return copyVal(it) !== copyDef(it); }).length; });
+    $("copyPages").innerHTML = PAGE_ORDER.map(function (p) { return '<button class="' + (copyPage === p ? "on" : "") + '" data-cp="' + p + '">' + esc(PAGE_LABEL[p] || p) + (modCount[p] ? '<b>' + modCount[p] + '</b>' : "") + '</button>'; }).join("");
+    $("copyEditLink").href = "../" + copyPage + "?edit=1";
+    var q = copyQ.trim().toLowerCase(), items = copyItemsFor(copyPage).filter(function (it) { return !q || (copyVal(it) + " " + it.label).toLowerCase().indexOf(q) >= 0; });
+    $("copyCount").textContent = (PAGE_LABEL[copyPage] || copyPage) + " · " + items.length + "개 문구";
+    var lastSec = null;
+    $("copyList").innerHTML = items.map(function (it) {
+      var v = copyVal(it), d = copyDef(it), multi = /<br|<p|\n/.test(v) || v.length > 60, id = it.svc ? "svc_" + it.svc + "_" + it.f : "c_" + it.k.replace(/\./g, "_");
+      var head = it.sec !== lastSec ? '<h3 class="csec">' + esc(it.sec) + '</h3>' : ""; lastSec = it.sec;
+      return head + '<div class="ccard' + (v !== d ? " mod" : "") + '"><label>' + esc(it.label) + (v !== d ? '<small class="mod">수정됨</small><button type="button" class="lite xs" data-creset="' + id + '">기본값으로</button>' : "") + '</label>' +
+        (multi ? '<textarea data-cid="' + id + '">' + esc(v) + '</textarea>' : '<input type="text" data-cid="' + id + '" value="' + esc(v) + '">') + (/<[a-z]/i.test(v) ? '<div class="pv" id="pv_' + id + '">' + v + '</div>' : "") + '</div>';
+    }).join("") || '<p class="empty">문구가 없습니다.</p>';
+    $("faqWrap").hidden = !(copyPage === "index.html" || copyPage === "faq.html"); if (!$("faqWrap").hidden) renderFaq();
+  }
+  function copyTarget(id) { if (id.indexOf("svc_") === 0) { var m = id.match(/^svc_([a-z]+)_([a-z0-9]+)$/); return { svc: m[1], f: m[2] }; } return { k: null, id: id }; }
+  function copyKeyOf(id) { var it = copyItemsFor(copyPage).filter(function (x) { return (x.svc ? "svc_" + x.svc + "_" + x.f : "c_" + x.k.replace(/\./g, "_")) === id; })[0]; return it; }
   function bindCopy() {
-    $("copyList").addEventListener("input", function (e) { var el = e.target; if (el.dataset.c) { D.copy[el.dataset.c] = el.value; $("cpv_" + el.dataset.c).innerHTML = el.value; } else if (el.dataset.s) { D.svc[el.dataset.s][el.dataset.k] = el.value; } });
-    $("copySave").addEventListener("click", function () { Promise.all([H.store("copy", D.copy, "문구 저장 완료"), H.store("svc", D.svc, "서비스 문구 저장 완료", "서비스 문구")]).then(renderCopy).catch(function () {}); });
+    $("copyPages").addEventListener("click", function (e) { var b = e.target.closest("[data-cp]"); if (b) { copyPage = b.dataset.cp; renderCopy(); window.scrollTo(0, 0); } });
+    $("copySearch").addEventListener("input", function () { copyQ = this.value; renderCopy(); });
+    $("copyList").addEventListener("input", function (e) { var el = e.target; if (!el.dataset.cid) return; var it = copyKeyOf(el.dataset.cid); if (!it) return; if (it.svc) D.svc[it.svc][it.f] = el.value; else D.copy[it.k] = el.value; var pv = $("pv_" + el.dataset.cid); if (pv) pv.innerHTML = el.value; });
+    $("copyList").addEventListener("click", function (e) { var b = e.target.closest("[data-creset]"); if (!b) return; var it = copyKeyOf(b.dataset.creset); if (!it) return; if (it.svc) D.svc[it.svc][it.f] = copyDef(it); else D.copy[it.k] = copyDef(it); renderCopy(); });
+    $("copySave").addEventListener("click", function () {
+      if (!$("faqWrap").hidden) D.faq = D.faq.filter(function (f) { return f.q.trim() && f.a.trim(); });
+      Promise.all([H.store("copy", D.copy, "문구 저장 완료"), H.store("svc", D.svc, "", "서비스 문구"), H.store("faq", D.faq, "", "FAQ")]).then(renderCopy).catch(function () {});
+    });
   }
 
   /* ================= 포트폴리오 ================= */
@@ -236,7 +263,6 @@ window.HDApp = (function () {
     $("faqList").addEventListener("input", function (e) { var el = e.target; if (el.dataset.fq != null) D.faq[+el.dataset.fq].q = el.value; if (el.dataset.fa != null) D.faq[+el.dataset.fa].a = el.value; });
     $("faqList").addEventListener("click", function (e) { var b = e.target.closest("[data-fdel]"); if (!b) return; H.confirm("FAQ 삭제", "이 질문을 지울까요?", "삭제", true).then(function (ok) { if (ok) { D.faq.splice(+b.dataset.fdel, 1); renderFaq(); } }); });
     $("faqAdd").addEventListener("click", function () { D.faq.push({ q: "", a: "" }); renderFaq(); $("faqList").lastElementChild.scrollIntoView({ behavior: "smooth" }); });
-    $("faqSave").addEventListener("click", function () { D.faq = D.faq.filter(function (f) { return f.q.trim() && f.a.trim(); }); renderFaq(); H.store("faq", D.faq, "FAQ 저장 완료"); });
     H.dragSort($("faqList"), function (from, to) { var it = D.faq.splice(from, 1)[0]; D.faq.splice(to, 0, it); renderFaq(); });
   }
 
@@ -368,7 +394,7 @@ window.HDApp = (function () {
     document.querySelectorAll(".tab").forEach(function (s) { s.classList.toggle("on", s.id === "tab-" + t); });
     if (t === "inq") refreshInq(); if (t === "dash") renderDash(); location.hash = t; window.scrollTo(0, 0);
   }
-  function renderAll() { renderDash(); renderHero(); renderSlots(); renderCopy(); renderWorks(); renderPosts(); renderFaq(); renderSeo(); renderSet(); renderAcc(); renderLog(); refreshInq(); H.renderStatus(); $("whoami").textContent = H.me; }
+  function renderAll() { renderDash(); renderHero(); renderSlots(); renderCopy(); renderWorks(); renderPosts(); renderSeo(); renderSet(); renderAcc(); renderLog(); refreshInq(); H.renderStatus(); $("whoami").textContent = H.me; }
   var started = false;
   function start() { if (started) { renderAll(); return; } started = true; D = H.D; DEF = H.DEF; bindCommon(); bindHero(); bindSlots(); bindCopy(); bindWorks(); bindPosts(); bindFaq(); bindInq(); bindSeo(); bindSet(); bindAcc(); renderAll(); var t = location.hash.replace("#", ""); if (t && $("tab-" + t)) showTab(t); }
   return { start: start, renderLog: renderLog, showTab: showTab };

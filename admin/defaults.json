@@ -1151,7 +1151,394 @@
   "pg_contact_h1": "견적문의",
   "pg_contact_lead": "간단한 내용만 남겨주세요. 담당자가 확인 후 빠르게 연락드립니다.",
   "pg_faq_h1": "FAQ",
-  "pg_faq_lead": "하오 DESIGN에 궁금한 점을 확인하세요."
+  "pg_faq_lead": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "about.p.44": "sales@haodesign.co.kr",
+  "about.h4.3": "EMAIL",
+  "about.p.43": "1666-2027 (평일 09:00–18:00)",
+  "about.h4.2": "TEL",
+  "about.p.42": "서울특별시 광진구",
+  "about.h4.1": "ADDRESS",
+  "about.h2.3": "오시는길",
+  "about.p.41": "LOCATION",
+  "about.p.40": "고객님이 만족할 수 있는 고품질의 제작물을 약속드립니다.",
+  "about.p.39": "국내외 기업 · 관공서 브랜드의 제작 경험으로 쌓아온 <b>오랜 노하우</b>를 토대로",
+  "about.p.38": "항상 고객님께 좋은 결과물을 드리기 위해 노력합니다.",
+  "about.p.37": "인쇄물을 건조하고 코팅액을 도포할 때도",
+  "about.p.36": "종이를 고를 때도, 인쇄기를 세팅할 때도,",
+  "about.h3.10": "<span>직접 해 온다는 가치로</span><span><em>하오 DESIGN의 약속</em>을 지킵니다</span>",
+  "about.p.35": "Our Value",
+  "about.p.34": "처음부터 끝까지 함께하겠습니다.",
+  "about.p.33": "<b>가장 합리적이면서 적합한 후가공을 선택</b>해 효과를 극대화하는 것이 중요합니다.",
+  "about.p.32": "단가가 함께 오르기 때문에",
+  "about.p.31": "후가공은 결과물의 퀄리티를 높이는 가장 효과적인 방법이지만",
+  "about.p.30": "인쇄 후 더해지는 모든 공정을 후가공이라고 합니다.",
+  "about.p.29": "금은박 · 일반코팅 · 부분 UV코팅 등",
+  "about.h3.9": "<span>다양한 제작경험으로</span><span><em>높은 지식</em>을 보유하고 있습니다</span>",
+  "about.p.28": "Post-processing",
+  "about.p.27": "합리적인 가격과 최상의 퀄리티로 제작될 수 있도록<br>모든 과정을 체크하고 관리합니다.",
+  "about.p.26": "고객님의 인쇄물에 가장 적합한 <b>인쇄방식과 인쇄기를 선택</b>합니다.",
+  "about.p.25": "다양한 인쇄방식을 제대로 이해하고,",
+  "about.p.24": "스노우지 · 아트지 · 랑데뷰지 · 아르떼 · 몽블랑, 옵셋인쇄 · UV인쇄 등",
+  "about.h3.8": "<span>적합한 인쇄방식으로</span><span><em>최상의 제품 퀄리티</em>를 제공합니다</span>",
+  "about.p.23": "Printing Method",
+  "about.h2.2": "하오 DESIGN 제작설비의 <em>세 가지 특별함</em>",
+  "about.p.22": "FACILITY",
+  "about.p.21": "수정 횟수에 쫓기지 않습니다.<br>고객의 만족과 결과의 완성도가<br>하오 DESIGN의 기준입니다.",
+  "about.h3.7": "만족할 때까지 수정",
+  "about.p.20": "Until You're Satisfied",
+  "about.p.19": "영어 · 중국어 · 일본어 · 베트남어 —<br>언어가 바뀌어도 톤은 흔들리지 않습니다.<br>다국어 편집으로<br>수출 시장까지 한 번에 대응합니다.",
+  "about.h3.6": "다국어 · 수출 대응",
+  "about.p.18": "Global Edition",
+  "about.p.17": "제조 · 뷰티 · 식품 · 의료 · IT —<br>업종이 다르면 언어도 다릅니다.<br>업종별 표현과 규제를 이해한 디자인으로<br>메시지가 정확히 닿게 합니다.",
+  "about.h3.5": "업종의 언어로 디자인",
+  "about.p.16": "Industry-fluent Design",
+  "about.p.15": "기획 · 카피 · 디자인 · 촬영 · 인쇄 · 납품까지<br>하나의 팀이 끝까지 책임집니다.<br>공정 사이의 어긋남이 없어<br>결과물의 톤이 처음부터 끝까지 일관됩니다.",
+  "about.h3.4": "원스톱 책임 제작",
+  "about.p.14": "One-stop Production",
+  "about.li.4": "<button type=\"button\">04. 만족할 때까지 수정</button>",
+  "about.li.3": "<button type=\"button\">03. 다국어 · 수출 대응</button>",
+  "about.li.2": "<button type=\"button\">02. 업종의 언어로 디자인</button>",
+  "about.li.1": "<button type=\"button\">01. 원스톱 책임 제작</button>",
+  "about.p.13": "하오 DESIGN은 다릅니다",
+  "about.p.12": "<span>하오 DESIGN은</span><span>무엇이 다를까요?</span>",
+  "about.p.11": "좋은 디자인 뒤에는 좋은 <mark>과정</mark>이 있습니다",
+  "about.p.10": "고객과 서비스의 특성에 맞춰 기획하고<br>니즈 분석에 따른 1:1 전담 프로세스로<br>오직 고객님에게만 집중합니다.",
+  "about.p.9": "1:1 전담 시스템",
+  "about.h3.3": "PROCESS",
+  "about.p.8": "가장 자신 있고 잘하는 분야의<br>대표 전문가가 고객 만족과<br>높은 수준의 결과물을 최우선으로 합니다.",
+  "about.p.7": "분야별 전문가",
+  "about.h3.2": "PROFESSIONAL",
+  "about.p.6": "대기업·공기업 등 다양한 제작 경험으로<br>상황과 시간을 읽고, 시장에서 빛날 수 있는<br>디자인 결과물을 약속드립니다.",
+  "about.p.5": "차별화된 디자인",
+  "about.h3.1": "CREATIVE",
+  "about.h2.1": "하오 DESIGN은 결과가 아닌 <em>과정까지</em> 책임집니다",
+  "about.p.4": "제조, 뷰티, 식품, 의료, IT — 업종이 다르면 언어도 다릅니다. 10년의 경험으로 업종의 언어를 먼저 이해하고, 영어 · 중국어 · 일본어 등 수출 시장의 언어까지 한 번에 담아냅니다.",
+  "about.p.3": "우리는 디자인만 하고 끝내지 않습니다. 기획과 카피, 사진촬영, 인쇄와 후가공, 납품까지 — 결과물이 손에 쥐어지는 마지막 순간까지 하나의 팀이 책임집니다. 그래서 하오 DESIGN의 작업에는 공정 사이의 어긋남이 없습니다.",
+  "about.p.2": "<span class=\"ab-dropcap\">하</span>오디자인은 2013년부터 카탈로그 · 브로슈어 · 포스터 · 리플렛 등 인쇄 디자인 한 길을 걸어왔습니다. 화면 속 디자인이 넘쳐나는 시대에도, 손에 잡히는 종이 한 장이 만들어내는 신뢰의 무게는 다르다고 믿기 때문입니다.",
+  "about.blockquote.1": "잘 만든 카탈로그 한 권이<br>영업사원 열 명의 몫을 합니다.",
+  "about.h1.1": "우리는 디자인이<br><em>브랜드를 바꾼다고 믿습니다</em>",
+  "about.p.1": "<a href=\"index.html\">HOME</a> / About Us",
+  "board.p.1": "<a href=\"index.html\">HOME</a> / Column",
+  "catalog_brochure.p.18": "네. 자체 촬영 서비스로 제품 컷과 연출 컷을 촬영해 바로 편집디자인에 반영합니다. 촬영과 디자인을 따로 맡길 때 생기는 톤 차이가 없습니다.",
+  "catalog_brochure.p.17": "페이지 수, 인쇄 수량, 후가공(코팅·박·형압), 제품 촬영 포함 여부에 따라 산정됩니다. 사양을 알려주시면 무료로 견적을 안내드립니다.",
+  "catalog_brochure.p.16": "가능합니다. 다만 하오 DESIGN은 카탈로그 디자인부터 인쇄, 후가공, 납품까지 원스톱 진행도 가능하며, 이 경우 색 보정과 인쇄 품질까지 한 팀이 관리합니다.",
+  "catalog_brochure.p.15": "카탈로그는 제품 정보와 스펙을 체계적으로 보여주는 인쇄물이고, 브로슈어는 회사소개, 브랜드 소개, 서비스 설명처럼 메시지 전달에 적합한 홍보물입니다. 하오 DESIGN은 두 가지 모두 기획부터 편집디자인, 인쇄까지 진행합니다.",
+  "catalog_brochure.p.14": "페이지 수, 원고 준비 상태, 촬영 여부에 따라 달라지지만, 하오 DESIGN은 기획, 디자인, 수정, 인쇄 검수, 납품까지 순서대로 진행하며 일반적으로 2~4주가량 소요됩니다.",
+  "catalog_brochure.p.13": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "catalog_brochure.h2.4": "카탈로그 · 브로슈어 자주 묻는 질문",
+  "catalog_brochure.p.12": "<span>카탈로그 제작</span><span>카다로그</span><span>카달로그</span><span>브로슈어 제작</span><span>브로셔</span><span>회사소개서 디자인</span><span>카탈로그 제작 업체</span><span>인쇄물 디자인</span><span>편집디자인</span>",
+  "catalog_brochure.p.11": "카탈로그 제작이나 브로슈어 디자인을 준비할 때는 먼저 목적과 타깃을 명확히 설정하고, 그에 맞는 구성과 페이지 수를 기획하는 것이 중요합니다. 디자인 단계에서는 브랜드 아이덴티티에 맞는 레이아웃과 색상을 적용하고, 인쇄 단계에서는 종이 재질과 후가공(코팅, 박, 제본 등)을 신중히 선택해야 완성도가 높아집니다. 하오 DESIGN은 회사소개서, 제품 카탈로그, 기업 브로슈어까지 기획부터 납품까지 원스톱으로 진행합니다.",
+  "catalog_brochure.h3.7": "카탈로그 및 브로슈어 준비 방법",
+  "catalog_brochure.p.10": "기업의 이미지를 효과적으로 전달하는 가장 기본적인 홍보물이 바로 카탈로그와 브로슈어입니다. 카탈로그 제작은 제품과 서비스를 체계적으로 보여줄 수 있으며, 브로슈어 제작은 브랜드 스토리를 감각적으로 담아내는 데 적합합니다. 기획 단계에서부터 디자인, 인쇄, 후가공까지 전문적인 과정을 거쳐 완성되는 카탈로그 디자인과 브로슈어 디자인은 기업의 신뢰도를 높이고 차별화된 경쟁력을 제공합니다. 전시회, 영업 현장, 온라인 홍보까지 활용도가 높아 많은 기업이 카탈로그 · 브로슈어 제작을 통해 마케팅 성과를 경험하고 있습니다.",
+  "catalog_brochure.h3.6": "카탈로그 및 브로슈어에 대하여",
+  "catalog_brochure.h2.3": "<span>카탈로그제작 · <em>브로슈어제작</em></span>",
+  "catalog_brochure.p.9": "<a class=\"btn btn-line\" href=\"work.html#catalog\">포트폴리오에서 더 보기 <span class=\"arr\">→</span></a>",
+  "catalog_brochure.h2.2": "카탈로그 · 브로슈어 작업 사례",
+  "catalog_brochure.p.8": "WORKS",
+  "catalog_brochure.p.7": "인쇄와 후가공을 진행한 뒤<br>완성된 결과물을 납품합니다.",
+  "catalog_brochure.h3.5": "인쇄 · 납품",
+  "catalog_brochure.span.5": "05",
+  "catalog_brochure.p.6": "전달주신 의견을 반영하고<br>최종 제작 전 결과물을 검수합니다.",
+  "catalog_brochure.h3.4": "수정 · 검수",
+  "catalog_brochure.span.4": "04",
+  "catalog_brochure.p.5": "자료를 검토한 뒤 브랜드에 맞는<br>방향으로 시안을 제작합니다.",
+  "catalog_brochure.h3.3": "기획 · 디자인",
+  "catalog_brochure.span.3": "03",
+  "catalog_brochure.p.4": "프로젝트 범위와 사양을 정리하고<br>견적과 일정을 안내드립니다.",
+  "catalog_brochure.h3.2": "상담 · 견적",
+  "catalog_brochure.span.2": "02",
+  "catalog_brochure.p.3": "제작물 종류와 일정,<br>필요한 내용을 확인합니다.",
+  "catalog_brochure.h3.1": "문의 접수",
+  "catalog_brochure.span.1": "01",
+  "catalog_brochure.h2.1": "진행 과정",
+  "catalog_brochure.p.2": "PROCESS",
+  "catalog_brochure.p.1": "<a href=\"index.html\">HOME</a> / 서비스 / 카탈로그 · 브로슈어",
+  "ci_logo.p.18": "회사 소개와 지향하는 방향, 선호하는 레퍼런스를 정리해 주시면 시안의 정확도가 높아집니다. 정리가 어려우시면 상담에서 함께 잡아드립니다.",
+  "ci_logo.p.17": "네. 로고와 함께 명함, 서식 등 기본 응용 시스템까지 일관된 톤으로 확장해 드립니다.",
+  "ci_logo.p.16": "AI 원본과 인쇄·온라인 겸용 파일을 함께 드립니다. 명함 제작, 홍보물 제작에 바로 활용할 수 있도록 정리해 전달합니다.",
+  "ci_logo.p.15": "CI는 기업 전체의 아이덴티티를, BI는 개별 브랜드나 제품의 아이덴티티를 다룹니다. 하오 DESIGN은 회사 로고부터 브랜드 로고, 응용 시스템까지 함께 설계합니다.",
+  "ci_logo.p.14": "문의 접수, 상담·견적, 기획·디자인, 수정·검수, 최종 파일 전달 순으로 진행됩니다. 브랜드명과 업종, 사용 목적을 알려주시면 방향 정리부터 시작합니다.",
+  "ci_logo.p.13": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "ci_logo.h2.4": "CI · 로고디자인 자주 묻는 질문",
+  "ci_logo.p.12": "<span>로고 제작</span><span>로고 디자인</span><span>CI 디자인</span><span>BI 디자인</span><span>회사 로고</span><span>심볼 로고</span><span>명함 디자인</span>",
+  "ci_logo.p.11": "로고 제작을 의뢰할 때는 회사 소개와 지향하는 방향, 선호하는 레퍼런스를 정리해 전달하면 시안의 정확도가 높아집니다. 완성된 로고는 AI 원본과 인쇄 · 온라인 겸용 파일로 제공받아야 명함 제작, 홍보물 제작에 바로 활용할 수 있습니다. 하오 DESIGN은 로고 디자인부터 기본 응용 시스템, 사용 가이드까지 함께 정리해드립니다.",
+  "ci_logo.h3.7": "로고 및 CI 준비 방법",
+  "ci_logo.p.10": "로고 디자인과 CI 디자인은 브랜드의 첫인상을 결정하는 가장 중요한 자산입니다. 로고 제작은 단순히 예쁜 심볼을 만드는 일이 아니라, 회사의 방향과 가치를 한 번에 전달하는 시각 언어를 설계하는 일입니다. 명함, 서식류, 홍보물, 간판까지 일관되게 적용되는 CI는 기업의 신뢰도를 높이고 브랜드 인지도를 만들어 갑니다.",
+  "ci_logo.h3.6": "로고 및 CI에 대하여",
+  "ci_logo.h2.3": "<span>로고제작 · <em>CI디자인</em></span>",
+  "ci_logo.p.9": "<a class=\"btn btn-line\" href=\"work.html#ci\">포트폴리오에서 더 보기 <span class=\"arr\">→</span></a>",
+  "ci_logo.h2.2": "CI · 로고디자인 작업 사례",
+  "ci_logo.p.8": "WORKS",
+  "ci_logo.p.7": "확정된 로고를 정리해<br>활용 가능한 파일로 전달드립니다.",
+  "ci_logo.h3.5": "최종 파일 전달",
+  "ci_logo.span.5": "05",
+  "ci_logo.p.6": "전달주신 의견을 반영해<br>로고의 완성도를 높입니다.",
+  "ci_logo.h3.4": "수정 · 검수",
+  "ci_logo.span.4": "04",
+  "ci_logo.p.5": "브랜드 컨셉을 바탕으로<br>로고 시안을 제작합니다.",
+  "ci_logo.h3.3": "기획 · 디자인",
+  "ci_logo.span.3": "03",
+  "ci_logo.p.4": "로고 제작 범위와 방향을 정리하고<br>견적과 일정을 안내드립니다.",
+  "ci_logo.h3.2": "상담 · 견적",
+  "ci_logo.span.2": "02",
+  "ci_logo.p.3": "브랜드명, 업종, 사용 목적 등<br>필요한 내용을 확인합니다.",
+  "ci_logo.h3.1": "문의 접수",
+  "ci_logo.span.1": "01",
+  "ci_logo.h2.1": "진행 과정",
+  "ci_logo.p.2": "PROCESS",
+  "ci_logo.p.1": "<a href=\"index.html\">HOME</a> / 서비스 / CI · 로고디자인",
+  "contact.p.1": "<a href=\"index.html\">HOME</a> / 견적문의",
+  "faq.p.2": "더 궁금한 점이 있으신가요? <a href=\"contact.html\">견적문의 남기기 &rarr;</a> <span>·</span> <a href=\"tel:16662027\">1666-2027</a>",
+  "faq.p.1": "<a href=\"index.html\">HOME</a> / 견적문의 / FAQ",
+  "global_design.p.18": "네. 전시회·해외 영업용 다국어 홍보물은 수출바우처 등 정부지원사업과 연계해 제작 부담을 줄일 수 있습니다.",
+  "global_design.p.17": "네. 원본 제작과 다국어 편집을 같은 팀이 원스톱으로 진행해, 언어가 늘어도 일관된 톤을 유지합니다.",
+  "global_design.p.16": "언어별 글줄 길이와 타이포그래피 호흡에 맞춰 재조판하는 작업입니다. 원본의 레이아웃과 브랜드 톤을 유지하는 것이 핵심입니다.",
+  "global_design.p.15": "네. 번역문이 준비되어 있으면 진행이 가장 빠르지만, 없는 경우 번역 협업도 가능합니다.",
+  "global_design.p.14": "영어·중국어·일본어·베트남어 등 5개국 다국어 인쇄물 제작에 대응합니다. 필요한 언어를 알려주시면 진행 방식을 안내드립니다.",
+  "global_design.p.13": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "global_design.h2.4": "다국어디자인 자주 묻는 질문",
+  "global_design.p.12": "<span>다국어 카탈로그</span><span>영문 카탈로그</span><span>영문 브로셔</span><span>영문 카다로그</span><span>중문 카탈로그</span><span>일문 카탈로그</span><span>수출 인쇄물</span>",
+  "global_design.p.11": "다국어 카탈로그 제작을 준비할 때는 원본 디자인 파일과 언어별 번역문을 함께 준비하면 진행이 빠릅니다. 번역문이 없는 경우 번역 협업도 가능하며, 언어가 늘어도 일관된 톤을 유지하도록 같은 팀이 전체 언어를 관리하는 것이 좋습니다. 하오 DESIGN은 영어 · 중국어 · 일본어 등 다국어 편집을 원본 제작과 함께 원스톱으로 진행합니다.",
+  "global_design.h3.7": "다국어 디자인 준비 방법",
+  "global_design.p.10": "수출 기업에게 영문 카탈로그 제작, 중문 브로슈어 제작은 해외 바이어를 만나는 첫인상입니다. 다국어 디자인은 단순 번역이 아니라 언어별 글줄 길이와 타이포그래피 호흡에 맞춘 재조판 작업으로, 원본의 레이아웃과 브랜드 톤을 유지하는 것이 핵심입니다. 전시회 · 해외 영업용 다국어 홍보물은 수출바우처 등 정부지원사업과 연계해 제작 부담을 줄일 수도 있습니다.",
+  "global_design.h3.6": "다국어 디자인에 대하여",
+  "global_design.h2.3": "<span>다국어카탈로그 · <em>영문브로슈어제작</em></span>",
+  "global_design.p.9": "<a class=\"btn btn-line\" href=\"work.html#global\">포트폴리오에서 더 보기 <span class=\"arr\">→</span></a>",
+  "global_design.h2.2": "다국어디자인 작업 사례",
+  "global_design.p.8": "WORKS",
+  "global_design.p.7": "최종 내용을 검수한 뒤<br>사용 가능한 파일로 전달드립니다.",
+  "global_design.h3.5": "검수 · 파일 전달",
+  "global_design.span.5": "05",
+  "global_design.p.6": "번역된 내용을 디자인에 반영해<br>언어별 가독성과 구성을 조정합니다.",
+  "global_design.h3.4": "다국어 디자인",
+  "global_design.span.4": "04",
+  "global_design.p.5": "원문 내용을 확인한 뒤<br>사용 언어에 맞게 번역을 진행합니다.",
+  "global_design.h3.3": "번역 · 자료 정리",
+  "global_design.span.3": "03",
+  "global_design.p.4": "번역 범위와 디자인 작업 내용을<br>정리하고 견적과 일정을 안내드립니다.",
+  "global_design.h3.2": "상담 · 견적",
+  "global_design.span.2": "02",
+  "global_design.p.3": "제작물 종류, 언어, 일정 등<br>필요한 내용을 확인합니다.",
+  "global_design.h3.1": "문의 접수",
+  "global_design.span.1": "01",
+  "global_design.h2.1": "진행 과정",
+  "global_design.p.2": "PROCESS",
+  "global_design.p.1": "<a href=\"index.html\">HOME</a> / 서비스 / 다국어디자인",
+  "index.p.74": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "index.h2.7": "자주 묻는 질문",
+  "index.h2.6": "고객과 함께 걸어가는 <em>하오 DESIGN</em>",
+  "index.p.73": "식품기업 마케팅팀 한OO 과장",
+  "index.p.72": "패키지 리뉴얼 후 매대에서 확실히 눈에 띕니다. 다음 라인업도 맡길 예정이에요.",
+  "index.p.71": "식품기업",
+  "index.p.70": "연구기관 대외협력팀 윤OO 선임",
+  "index.p.69": "영문·국문 자료를 같은 톤으로 정리해주셔서 해외 협력 자리에서 깔끔했습니다.",
+  "index.p.68": "연구기관",
+  "index.p.67": "문화재단 기획팀 최OO 대리",
+  "index.p.66": "전시·행사 홍보물을 시안 단계부터 방향을 잘 잡아주셨어요. 멀리서도 눈에 잘 띕니다.",
+  "index.p.65": "문화재단",
+  "index.p.64": "대학교 홍보팀 박OO 주임",
+  "index.p.63": "모집 시즌 급한 일정에도 퀄리티를 놓치지 않으셨어요. 인쇄·납품까지 한 번에 끝나 든든했습니다.",
+  "index.p.62": "대학교",
+  "index.p.61": "은행 홍보팀 이OO 과장",
+  "index.p.60": "브랜드 톤을 정확히 잡아주셔서 홍보물이 일관돼졌어요. 소통도 빠르고 편했습니다.",
+  "index.p.59": "은행",
+  "index.p.58": "보험사 마케팅팀 김OO 팀장",
+  "index.p.57": "회사 안내 자료를 새로 만들면서 신뢰감이 확 살았어요. 고객 응대 현장에서 반응이 좋습니다.",
+  "index.p.56": "보험사",
+  "index.p.55": "식품기업 마케팅팀 한OO 과장",
+  "index.p.54": "패키지 리뉴얼 후 매대에서 확실히 눈에 띕니다. 다음 라인업도 맡길 예정이에요.",
+  "index.p.53": "식품기업",
+  "index.p.52": "연구기관 대외협력팀 윤OO 선임",
+  "index.p.51": "영문·국문 자료를 같은 톤으로 정리해주셔서 해외 협력 자리에서 깔끔했습니다.",
+  "index.p.50": "연구기관",
+  "index.p.49": "문화재단 기획팀 최OO 대리",
+  "index.p.48": "전시·행사 홍보물을 시안 단계부터 방향을 잘 잡아주셨어요. 멀리서도 눈에 잘 띕니다.",
+  "index.p.47": "문화재단",
+  "index.p.46": "대학교 홍보팀 박OO 주임",
+  "index.p.45": "모집 시즌 급한 일정에도 퀄리티를 놓치지 않으셨어요. 인쇄·납품까지 한 번에 끝나 든든했습니다.",
+  "index.p.44": "대학교",
+  "index.p.43": "은행 홍보팀 이OO 과장",
+  "index.p.42": "브랜드 톤을 정확히 잡아주셔서 홍보물이 일관돼졌어요. 소통도 빠르고 편했습니다.",
+  "index.p.41": "은행",
+  "index.p.40": "보험사 마케팅팀 김OO 팀장",
+  "index.p.39": "회사 안내 자료를 새로 만들면서 신뢰감이 확 살았어요. 고객 응대 현장에서 반응이 좋습니다.",
+  "index.p.38": "보험사",
+  "index.p.37": "함께한 클라이언트들이 남겨주신 실제 프로젝트 후기입니다.",
+  "index.h2.5": "함께한 브랜드들이 말하는 <em>하오 DESIGN</em>",
+  "index.p.36": "하오 DESIGN이 직접 기획하고 완성한 실제 작업물입니다.",
+  "index.h2.4": "제작 사례",
+  "index.p.35": "다양한 트렌드에 맞춰 디스플레이와 상품 구매,<br>홍보에도 큰 영향을 미치는 디자인 제품입니다.",
+  "index.p.34": "물품을 보여주는 최종 겉면 형태로,<br>내용물을 보호하는 것이 기본 목적입니다.",
+  "index.h3.11": "다국어디자인",
+  "index.p.33": "Global Design",
+  "index.p.32": "간편하고, 빠른 일정안에 제작이 가능한 품목입니다.",
+  "index.p.31": "정기적으로 수요가 발생하는 다양한 디자인 취급상품들을 소개합니다.",
+  "index.h3.10": "촬영서비스",
+  "index.p.30": "Photography",
+  "index.p.29": "부담이 적은 비용으로 진행이 가능하며 다양한 목적으로 활용될 수 있습니다.",
+  "index.p.28": "홍보를 목적으로 만든 낱장의 종이 인쇄물로 접는 방식에 따라 분류가 다양합니다.",
+  "index.h3.9": "패키지.라벨",
+  "index.p.27": "Package &amp; Label",
+  "index.p.26": "시선을 사로잡는 디자인으로 많은 사람들이 쉽게 이해할 수 있도록<br>제작하여 높은 홍보효과를 이끌어 냅니다.",
+  "index.p.25": "회사, 브랜드, 상품, 서비스의 소개를 목적으로 한 인쇄물로<br>다양한 목적으로 사용되는 책자 등을 말합니다.",
+  "index.h3.8": "CI&amp;로고디자인",
+  "index.p.24": "CI &amp; Logo Design",
+  "index.p.23": "간편하고, 빠른 일정안에 제작이 가능한 품목입니다.",
+  "index.p.22": "정기적으로 수요가 발생하는 다양한 디자인 취급상품들을 소개합니다.",
+  "index.h3.7": "포스터&amp;전단지",
+  "index.p.21": "Poster &amp; Flyer",
+  "index.p.20": "부담이 적은 비용으로 진행이 가능하며 다양한 목적으로 활용될 수 있습니다.",
+  "index.p.19": "홍보를 목적으로 만든 낱장의 종이 인쇄물로 접는 방식에 따라 분류가 다양합니다.",
+  "index.h3.6": "리플렛",
+  "index.p.18": "Leaflet",
+  "index.p.17": "시선을 사로잡는 디자인으로 많은 사람들이 쉽게 이해할 수 있도록<br>제작하여 높은 홍보효과를 이끌어 냅니다.",
+  "index.p.16": "회사, 브랜드, 상품, 서비스의 소개를 목적으로 한 인쇄물로<br>다양한 목적으로 사용되는 책자 등을 말합니다.",
+  "index.h3.5": "카다로그&amp;브로셔",
+  "index.p.15": "Catalog &amp; Brochure",
+  "index.h3.4": "10년 이상의 실무 경험으로<br>브랜드의 방향을 제안합니다",
+  "index.p.14": "04.",
+  "index.h3.3": "자체 스튜디오와 인쇄소를 통해<br>기획부터 제작까지 한 번에",
+  "index.p.13": "03.",
+  "index.h3.2": "프로젝트별 전담 디자이너가<br>처음부터 끝까지 함께합니다",
+  "index.p.12": "02.",
+  "index.h3.1": "좋은 결과는 결국<br>좋은 소통에서 시작됩니다",
+  "index.p.11": "01.",
+  "index.p.10": "좋은 디자인 뒤에는<br>좋은 과정이 있습니다",
+  "index.h2.3": "수많은 브랜드가<br><em>하오 DESIGN</em>을 선택한 이유",
+  "index.p.9": "하오 DESIGN은 지난 10년간 카탈로그·브로슈어·패키지 등 누적 4,500건 이상을 제작했고, 재의뢰율 98%를 기록하고 있습니다.<br>영어·중국어·일본어·베트남어 등 5개국 다국어 인쇄물 제작에 대응합니다.",
+  "index.p.8": "다국어 대응",
+  "index.p.7": "재의뢰율",
+  "index.p.6": "디자인 경력",
+  "index.p.5": "누적 제작",
+  "index.h2.2": "하오 DESIGN에서 <em>ONE STOP!</em>으로",
+  "index.p.4": "기업이 필요한 디자인, 기획부터 제작까지",
+  "index.p.3": "HAODESIGN",
+  "index.p.2": "CREATIVE",
+  "index.p.1": "CREATIVE  DESIGN",
+  "index.h2.1": "HAODESIGN",
+  "leaflet_pamphlet.p.18": "가능합니다. 전달할 핵심 메시지와 자료를 주시면 정보의 순서와 구성 기획부터 함께 진행합니다.",
+  "leaflet_pamphlet.p.17": "네. 소량은 디지털 인쇄로, 대량은 옵셋 인쇄로 진행해 수량과 목적에 맞는 방식을 제안드립니다.",
+  "leaflet_pamphlet.p.16": "배포 장소와 정보량에 따라 2단·3단·대문접지 중 알맞은 방식을 제안드립니다. 접지에 따라 읽는 순서가 달라지므로 구성 기획 단계에서 함께 결정합니다.",
+  "leaflet_pamphlet.p.15": "보통 여러 장을 제본한 소책자를 팜플렛, 한 장을 접어 만든 인쇄물을 리플렛이라 부릅니다. 하오 DESIGN은 두 형태 모두 기획부터 디자인, 인쇄까지 원스톱으로 제작합니다.",
+  "leaflet_pamphlet.p.14": "구성과 수량에 따라 다르지만 리플렛 디자인부터 인쇄까지 보통 1~2주가량 소요됩니다. 행사 일정이 정해져 있다면 상담 시 알려주세요.",
+  "leaflet_pamphlet.p.13": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "leaflet_pamphlet.h2.4": "팜플렛 · 리플렛 자주 묻는 질문",
+  "leaflet_pamphlet.p.12": "<span>리플렛 제작</span><span>리플릿</span><span>팜플렛 제작</span><span>팜플릿</span><span>팸플릿</span><span>3단 리플렛</span><span>접지 인쇄</span><span>홍보물 제작</span>",
+  "leaflet_pamphlet.p.11": "팜플렛 제작을 준비할 때는 배포 장소와 대상, 전달할 핵심 메시지를 먼저 정해야 합니다. 접지 방식(2단 · 3단 · 대문접지)에 따라 정보의 순서가 달라지므로 구성 기획이 중요하고, 용지 평량과 코팅 여부에 따라 손에 닿는 인상이 달라집니다. 하오 DESIGN은 소량 디지털 인쇄부터 대량 옵셋 인쇄까지 목적과 수량에 맞는 팜플렛 · 리플렛 제작을 제안해드립니다.",
+  "leaflet_pamphlet.h3.7": "팜플렛 및 리플렛 준비 방법",
+  "leaflet_pamphlet.p.10": "행사 안내, 제품 소개, 매장 홍보에 가장 널리 쓰이는 인쇄물이 팜플렛과 리플렛입니다. 리플렛 제작은 2단 · 3단 접지로 작은 지면에 핵심 정보를 효율적으로 담을 수 있고, 팜플렛 디자인은 배포와 휴대가 쉬워 전시회 · 박람회 · 오프라인 마케팅에서 높은 효과를 냅니다. 접지 방식과 읽는 동선까지 계산된 리플렛 디자인은 같은 내용도 더 잘 전달되게 만듭니다.",
+  "leaflet_pamphlet.h3.6": "팜플렛 및 리플렛에 대하여",
+  "leaflet_pamphlet.h2.3": "<span>팜플렛제작 · <em>리플렛제작</em></span>",
+  "leaflet_pamphlet.p.9": "<a class=\"btn btn-line\" href=\"work.html#leaflet\">포트폴리오에서 더 보기 <span class=\"arr\">→</span></a>",
+  "leaflet_pamphlet.h2.2": "팜플렛 · 리플렛 작업 사례",
+  "leaflet_pamphlet.p.8": "WORKS",
+  "leaflet_pamphlet.p.7": "인쇄와 후가공을 진행한 뒤<br>완성된 결과물을 납품합니다.",
+  "leaflet_pamphlet.h3.5": "인쇄 · 납품",
+  "leaflet_pamphlet.span.5": "05",
+  "leaflet_pamphlet.p.6": "전달주신 의견을 반영하고<br>최종 제작 전 결과물을 검수합니다.",
+  "leaflet_pamphlet.h3.4": "수정 · 검수",
+  "leaflet_pamphlet.span.4": "04",
+  "leaflet_pamphlet.p.5": "자료를 검토한 뒤 브랜드에 맞는<br>방향으로 시안을 제작합니다.",
+  "leaflet_pamphlet.h3.3": "기획 · 디자인",
+  "leaflet_pamphlet.span.3": "03",
+  "leaflet_pamphlet.p.4": "프로젝트 범위와 사양을 정리하고<br>견적과 일정을 안내드립니다.",
+  "leaflet_pamphlet.h3.2": "상담 · 견적",
+  "leaflet_pamphlet.span.2": "02",
+  "leaflet_pamphlet.p.3": "제작물 종류와 일정,<br>필요한 내용을 확인합니다.",
+  "leaflet_pamphlet.h3.1": "문의 접수",
+  "leaflet_pamphlet.span.1": "01",
+  "leaflet_pamphlet.h2.1": "진행 과정",
+  "leaflet_pamphlet.p.2": "PROCESS",
+  "leaflet_pamphlet.p.1": "<a href=\"index.html\">HOME</a> / 서비스 / 팜플렛 · 리플렛",
+  "package_label.p.18": "같은 패키지 디자인도 재질과 후가공에 따라 인상이 크게 달라지므로, 재질 샘플을 기반으로 제품에 맞는 조합을 제안드립니다.",
+  "package_label.p.17": "가능합니다. 라벨, 스티커, 쇼핑백 등 필요한 품목만 따로 제작할 수 있습니다.",
+  "package_label.p.16": "네. 소량 디지털 패키지부터 대량 옵셋 양산까지 수량에 맞는 방식을 제안드립니다.",
+  "package_label.p.15": "네. 패키지 구조 설계부터 진행하며, 칼선이 필요한 단상자는 샘플 확인 후 양산에 들어가 안전합니다.",
+  "package_label.p.14": "제품 실물 또는 정확한 치수, 그리고 식품·화장품 등 품목별 표시사항 문구를 정리해 주시면 진행이 빠릅니다.",
+  "package_label.p.13": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "package_label.h2.4": "패키지 · 라벨 자주 묻는 질문",
+  "package_label.p.12": "<span>패키지 디자인</span><span>패키지 제작</span><span>박스 디자인</span><span>단상자 제작</span><span>포장지 디자인</span><span>라벨 디자인</span><span>스티커 제작</span><span>쇼핑백</span>",
+  "package_label.p.11": "패키지 제작을 준비할 때는 제품 실물 또는 정확한 치수와 함께 식품 · 화장품 등 품목별 표시사항 문구를 먼저 정리해야 합니다. 칼선(목형) 설계가 필요한 단상자 제작은 샘플 확인 후 양산에 들어가는 것이 안전합니다. 하오 DESIGN은 소량 디지털 패키지부터 대량 옵셋 양산까지 재질 샘플 기반으로 제안해드립니다.",
+  "package_label.h3.7": "패키지 및 라벨 준비 방법",
+  "package_label.p.10": "패키지 디자인은 매대에서 제품이 스스로 말을 걸게 만드는 가장 강력한 마케팅 도구입니다. 단상자 제작, 라벨 디자인, 스티커 제작, 쇼핑백 제작까지 — 제품을 감싸는 모든 요소가 브랜드 경험의 일부가 됩니다. 재질과 후가공에 따라 같은 디자인도 전혀 다른 인상을 주기 때문에 구조 설계부터 신중하게 접근해야 합니다.",
+  "package_label.h3.6": "패키지 및 라벨에 대하여",
+  "package_label.h2.3": "<span>패키지디자인 · <em>라벨제작</em></span>",
+  "package_label.p.9": "<a class=\"btn btn-line\" href=\"work.html#package\">포트폴리오에서 더 보기 <span class=\"arr\">→</span></a>",
+  "package_label.h2.2": "패키지 · 라벨 작업 사례",
+  "package_label.p.8": "WORKS",
+  "package_label.p.7": "인쇄와 후가공을 진행한 뒤<br>완성된 결과물을 납품합니다.",
+  "package_label.h3.5": "인쇄 · 납품",
+  "package_label.span.5": "05",
+  "package_label.p.6": "전달주신 의견을 반영하고<br>최종 제작 전 결과물을 검수합니다.",
+  "package_label.h3.4": "수정 · 검수",
+  "package_label.span.4": "04",
+  "package_label.p.5": "자료를 검토한 뒤 브랜드에 맞는<br>방향으로 시안을 제작합니다.",
+  "package_label.h3.3": "기획 · 디자인",
+  "package_label.span.3": "03",
+  "package_label.p.4": "프로젝트 범위와 사양을 정리하고<br>견적과 일정을 안내드립니다.",
+  "package_label.h3.2": "상담 · 견적",
+  "package_label.span.2": "02",
+  "package_label.p.3": "제작물 종류와 일정,<br>필요한 내용을 확인합니다.",
+  "package_label.h3.1": "문의 접수",
+  "package_label.span.1": "01",
+  "package_label.h2.1": "진행 과정",
+  "package_label.p.2": "PROCESS",
+  "package_label.p.1": "<a href=\"index.html\">HOME</a> / 서비스 / 패키지 · 라벨",
+  "poster_flyer.p.18": "네. 카피 위계 설계부터 디자인, 인쇄, 납품까지 원스톱으로 진행합니다.",
+  "poster_flyer.p.17": "시안 확정 전까지 협의를 통해 수정을 진행합니다. 부착 환경에서 잘 읽히는지까지 검토해 완성합니다.",
+  "poster_flyer.p.16": "포스터·전단지는 비교적 짧은 일정으로 제작 가능한 품목입니다. 일정을 먼저 알려주시면 가능한 범위를 안내드립니다.",
+  "poster_flyer.p.15": "배포 수량에 따라 소량은 디지털 인쇄, 대량은 옵셋 인쇄로 진행해 비용을 효율적으로 맞춥니다.",
+  "poster_flyer.p.14": "부착 장소와 보는 거리를 고려해 A3부터 A0까지 제안드립니다. 멀리서 봐야 하는 장소일수록 큰 사이즈와 굵은 글자 위계가 필요합니다.",
+  "poster_flyer.p.13": "하오 DESIGN에 궁금한 점을 확인하세요.",
+  "poster_flyer.h2.4": "포스터 · 전단지 자주 묻는 질문",
+  "poster_flyer.p.12": "<span>포스터 제작</span><span>포스터 디자인</span><span>포스터 인쇄</span><span>전단지 제작</span><span>전단 인쇄</span><span>전단지 디자인</span><span>행사 포스터</span>",
+  "poster_flyer.p.11": "포스터 디자인을 준비할 때는 부착 장소와 보는 거리를 먼저 고려해 사이즈(A3~A0)와 글자 크기를 정해야 합니다. 전단지 제작은 배포 수량과 방식에 따라 용지와 인쇄 방식(디지털 · 옵셋)을 선택하면 비용을 효율적으로 줄일 수 있습니다. 하오 DESIGN은 목적에 맞는 카피 위계 설계부터 인쇄 · 납품까지 한 번에 진행합니다.",
+  "poster_flyer.h3.7": "포스터 및 전단지 준비 방법",
+  "poster_flyer.p.10": "포스터 제작과 전단지 제작은 가장 직관적인 오프라인 홍보 수단입니다. 행사 포스터, 공연 포스터, 모집 공고 포스터는 멀리서도 읽히는 타이포그래피와 임팩트 있는 비주얼이 핵심이며, 판촉용 전단지는 짧은 시간에 혜택과 정보를 전달하는 구성이 중요합니다. 잘 만든 포스터 디자인 한 장은 지나가는 사람의 발걸음을 멈추게 합니다.",
+  "poster_flyer.h3.6": "포스터 및 전단지에 대하여",
+  "poster_flyer.h2.3": "<span>포스터제작 · <em>전단지제작</em></span>",
+  "poster_flyer.p.9": "<a class=\"btn btn-line\" href=\"work.html#poster\">포트폴리오에서 더 보기 <span class=\"arr\">→</span></a>",
+  "poster_flyer.h2.2": "포스터 · 전단지 작업 사례",
+  "poster_flyer.p.8": "WORKS",
+  "poster_flyer.p.7": "인쇄와 후가공을 진행한 뒤<br>완성된 결과물을 납품합니다.",
+  "poster_flyer.h3.5": "인쇄 · 납품",
+  "poster_flyer.span.5": "05",
+  "poster_flyer.p.6": "전달주신 의견을 반영하고<br>최종 제작 전 결과물을 검수합니다.",
+  "poster_flyer.h3.4": "수정 · 검수",
+  "poster_flyer.span.4": "04",
+  "poster_flyer.p.5": "자료를 검토한 뒤 브랜드에 맞는<br>방향으로 시안을 제작합니다.",
+  "poster_flyer.h3.3": "기획 · 디자인",
+  "poster_flyer.span.3": "03",
+  "poster_flyer.p.4": "프로젝트 범위와 사양을 정리하고<br>견적과 일정을 안내드립니다.",
+  "poster_flyer.h3.2": "상담 · 견적",
+  "poster_flyer.span.2": "02",
+  "poster_flyer.p.3": "제작물 종류와 일정,<br>필요한 내용을 확인합니다.",
+  "poster_flyer.h3.1": "문의 접수",
+  "poster_flyer.span.1": "01",
+  "poster_flyer.h2.1": "진행 과정",
+  "poster_flyer.p.2": "PROCESS",
+  "poster_flyer.p.1": "<a href=\"index.html\">HOME</a> / 서비스 / 포스터 · 전단지",
+  "work.p.1": "<a href=\"index.html\">HOME</a> / Work",
+  "common.ft.p.1": "카탈로그 · 브로슈어 · 리플렛 · 패키지 디자인 인쇄 제작",
+  "common.ft.h5.1": "상담시간",
+  "common.ft.li.1": "<span>평일</span><span>09:00 – 18:00</span>",
+  "common.ft.li.2": "<span>주말·공휴일</span><span>휴무</span>",
+  "common.ft.h5.2": "대표전화",
+  "common.ft.p.2": "sales@haodesign.co.kr",
+  "common.ft.p.3": "좋은 사람들이 가치를 만드는 기업",
+  "common.ft.p.4": "<b>주식회사 하오커뮤니케이션</b>",
+  "common.ft.li.3": "대표이사 : 박창민",
+  "common.ft.li.4": "사업자등록번호 : 528-87-01037",
+  "common.ft.li.5": "주소 : 서울시 광진구 능동로49길 9, 2F",
+  "common.ft.li.6": "대표번호 : 1666-2027",
+  "common.ft.li.7": "E-mail : <a href=\"mailto:sales@haodesign.co.kr\">sales@haodesign.co.kr</a>",
+  "common.ft.dt.1": "운영채널",
+  "common.ft.dd.1": "<a href=\"https://haodesign.tistory.com/\" target=\"_blank\" rel=\"noopener\">티스토리 1</a><a href=\"https://haodesign02.tistory.com/\" target=\"_blank\" rel=\"noopener\">티스토리 2</a><a href=\"https://haodesign03.tistory.com/\" target=\"_blank\" rel=\"noopener\">티스토리 3</a><a href=\"https://haodesign04.tistory.com/\" target=\"_blank\" rel=\"noopener\">티스토리 4</a><a href=\"https://haodesign05.tistory.com/\" target=\"_blank\" rel=\"noopener\">티스토리 5</a><a href=\"https://haodesign01.blogspot.com/\" target=\"_blank\" rel=\"noopener\">블로거 1</a><a href=\"https://haodesign02.blogspot.com/\" target=\"_blank\" rel=\"noopener\">블로거 2</a><a href=\"https://haodesign03.blogspot.com/\" target=\"_blank\" rel=\"noopener\">블로거 3</a><a href=\"https://haodesign04.blogspot.com/\" target=\"_blank\" rel=\"noopener\">블로거 4</a><a href=\"https://haodesign05.blogspot.com/\" target=\"_blank\" rel=\"noopener\">블로거 5</a>",
+  "common.ft.p.5": "© 2026 하오 DESIGN. All rights reserved.",
+  "common.qt.p.1": "START YOUR PROJECT",
+  "common.qt.li.1": "<b>TIME</b>평일 09:00 – 18:00 (주말·공휴일 휴무)",
+  "common.qt.li.2": "<b>MAIL</b><a href=\"mailto:sales@haodesign.co.kr\">sales@haodesign.co.kr</a>",
+  "common.qt.li.3": "<b>ADDRESS</b>서울시 광진구 능동로49길 9, 2F"
  },
  "settings": {
   "tel": "1666-2027",
@@ -1336,5 +1723,3649 @@
    }
   }
  },
- "headcode": ""
+ "headcode": "",
+ "copy_pages": {
+  "about.html": [
+   {
+    "k": "about.p.1",
+    "tag": "p",
+    "sec": "sp-hero",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "about.h1.1",
+    "tag": "h1",
+    "sec": "sp-hero",
+    "cls": ""
+   },
+   {
+    "k": "about.blockquote.1",
+    "tag": "blockquote",
+    "sec": "story",
+    "cls": "ab-quote ab-quote--bar reveal"
+   },
+   {
+    "k": "about.p.2",
+    "tag": "p",
+    "sec": "story",
+    "cls": ""
+   },
+   {
+    "k": "about.p.3",
+    "tag": "p",
+    "sec": "story",
+    "cls": ""
+   },
+   {
+    "k": "about.p.4",
+    "tag": "p",
+    "sec": "story",
+    "cls": ""
+   },
+   {
+    "k": "about.h2.1",
+    "tag": "h2",
+    "sec": "promise",
+    "cls": "ab-orbit-title reveal"
+   },
+   {
+    "k": "about.h3.1",
+    "tag": "h3",
+    "sec": "promise",
+    "cls": ""
+   },
+   {
+    "k": "about.p.5",
+    "tag": "p",
+    "sec": "promise",
+    "cls": "sub"
+   },
+   {
+    "k": "about.p.6",
+    "tag": "p",
+    "sec": "promise",
+    "cls": ""
+   },
+   {
+    "k": "about.h3.2",
+    "tag": "h3",
+    "sec": "promise",
+    "cls": ""
+   },
+   {
+    "k": "about.p.7",
+    "tag": "p",
+    "sec": "promise",
+    "cls": "sub"
+   },
+   {
+    "k": "about.p.8",
+    "tag": "p",
+    "sec": "promise",
+    "cls": ""
+   },
+   {
+    "k": "about.h3.3",
+    "tag": "h3",
+    "sec": "promise",
+    "cls": ""
+   },
+   {
+    "k": "about.p.9",
+    "tag": "p",
+    "sec": "promise",
+    "cls": "sub"
+   },
+   {
+    "k": "about.p.10",
+    "tag": "p",
+    "sec": "promise",
+    "cls": ""
+   },
+   {
+    "k": "about.p.11",
+    "tag": "p",
+    "sec": "promise",
+    "cls": "ab-orbit-foot"
+   },
+   {
+    "k": "about.p.12",
+    "tag": "p",
+    "sec": "hwIntro",
+    "cls": "hwi-txt"
+   },
+   {
+    "k": "about.p.13",
+    "tag": "p",
+    "sec": "way",
+    "cls": "hw-cap"
+   },
+   {
+    "k": "about.li.1",
+    "tag": "li",
+    "sec": "way",
+    "cls": "on"
+   },
+   {
+    "k": "about.li.2",
+    "tag": "li",
+    "sec": "way",
+    "cls": ""
+   },
+   {
+    "k": "about.li.3",
+    "tag": "li",
+    "sec": "way",
+    "cls": ""
+   },
+   {
+    "k": "about.li.4",
+    "tag": "li",
+    "sec": "way",
+    "cls": ""
+   },
+   {
+    "k": "about.p.14",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "en"
+   },
+   {
+    "k": "about.h3.4",
+    "tag": "h3",
+    "sec": "hwTxt",
+    "cls": ""
+   },
+   {
+    "k": "about.p.15",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "d"
+   },
+   {
+    "k": "about.p.16",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "en"
+   },
+   {
+    "k": "about.h3.5",
+    "tag": "h3",
+    "sec": "hwTxt",
+    "cls": ""
+   },
+   {
+    "k": "about.p.17",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "d"
+   },
+   {
+    "k": "about.p.18",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "en"
+   },
+   {
+    "k": "about.h3.6",
+    "tag": "h3",
+    "sec": "hwTxt",
+    "cls": ""
+   },
+   {
+    "k": "about.p.19",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "d"
+   },
+   {
+    "k": "about.p.20",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "en"
+   },
+   {
+    "k": "about.h3.7",
+    "tag": "h3",
+    "sec": "hwTxt",
+    "cls": ""
+   },
+   {
+    "k": "about.p.21",
+    "tag": "p",
+    "sec": "hwTxt",
+    "cls": "d"
+   },
+   {
+    "k": "about.p.22",
+    "tag": "p",
+    "sec": "facility",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "about.h2.2",
+    "tag": "h2",
+    "sec": "facility",
+    "cls": "fp-heading"
+   },
+   {
+    "k": "about.p.23",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "fp-eyebrow"
+   },
+   {
+    "k": "about.h3.8",
+    "tag": "h3",
+    "sec": "fpStage",
+    "cls": "fp-title"
+   },
+   {
+    "k": "about.p.24",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.25",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.26",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.27",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "fp-quote"
+   },
+   {
+    "k": "about.p.28",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "fp-eyebrow"
+   },
+   {
+    "k": "about.h3.9",
+    "tag": "h3",
+    "sec": "fpStage",
+    "cls": "fp-title"
+   },
+   {
+    "k": "about.p.29",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.30",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.31",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "gap"
+   },
+   {
+    "k": "about.p.32",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.33",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.34",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "fp-quote"
+   },
+   {
+    "k": "about.p.35",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "fp-eyebrow"
+   },
+   {
+    "k": "about.h3.10",
+    "tag": "h3",
+    "sec": "fpStage",
+    "cls": "fp-title"
+   },
+   {
+    "k": "about.p.36",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.37",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.38",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.39",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": ""
+   },
+   {
+    "k": "about.p.40",
+    "tag": "p",
+    "sec": "fpStage",
+    "cls": "fp-quote"
+   },
+   {
+    "k": "about.p.41",
+    "tag": "p",
+    "sec": "location",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "about.h2.3",
+    "tag": "h2",
+    "sec": "location",
+    "cls": "sp-title"
+   },
+   {
+    "k": "about.h4.1",
+    "tag": "h4",
+    "sec": "location",
+    "cls": ""
+   },
+   {
+    "k": "about.p.42",
+    "tag": "p",
+    "sec": "location",
+    "cls": ""
+   },
+   {
+    "k": "about.h4.2",
+    "tag": "h4",
+    "sec": "location",
+    "cls": ""
+   },
+   {
+    "k": "about.p.43",
+    "tag": "p",
+    "sec": "location",
+    "cls": ""
+   },
+   {
+    "k": "about.h4.3",
+    "tag": "h4",
+    "sec": "location",
+    "cls": ""
+   },
+   {
+    "k": "about.p.44",
+    "tag": "p",
+    "sec": "location",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "board.html": [
+   {
+    "k": "board.p.1",
+    "tag": "p",
+    "sec": "sp-hero",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "catalog-brochure.html": [
+   {
+    "k": "catalog_brochure.p.1",
+    "tag": "p",
+    "sec": "svc-cover",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "catalog_brochure.p.2",
+    "tag": "p",
+    "sec": "process",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "catalog_brochure.h2.1",
+    "tag": "h2",
+    "sec": "process",
+    "cls": "ps-title"
+   },
+   {
+    "k": "catalog_brochure.span.1",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "catalog_brochure.h3.1",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "catalog_brochure.p.3",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "catalog_brochure.span.2",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "catalog_brochure.h3.2",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "catalog_brochure.p.4",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "catalog_brochure.span.3",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "catalog_brochure.h3.3",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "catalog_brochure.p.5",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "catalog_brochure.span.4",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "catalog_brochure.h3.4",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "catalog_brochure.p.6",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "catalog_brochure.span.5",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "catalog_brochure.h3.5",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "catalog_brochure.p.7",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "catalog_brochure.p.8",
+    "tag": "p",
+    "sec": "works",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "catalog_brochure.h2.2",
+    "tag": "h2",
+    "sec": "works",
+    "cls": "sp-title"
+   },
+   {
+    "k": "catalog_brochure.p.9",
+    "tag": "p",
+    "sec": "works",
+    "cls": "more"
+   },
+   {
+    "k": "catalog_brochure.h2.3",
+    "tag": "h2",
+    "sec": "about-service",
+    "cls": "bx-title"
+   },
+   {
+    "k": "catalog_brochure.h3.6",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "catalog_brochure.p.10",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "catalog_brochure.h3.7",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "catalog_brochure.p.11",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "catalog_brochure.p.12",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": "bx-tags"
+   },
+   {
+    "k": "catalog_brochure.h2.4",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "catalog_brochure.p.13",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "catalog_brochure.p.14",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "catalog_brochure.p.15",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "catalog_brochure.p.16",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "catalog_brochure.p.17",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "catalog_brochure.p.18",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "ci-logo.html": [
+   {
+    "k": "ci_logo.p.1",
+    "tag": "p",
+    "sec": "svc-cover",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "ci_logo.p.2",
+    "tag": "p",
+    "sec": "process",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "ci_logo.h2.1",
+    "tag": "h2",
+    "sec": "process",
+    "cls": "ps-title"
+   },
+   {
+    "k": "ci_logo.span.1",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "ci_logo.h3.1",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "ci_logo.p.3",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "ci_logo.span.2",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "ci_logo.h3.2",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "ci_logo.p.4",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "ci_logo.span.3",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "ci_logo.h3.3",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "ci_logo.p.5",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "ci_logo.span.4",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "ci_logo.h3.4",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "ci_logo.p.6",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "ci_logo.span.5",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "ci_logo.h3.5",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "ci_logo.p.7",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "ci_logo.p.8",
+    "tag": "p",
+    "sec": "works",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "ci_logo.h2.2",
+    "tag": "h2",
+    "sec": "works",
+    "cls": "sp-title"
+   },
+   {
+    "k": "ci_logo.p.9",
+    "tag": "p",
+    "sec": "works",
+    "cls": "more"
+   },
+   {
+    "k": "ci_logo.h2.3",
+    "tag": "h2",
+    "sec": "about-service",
+    "cls": "bx-title"
+   },
+   {
+    "k": "ci_logo.h3.6",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "ci_logo.p.10",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "ci_logo.h3.7",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "ci_logo.p.11",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "ci_logo.p.12",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": "bx-tags"
+   },
+   {
+    "k": "ci_logo.h2.4",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "ci_logo.p.13",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "ci_logo.p.14",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "ci_logo.p.15",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "ci_logo.p.16",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "ci_logo.p.17",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "ci_logo.p.18",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "contact.html": [
+   {
+    "k": "contact.p.1",
+    "tag": "p",
+    "sec": "sp-hero",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "faq.html": [
+   {
+    "k": "faq.p.1",
+    "tag": "p",
+    "sec": "sp-hero",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "faq.p.2",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "center faq-cta"
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "global-design.html": [
+   {
+    "k": "global_design.p.1",
+    "tag": "p",
+    "sec": "svc-cover",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "global_design.p.2",
+    "tag": "p",
+    "sec": "process",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "global_design.h2.1",
+    "tag": "h2",
+    "sec": "process",
+    "cls": "ps-title"
+   },
+   {
+    "k": "global_design.span.1",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "global_design.h3.1",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "global_design.p.3",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "global_design.span.2",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "global_design.h3.2",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "global_design.p.4",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "global_design.span.3",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "global_design.h3.3",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "global_design.p.5",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "global_design.span.4",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "global_design.h3.4",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "global_design.p.6",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "global_design.span.5",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "global_design.h3.5",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "global_design.p.7",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "global_design.p.8",
+    "tag": "p",
+    "sec": "works",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "global_design.h2.2",
+    "tag": "h2",
+    "sec": "works",
+    "cls": "sp-title"
+   },
+   {
+    "k": "global_design.p.9",
+    "tag": "p",
+    "sec": "works",
+    "cls": "more"
+   },
+   {
+    "k": "global_design.h2.3",
+    "tag": "h2",
+    "sec": "about-service",
+    "cls": "bx-title"
+   },
+   {
+    "k": "global_design.h3.6",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "global_design.p.10",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "global_design.h3.7",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "global_design.p.11",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "global_design.p.12",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": "bx-tags"
+   },
+   {
+    "k": "global_design.h2.4",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "global_design.p.13",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "global_design.p.14",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "global_design.p.15",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "global_design.p.16",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "global_design.p.17",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "global_design.p.18",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "index.html": [
+   {
+    "k": "index.h2.1",
+    "tag": "h2",
+    "sec": "hz",
+    "cls": "hz-title"
+   },
+   {
+    "k": "index.p.1",
+    "tag": "p",
+    "sec": "hz",
+    "cls": "hz-sub"
+   },
+   {
+    "k": "index.p.2",
+    "tag": "p",
+    "sec": "designer",
+    "cls": "big"
+   },
+   {
+    "k": "index.p.3",
+    "tag": "p",
+    "sec": "designer",
+    "cls": "doc-kicker"
+   },
+   {
+    "k": "index.p.4",
+    "tag": "p",
+    "sec": "osFill",
+    "cls": "os-kicker"
+   },
+   {
+    "k": "index.h2.2",
+    "tag": "h2",
+    "sec": "osFill",
+    "cls": "os-title"
+   },
+   {
+    "k": "index.p.5",
+    "tag": "p",
+    "sec": "osFill",
+    "cls": "os-label"
+   },
+   {
+    "k": "index.p.6",
+    "tag": "p",
+    "sec": "osFill",
+    "cls": "os-label"
+   },
+   {
+    "k": "index.p.7",
+    "tag": "p",
+    "sec": "osFill",
+    "cls": "os-label"
+   },
+   {
+    "k": "index.p.8",
+    "tag": "p",
+    "sec": "osFill",
+    "cls": "os-label"
+   },
+   {
+    "k": "index.p.9",
+    "tag": "p",
+    "sec": "osFill",
+    "cls": "os-desc reveal"
+   },
+   {
+    "k": "index.h2.3",
+    "tag": "h2",
+    "sec": "diff",
+    "cls": "sec-title"
+   },
+   {
+    "k": "index.p.10",
+    "tag": "p",
+    "sec": "diff",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "index.p.11",
+    "tag": "p",
+    "sec": "dvList",
+    "cls": "no"
+   },
+   {
+    "k": "index.h3.1",
+    "tag": "h3",
+    "sec": "dvList",
+    "cls": ""
+   },
+   {
+    "k": "index.p.12",
+    "tag": "p",
+    "sec": "dvList",
+    "cls": "no"
+   },
+   {
+    "k": "index.h3.2",
+    "tag": "h3",
+    "sec": "dvList",
+    "cls": ""
+   },
+   {
+    "k": "index.p.13",
+    "tag": "p",
+    "sec": "dvList",
+    "cls": "no"
+   },
+   {
+    "k": "index.h3.3",
+    "tag": "h3",
+    "sec": "dvList",
+    "cls": ""
+   },
+   {
+    "k": "index.p.14",
+    "tag": "p",
+    "sec": "dvList",
+    "cls": "no"
+   },
+   {
+    "k": "index.h3.4",
+    "tag": "h3",
+    "sec": "dvList",
+    "cls": ""
+   },
+   {
+    "k": "index.p.15",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.5",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.16",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.17",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.18",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.6",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.19",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.20",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.21",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.7",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.22",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.23",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.24",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.8",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.25",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.26",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.27",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.9",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.28",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.29",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.30",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.10",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.31",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.32",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.33",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": "svc-kicker"
+   },
+   {
+    "k": "index.h3.11",
+    "tag": "h3",
+    "sec": "services-hao",
+    "cls": "svc-title"
+   },
+   {
+    "k": "index.p.34",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.p.35",
+    "tag": "p",
+    "sec": "services-hao",
+    "cls": ""
+   },
+   {
+    "k": "index.h2.4",
+    "tag": "h2",
+    "sec": "work",
+    "cls": "sec-title"
+   },
+   {
+    "k": "index.p.36",
+    "tag": "p",
+    "sec": "work",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "index.h2.5",
+    "tag": "h2",
+    "sec": "reviews",
+    "cls": "sec-title"
+   },
+   {
+    "k": "index.p.37",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "index.p.38",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.39",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.40",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.41",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.42",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.43",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.44",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.45",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.46",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.47",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.48",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.49",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.50",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.51",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.52",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.53",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.54",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.55",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.56",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.57",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.58",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.59",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.60",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.61",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.62",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.63",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.64",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.65",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.66",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.67",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.68",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.69",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.70",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.p.71",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "cat"
+   },
+   {
+    "k": "index.p.72",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "q"
+   },
+   {
+    "k": "index.p.73",
+    "tag": "p",
+    "sec": "reviews",
+    "cls": "who"
+   },
+   {
+    "k": "index.h2.6",
+    "tag": "h2",
+    "sec": "partners",
+    "cls": "sec-title"
+   },
+   {
+    "k": "index.h2.7",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "index.p.74",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "leaflet-pamphlet.html": [
+   {
+    "k": "leaflet_pamphlet.p.1",
+    "tag": "p",
+    "sec": "svc-cover",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "leaflet_pamphlet.p.2",
+    "tag": "p",
+    "sec": "process",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "leaflet_pamphlet.h2.1",
+    "tag": "h2",
+    "sec": "process",
+    "cls": "ps-title"
+   },
+   {
+    "k": "leaflet_pamphlet.span.1",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "leaflet_pamphlet.h3.1",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "leaflet_pamphlet.p.3",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "leaflet_pamphlet.span.2",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "leaflet_pamphlet.h3.2",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "leaflet_pamphlet.p.4",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "leaflet_pamphlet.span.3",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "leaflet_pamphlet.h3.3",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "leaflet_pamphlet.p.5",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "leaflet_pamphlet.span.4",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "leaflet_pamphlet.h3.4",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "leaflet_pamphlet.p.6",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "leaflet_pamphlet.span.5",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "leaflet_pamphlet.h3.5",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "leaflet_pamphlet.p.7",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "leaflet_pamphlet.p.8",
+    "tag": "p",
+    "sec": "works",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "leaflet_pamphlet.h2.2",
+    "tag": "h2",
+    "sec": "works",
+    "cls": "sp-title"
+   },
+   {
+    "k": "leaflet_pamphlet.p.9",
+    "tag": "p",
+    "sec": "works",
+    "cls": "more"
+   },
+   {
+    "k": "leaflet_pamphlet.h2.3",
+    "tag": "h2",
+    "sec": "about-service",
+    "cls": "bx-title"
+   },
+   {
+    "k": "leaflet_pamphlet.h3.6",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "leaflet_pamphlet.p.10",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "leaflet_pamphlet.h3.7",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "leaflet_pamphlet.p.11",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "leaflet_pamphlet.p.12",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": "bx-tags"
+   },
+   {
+    "k": "leaflet_pamphlet.h2.4",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "leaflet_pamphlet.p.13",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "leaflet_pamphlet.p.14",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "leaflet_pamphlet.p.15",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "leaflet_pamphlet.p.16",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "leaflet_pamphlet.p.17",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "leaflet_pamphlet.p.18",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "package-label.html": [
+   {
+    "k": "package_label.p.1",
+    "tag": "p",
+    "sec": "svc-cover",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "package_label.p.2",
+    "tag": "p",
+    "sec": "process",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "package_label.h2.1",
+    "tag": "h2",
+    "sec": "process",
+    "cls": "ps-title"
+   },
+   {
+    "k": "package_label.span.1",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "package_label.h3.1",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "package_label.p.3",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "package_label.span.2",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "package_label.h3.2",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "package_label.p.4",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "package_label.span.3",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "package_label.h3.3",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "package_label.p.5",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "package_label.span.4",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "package_label.h3.4",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "package_label.p.6",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "package_label.span.5",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "package_label.h3.5",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "package_label.p.7",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "package_label.p.8",
+    "tag": "p",
+    "sec": "works",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "package_label.h2.2",
+    "tag": "h2",
+    "sec": "works",
+    "cls": "sp-title"
+   },
+   {
+    "k": "package_label.p.9",
+    "tag": "p",
+    "sec": "works",
+    "cls": "more"
+   },
+   {
+    "k": "package_label.h2.3",
+    "tag": "h2",
+    "sec": "about-service",
+    "cls": "bx-title"
+   },
+   {
+    "k": "package_label.h3.6",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "package_label.p.10",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "package_label.h3.7",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "package_label.p.11",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "package_label.p.12",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": "bx-tags"
+   },
+   {
+    "k": "package_label.h2.4",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "package_label.p.13",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "package_label.p.14",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "package_label.p.15",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "package_label.p.16",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "package_label.p.17",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "package_label.p.18",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "poster-flyer.html": [
+   {
+    "k": "poster_flyer.p.1",
+    "tag": "p",
+    "sec": "svc-cover",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "poster_flyer.p.2",
+    "tag": "p",
+    "sec": "process",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "poster_flyer.h2.1",
+    "tag": "h2",
+    "sec": "process",
+    "cls": "ps-title"
+   },
+   {
+    "k": "poster_flyer.span.1",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "poster_flyer.h3.1",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "poster_flyer.p.3",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "poster_flyer.span.2",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "poster_flyer.h3.2",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "poster_flyer.p.4",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "poster_flyer.span.3",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "poster_flyer.h3.3",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "poster_flyer.p.5",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "poster_flyer.span.4",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "poster_flyer.h3.4",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "poster_flyer.p.6",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "poster_flyer.span.5",
+    "tag": "span",
+    "sec": "process",
+    "cls": "ps-no"
+   },
+   {
+    "k": "poster_flyer.h3.5",
+    "tag": "h3",
+    "sec": "process",
+    "cls": "ps-tit"
+   },
+   {
+    "k": "poster_flyer.p.7",
+    "tag": "p",
+    "sec": "process",
+    "cls": "ps-desc"
+   },
+   {
+    "k": "poster_flyer.p.8",
+    "tag": "p",
+    "sec": "works",
+    "cls": "sp-tag"
+   },
+   {
+    "k": "poster_flyer.h2.2",
+    "tag": "h2",
+    "sec": "works",
+    "cls": "sp-title"
+   },
+   {
+    "k": "poster_flyer.p.9",
+    "tag": "p",
+    "sec": "works",
+    "cls": "more"
+   },
+   {
+    "k": "poster_flyer.h2.3",
+    "tag": "h2",
+    "sec": "about-service",
+    "cls": "bx-title"
+   },
+   {
+    "k": "poster_flyer.h3.6",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "poster_flyer.p.10",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "poster_flyer.h3.7",
+    "tag": "h3",
+    "sec": "about-service",
+    "cls": "bx-lead"
+   },
+   {
+    "k": "poster_flyer.p.11",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": ""
+   },
+   {
+    "k": "poster_flyer.p.12",
+    "tag": "p",
+    "sec": "about-service",
+    "cls": "bx-tags"
+   },
+   {
+    "k": "poster_flyer.h2.4",
+    "tag": "h2",
+    "sec": "faq",
+    "cls": "sec-title"
+   },
+   {
+    "k": "poster_flyer.p.13",
+    "tag": "p",
+    "sec": "faq",
+    "cls": "sec-desc"
+   },
+   {
+    "k": "poster_flyer.p.14",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "poster_flyer.p.15",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "poster_flyer.p.16",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "poster_flyer.p.17",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "poster_flyer.p.18",
+    "tag": "p",
+    "sec": "faq",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ],
+  "work.html": [
+   {
+    "k": "work.p.1",
+    "tag": "p",
+    "sec": "sp-hero",
+    "cls": "sp-crumb"
+   },
+   {
+    "k": "common.qt.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": "qt-tag"
+   },
+   {
+    "k": "common.qt.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.qt.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.1",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.1",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.1",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.2",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.h5.2",
+    "tag": "h5",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.2",
+    "tag": "p",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.3",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-slogan"
+   },
+   {
+    "k": "common.ft.p.4",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-co"
+   },
+   {
+    "k": "common.ft.li.3",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.4",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.5",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.6",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.li.7",
+    "tag": "li",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dt.1",
+    "tag": "dt",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.dd.1",
+    "tag": "dd",
+    "sec": "common",
+    "cls": ""
+   },
+   {
+    "k": "common.ft.p.5",
+    "tag": "p",
+    "sec": "common",
+    "cls": "ft-copy"
+   }
+  ]
+ }
 }

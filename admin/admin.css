@@ -101,6 +101,9 @@ textarea{min-height:84px;resize:vertical;line-height:1.55}textarea.code,.editor.
 .ccard textarea{min-height:70px;font-family:ui-monospace,Consolas,monospace;font-size:.86rem}.ccard.svc textarea{min-height:56px}.ccard .two{margin-bottom:8px}
 .ccard .pv{margin-top:8px;font-size:.9rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px}.ccard .pv em{font-style:normal;color:var(--accent)}
 .grip{color:#c9c4ba;cursor:grab;margin-right:6px}
+h3.csec{margin:22px 0 8px;font-size:.78rem;letter-spacing:.08em;color:#b5b0a6;text-transform:uppercase}
+.ccard.mod{border-color:#f3d9a4;background:#fffdf7}.ccard label .lite.xs{float:right}
+.ccard input[type=text]{font-size:.9rem}.ccard textarea{min-height:64px}
 .warn{color:var(--warn);font-style:normal}.warnchip{background:#fdecea;color:#c62828;border-radius:999px;padding:1px 8px;font-size:.7rem;font-weight:700}
 .issues{list-style:none;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:.86rem}.issues li{padding:5px 0 5px 18px;position:relative;color:var(--warn)}.issues li::before{content:"!";position:absolute;left:0;font-weight:800}.issues li.ok{color:var(--ok)}.issues li.ok::before{content:"✓"}
 /* 칼럼 에디터 */

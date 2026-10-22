@@ -168,11 +168,13 @@ function columnPage(boardHtml, p, seo) {
     Object.keys(d.copy || {}).forEach(k => { h = fill(h, "copy." + k, d.copy[k]); });
     h = fill(h, "headcode", d.headcode || "");
     h = applySeo(h, f, d.seo || {});
-    /* 연락처: 직전 값 → 새 값 */
-    const old = state.settings;
-    if (old.tel && S.tel && old.tel !== S.tel) h = h.split(old.tel).join(S.tel).split("tel:" + old.tel.replace(/\D/g, "")).join("tel:" + S.tel.replace(/\D/g, ""));
-    if (old.email && S.email && old.email !== S.email) h = h.split(old.email).join(S.email);
-    if (old.address && S.address && old.address !== S.address) h = h.split(old.address).join(S.address);
+    /* 연락처: (직전에 구운 값 → 새 값) + (기본 문구 속 값 → 새 값: 방금 채운 copy 마커 안에도 적용) */
+    [state.settings, JSON.parse(rd("admin/defaults.json")).settings].forEach(old => {
+      if (!old) return;
+      if (old.tel && S.tel && old.tel !== S.tel) h = h.split(old.tel).join(S.tel).split("tel:" + old.tel.replace(/\D/g, "")).join("tel:" + S.tel.replace(/\D/g, ""));
+      if (old.email && S.email && old.email !== S.email) h = h.split(old.email).join(S.email);
+      if (old.address && S.address && old.address !== S.address) h = h.split(old.address).join(S.address);
+    });
     wrIfChanged(f, h);
   }
 
