@@ -35,6 +35,8 @@ p,li,.d{text-wrap:pretty}
 @media (max-width:768px){
   header#hd{height:60px}
   .hd{height:60px;gap:0;justify-content:space-between}
+  .hd-cta{display:none}
+  .hd .logo{flex:0 0 auto}
   .logo img{height:32px!important;width:auto}
   .m-nav{inset:60px 0 0 0}
   html{-webkit-text-size-adjust:100%}
