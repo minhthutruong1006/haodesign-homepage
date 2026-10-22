@@ -1667,7 +1667,7 @@
  },
  "seo": {
   "siteUrl": "https://minhthutruong1006.github.io/haodesign-homepage",
-  "ogImage": "",
+  "ogImage": "assets/og-image.png",
   "pages": {
    "about.html": {
     "title": "회사소개 | 카탈로그·브로슈어·브로셔 디자인 인쇄 전문 | 하오 DESIGN",
@@ -1743,7 +1743,7 @@
    }
   },
   "siteName": "하오 DESIGN",
-  "favicon": "",
+  "favicon": "assets/favicon.png",
   "keywords": "카탈로그 제작, 카달로그 제작, 브로슈어 디자인, 브로셔 제작, 팜플렛 제작, 리플렛 디자인, 포스터 디자인, 전단지 제작, 패키지 디자인, 라벨 디자인, CI 로고 디자인, 다국어 카탈로그, 인쇄 디자인, 회사소개서 디자인",
   "verify": {
    "google": "",
