@@ -16,7 +16,6 @@ window.HDApp = (function () {
     $("stFaq").textContent = (D.faq || []).length;
     var p = H.pending();
     $("dashPending").innerHTML = p.length ? p.map(function (x) { return '<span class="chip wait">' + esc(x) + '</span>'; }).join("") + '<p class="muted" style="margin-top:8px">30분마다 자동 반영됩니다. 바로 반영하려면 상단 버튼을 누르세요.</p>' : '<p class="muted">저장한 내용이 모두 사이트에 반영되어 있습니다.</p>';
-    $("dashSvc").innerHTML = SERVICE.map(function (s) { var n = svcList(s[0]).length, c = svcCount(s[0]); return '<div class="st sm"><b>' + c + '<small>/' + n + '</small></b><span>' + esc(s[1]) + (c < 12 ? ' <em class="warn">' + (n < 12 ? "사진 " + (12 - n) + "장 부족" : "") + '</em>' : "") + '</span></div>'; }).join("");
     renderLog(true);
   }
   function renderLog(dashOnly) {
@@ -94,19 +93,21 @@ window.HDApp = (function () {
   function workIdx(w) { return D.works.indexOf(w); }
   function renderWorks() {
     var counts = { all: D.works.length }; D.works.forEach(function (w) { counts[w.c] = (counts[w.c] || 0) + 1; });
-    $("workChips").innerHTML = [{ k: "all", label: "전체" }].concat(DEF.cats).map(function (c) { return '<button class="chip' + (wFilter === c.k ? " on" : "") + '" data-f="' + c.k + '">' + esc(c.label) + '<b>' + (counts[c.k] || 0) + '</b></button>'; }).join("");
+    $("workChips").innerHTML = [{ k: "all", label: "전체" }].concat(DEF.cats).map(function (c) { return '<button class="' + (wFilter === c.k ? "on" : "") + '" data-f="' + c.k + '">' + esc(c.label) + '<b>' + (counts[c.k] || 0) + '</b></button>'; }).join("");
     $("wCat").innerHTML = DEF.cats.map(function (c) { return '<option value="' + c.k + '">' + esc(c.label) + '</option>'; }).join("");
     var q = wQuery.trim().toLowerCase();
     var list = D.works.filter(function (w) { return (wFilter === "all" || w.c === wFilter) && (!q || (w.t || "").toLowerCase().indexOf(q) >= 0); });
     var svcPos = {}; if (wFilter !== "all") svcList(wFilter).slice(0, svcCount(wFilter)).forEach(function (w, i) { svcPos[workIdx(w)] = i + 1; });
     var selN = Object.keys(wSel).length; $("wSelBar").hidden = !selN; $("wSelN").textContent = selN;
-    $("workCount").textContent = list.length + "장" + (wFilter !== "all" ? " · 서비스 페이지 노출 " + svcCount(wFilter) + "장" : "");
-    var g = $("workList"); g.className = wView === "grid" ? "grid" : "list";
+    $("workCount").textContent = list.length + "장" + (wFilter !== "all" ? " · 서비스 페이지에 " + svcCount(wFilter) + "장 노출" : "");
+    var g = $("workList"); g.className = (wView === "grid" ? "grid" : "list") + (selN ? " selecting" : "");
     g.innerHTML = list.length ? list.map(function (w) {
       var i = workIdx(w), sp = svcPos[i];
-      return '<div class="wk drag' + (wSel[i] ? " sel" : "") + '" draggable="true" data-i="' + i + '"><label class="ck"><input type="checkbox" data-sel="' + i + '"' + (wSel[i] ? " checked" : "") + '></label>' + (sp ? '<span class="pos">서비스 ' + sp + '</span>' : "") + '<img src="' + esc(src(w.img)) + '" alt="" loading="lazy"><div class="t" data-inline="' + i + '" title="두 번 클릭해 제목 수정">' + esc(w.t) + '</div><div class="c">' + esc(catLabel(w.c)) + (w.s ? "<b>서비스 우선</b>" : "") + '</div>' +
-        '<div class="ac"><button data-edit="' + i + '">수정</button><button data-svc="' + i + '">' + (w.s ? "우선 해제" : "서비스 우선") + '</button><button data-del="' + i + '">삭제</button></div></div>';
-    }).join("") : '<p class="empty">작품이 없습니다. "+ 작품 추가" 또는 사진 여러 장을 끌어다 놓으세요.</p>';
+      return '<div class="wk drag' + (wSel[i] ? " sel" : "") + (w.s ? " star" : "") + '" draggable="true" data-i="' + i + '"><label class="ck" title="선택"><input type="checkbox" data-sel="' + i + '"' + (wSel[i] ? " checked" : "") + '></label>' +
+        '<button class="starbtn" data-svc="' + i + '" title="' + (w.s ? "대표작 해제" : "대표작으로 지정") + '">★</button>' + (sp ? '<span class="pos">' + sp + '번째</span>' : "") +
+        '<div class="ph"><img src="' + esc(src(w.img)) + '" alt="" loading="lazy"><div class="hov"><button data-edit="' + i + '" title="수정">수정</button><button data-del="' + i + '" title="삭제">삭제</button></div></div>' +
+        '<div class="t" data-inline="' + i + '" title="두 번 클릭해 제목 수정">' + esc(w.t) + '</div><div class="c">' + esc(catLabel(w.c)) + '</div></div>';
+    }).join("") : '<p class="empty">작품이 없습니다.<br><small>"+ 사진 추가"로 올리거나 사진 파일을 여기에 끌어다 놓으세요.</small></p>';
   }
   function openWork(i) {
     var w = i >= 0 ? D.works[i] : { t: "", c: wFilter === "all" ? DEF.cats[0].k : wFilter, img: "", s: false };
@@ -115,9 +116,9 @@ window.HDApp = (function () {
   }
   function saveWorks(msg) { return H.store("works", D.works, msg || "포트폴리오 저장 완료"); }
   function bindWorks() {
-    $("workChips").addEventListener("click", function (e) { var b = e.target.closest(".chip"); if (b) { wFilter = b.dataset.f; renderWorks(); } });
+    $("workChips").addEventListener("click", function (e) { var b = e.target.closest("[data-f]"); if (b) { wFilter = b.dataset.f; wSel = {}; renderWorks(); } });
     $("workSearch").addEventListener("input", function () { wQuery = this.value; renderWorks(); });
-    $("workView").addEventListener("click", function () { wView = wView === "grid" ? "list" : "grid"; this.textContent = wView === "grid" ? "목록으로" : "그리드로"; renderWorks(); });
+    $("workView").addEventListener("click", function () { wView = wView === "grid" ? "list" : "grid"; this.textContent = wView === "grid" ? "목록 보기" : "그리드 보기"; renderWorks(); });
     $("workAdd").addEventListener("click", function () { openWork(-1); });
     $("workCancel").addEventListener("click", function () { $("workForm").hidden = true; });
     $("wImg").addEventListener("input", function () { wImg = this.value.trim(); $("wImgPv").src = src(wImg); });
@@ -142,7 +143,7 @@ window.HDApp = (function () {
     $("workList").addEventListener("click", function (e) {
       var b = e.target.closest("button"); if (!b) return; var i = +(b.dataset.edit || b.dataset.del || b.dataset.svc);
       if (b.dataset.edit) openWork(i);
-      else if (b.dataset.svc) { D.works[i].s = !D.works[i].s; delete D.works[i].so; renderWorks(); saveWorks(D.works[i].s ? "서비스 페이지 우선 노출" : "우선 노출 해제"); }
+      else if (b.dataset.svc) { D.works[i].s = !D.works[i].s; delete D.works[i].so; renderWorks(); saveWorks(D.works[i].s ? "★ 대표작으로 지정" : "대표작 해제"); }
       else if (b.dataset.del) H.confirm("작품 삭제", '"' + D.works[i].t + '"을(를) 지울까요?', "삭제", true).then(function (ok) { if (ok) { D.works.splice(i, 1); wSel = {}; renderWorks(); saveWorks("삭제했습니다"); } });
     });
     $("workList").addEventListener("change", function (e) { var c = e.target.closest("[data-sel]"); if (c) { if (c.checked) wSel[c.dataset.sel] = 1; else delete wSel[c.dataset.sel]; renderWorks(); } });
@@ -164,7 +165,7 @@ window.HDApp = (function () {
     $("wSelAll").addEventListener("click", function () { var all = $("workList").querySelectorAll("[data-sel]"); var allOn = Array.prototype.every.call(all, function (c) { return c.checked; }); wSel = {}; if (!allOn) Array.prototype.forEach.call(all, function (c) { wSel[c.dataset.sel] = 1; }); renderWorks(); });
     $("wSelCat").innerHTML = DEF.cats.map(function (c) { return '<option value="' + c.k + '">' + esc(c.label) + '</option>'; }).join("");
     $("wBulkCat").addEventListener("click", function () { var c = $("wSelCat").value; Object.keys(wSel).forEach(function (i) { D.works[+i].c = c; }); var n = Object.keys(wSel).length; wSel = {}; renderWorks(); saveWorks(n + "장 분류 변경 → " + catLabel(c)); });
-    $("wBulkSvc").addEventListener("click", function () { var on = Object.keys(wSel).some(function (i) { return !D.works[+i].s; }); Object.keys(wSel).forEach(function (i) { D.works[+i].s = on; delete D.works[+i].so; }); wSel = {}; renderWorks(); saveWorks(on ? "서비스 우선 지정" : "서비스 우선 해제"); });
+    $("wBulkSvc").addEventListener("click", function () { var on = Object.keys(wSel).some(function (i) { return !D.works[+i].s; }); Object.keys(wSel).forEach(function (i) { D.works[+i].s = on; delete D.works[+i].so; }); wSel = {}; renderWorks(); saveWorks(on ? "★ 대표작 지정" : "대표작 해제"); });
     $("wBulkDel").addEventListener("click", function () { var n = Object.keys(wSel).length; H.confirm("작품 " + n + "장 삭제", "선택한 작품을 모두 지웁니다.", "삭제", true).then(function (ok) { if (!ok) return; var ids = Object.keys(wSel).map(Number).sort(function (a, b) { return b - a; }); ids.forEach(function (i) { D.works.splice(i, 1); }); wSel = {}; renderWorks(); saveWorks(n + "장 삭제"); }); });
     $("wSelClear").addEventListener("click", function () { wSel = {}; renderWorks(); });
   }
@@ -251,29 +252,51 @@ window.HDApp = (function () {
       renderInq();
     }).catch(function () { $("inqList").innerHTML = '<p class="empty">불러오지 못했습니다.</p>'; });
   }
+  var inqCur = null;
+  function inqScope() { return inq.filter(function (x) { return x.mine; }); } /* 이 사이트([하오DESIGN]) 문의만 */
+  function parseMsg(x) { /* inquiry.js 가 넣는 "이메일: / 경로: / 내용:" 줄을 풀어낸다 */
+    var o = { email: "", route: "", body: "" }, extra = [];
+    x.message.split("\n").forEach(function (l) { var m; if ((m = l.match(/^이메일:\s*(.*)$/))) o.email = m[1] === "-" ? "" : m[1]; else if ((m = l.match(/^경로:\s*(.*)$/))) o.route = m[1]; else if ((m = l.match(/^내용:\s*(.*)$/))) extra.push(m[1]); else extra.push(l); });
+    o.body = extra.join("\n").trim(); var m = x.name.match(/^(.*?)\s*\((.+)\)$/); o.person = m ? m[1] : x.name; o.company = m ? m[2] : ""; o.type = x.type.replace(/^\[[^\]]*\]\s*/, ""); return o;
+  }
   function renderInq() {
-    var q = inqQ.trim().toLowerCase();
-    var rows = inq.filter(function (x) { return (inqF === "all" || x.mine) && (inqSt === "all" || x.st === inqSt) && (!q || (x.name + x.phone + x.type + x.message + x.memo).toLowerCase().indexOf(q) >= 0); });
-    var mine = inq.filter(function (x) { return x.mine; });
-    $("inqChips").innerHTML = '<button class="chip' + (inqF === "mine" ? " on" : "") + '" data-f="mine">이 사이트<b>' + mine.length + '</b></button><button class="chip' + (inqF === "all" ? " on" : "") + '" data-f="all">하오 전체<b>' + inq.length + '</b></button><span class="sep"></span>' + [["all", "전체"], ["new", "신규"], ["doing", "연락중"], ["done", "완료"]].map(function (s) { return '<button class="chip' + (inqSt === s[0] ? " on" : "") + '" data-st="' + s[0] + '">' + s[1] + '</button>'; }).join("");
+    var q = inqQ.trim().toLowerCase(), scope = inqScope();
+    var rows = scope.filter(function (x) { return (inqSt === "all" || x.st === inqSt) && (!q || (x.name + x.phone + x.type + x.message + x.memo).toLowerCase().indexOf(q) >= 0); });
+    var cnt = { all: scope.length }; scope.forEach(function (x) { cnt[x.st] = (cnt[x.st] || 0) + 1; });
+    $("inqSt").innerHTML = [["all", "전체"], ["new", "신규"], ["doing", "연락중"], ["done", "완료"]].map(function (s) { return '<button class="' + (inqSt === s[0] ? "on" : "") + '" data-st="' + s[0] + '">' + s[1] + '<b>' + (cnt[s[0]] || 0) + '</b></button>'; }).join("");
     $("inqCount").textContent = rows.length + "건";
+    if (inqCur && !rows.some(function (x) { return x.id === inqCur; })) inqCur = null;
+    if (!inqCur && rows.length) inqCur = rows[0].id;
     $("inqList").innerHTML = rows.length ? rows.map(function (x) {
-      var lines = x.message.split("\n"), mail = (x.message.match(/이메일:\s*(\S+)/) || [])[1];
-      return '<div class="row inqrow' + (x.st === "done" ? " dim" : "") + '"><div class="t"><div class="inqhead"><select class="stsel st-' + x.st + '" data-ist="' + x.id + '">' + Object.keys(ST).map(function (k) { return '<option value="' + k + '"' + (x.st === k ? " selected" : "") + '>' + ST[k] + '</option>'; }).join("") + '</select><b>' + esc(x.name) + '</b><a href="tel:' + esc(x.phone.replace(/\D/g, "")) + '">' + esc(x.phone) + '</a>' + (mail && mail !== "-" ? '<a href="mailto:' + esc(mail) + '">' + esc(mail) + '</a>' : "") + '<span class="tag sm' + (x.mine ? "" : " gray") + '">' + esc(x.mine ? x.type.replace(/^\[[^\]]*\]\s*/, "") : x.type) + '</span><small class="muted">' + esc(x.date) + '</small></div><small>' + esc(lines.filter(function (l) { return !/^이메일:/.test(l); }).join("\n")) + '</small><input type="text" class="memo" data-imemo="' + x.id + '" placeholder="내부 메모 (포커스가 빠지면 저장)" value="' + esc(x.memo) + '"></div><div class="ac"><button data-idel="' + x.id + '">삭제</button></div></div>';
-    }).join("") : '<p class="empty">문의가 없습니다.</p>';
+      var p = parseMsg(x);
+      return '<button class="initem st-' + x.st + (x.id === inqCur ? " on" : "") + '" data-iid="' + x.id + '"><span class="dot"></span><span class="t"><b>' + esc(p.person) + (p.company ? ' <small>' + esc(p.company) + '</small>' : "") + '</b><span class="type">' + esc(p.type) + '</span><span class="snip">' + esc(p.body || p.route || "") + '</span></span><time>' + esc(H.fmtDate(x.at, true)) + '</time></button>';
+    }).join("") : '<p class="empty">' + (scope.length ? "조건에 맞는 문의가 없습니다." : "아직 접수된 문의가 없습니다.<br><small>사이트 견적 폼으로 들어오면 여기에 쌓입니다.</small>") + '</p>';
+    renderInqDetail();
+  }
+  function renderInqDetail() {
+    var x = inq.filter(function (q) { return q.id === inqCur; })[0], d = $("inqDetail");
+    if (!x) { d.innerHTML = '<p class="empty">왼쪽에서 문의를 선택하세요.</p>'; return; }
+    var p = parseMsg(x), tel = x.phone.replace(/\D/g, "");
+    d.innerHTML = '<div class="dhead"><div><h3>' + esc(p.person) + (p.company ? ' <small>' + esc(p.company) + '</small>' : "") + '</h3><p class="muted">' + esc(x.date) + ' · #' + x.id + '</p></div><div class="seg st" data-iset="' + x.id + '">' + Object.keys(ST).map(function (k) { return '<button class="' + (x.st === k ? "on st-" + k : "") + '" data-st="' + k + '">' + ST[k] + '</button>'; }).join("") + '</div></div>' +
+      '<div class="dgrid"><div><small>연락처</small><b><a href="tel:' + esc(tel) + '">' + esc(x.phone) + '</a></b></div><div><small>이메일</small><b>' + (p.email ? '<a href="mailto:' + esc(p.email) + '">' + esc(p.email) + '</a>' : '<span class="muted">없음</span>') + '</b></div><div><small>의뢰 분야</small><b>' + esc(p.type || "-") + '</b></div><div><small>유입 경로</small><b>' + esc(p.route || "-") + '</b></div></div>' +
+      '<div class="dbody"><small>문의 내용</small><p>' + (p.body ? esc(p.body) : '<span class="muted">내용 없음</span>') + '</p></div>' +
+      '<div class="dmemo"><small>내부 메모 <span class="muted">· 자동 저장</span></small><textarea data-imemo="' + x.id + '" placeholder="통화 내용, 견적 금액, 다음 할 일…">' + esc(x.memo) + '</textarea></div>' +
+      '<div class="dacts"><button class="lite" data-icopy="' + x.id + '">내용 복사</button><span class="grow"></span><button class="lite danger" data-idel="' + x.id + '">삭제</button></div>';
   }
   function saveMeta(id, patch) { D.inq_meta[id] = Object.assign({}, D.inq_meta[id] || {}, patch, { t: new Date().toISOString() }); return H.sbSave("inq_meta", D.inq_meta).then(function () { toast("저장"); }).catch(function () { toast("저장 실패", true); }); }
   function bindInq() {
-    $("inqChips").addEventListener("click", function (e) { var b = e.target.closest(".chip"); if (!b) return; if (b.dataset.f) inqF = b.dataset.f; if (b.dataset.st) inqSt = b.dataset.st; renderInq(); });
+    $("inqSt").addEventListener("click", function (e) { var b = e.target.closest("[data-st]"); if (b) { inqSt = b.dataset.st; renderInq(); } });
     $("inqSearch").addEventListener("input", function () { inqQ = this.value; renderInq(); });
     $("inqRefresh").addEventListener("click", refreshInq);
-    $("inqCsv").addEventListener("click", function () { var rows = inq.filter(function (x) { return inqF === "all" || x.mine; }); H.csv([["접수일시", "이름", "연락처", "분야", "내용", "상태", "메모"]].concat(rows.map(function (x) { return [x.date, x.name, x.phone, x.type, x.message, ST[x.st], x.memo]; })), "문의_" + new Date().toISOString().slice(0, 10) + ".csv"); });
-    $("inqList").addEventListener("change", function (e) { var s = e.target.closest("[data-ist]"); if (!s) return; var x = inq.filter(function (q) { return String(q.id) === s.dataset.ist; })[0]; x.st = s.value; s.className = "stsel st-" + s.value; saveMeta(x.id, { st: s.value }).then(function () { refreshInq(); }); });
-    $("inqList").addEventListener("focusout", function (e) { var m = e.target.closest("[data-imemo]"); if (!m) return; var x = inq.filter(function (q) { return String(q.id) === m.dataset.imemo; })[0]; if (x.memo !== m.value) { x.memo = m.value; saveMeta(x.id, { memo: m.value }); } });
-    $("inqList").addEventListener("click", function (e) {
+    $("inqCsv").addEventListener("click", function () { H.csv([["접수일시", "담당자", "회사", "연락처", "이메일", "분야", "경로", "내용", "상태", "메모"]].concat(inqScope().map(function (x) { var p = parseMsg(x); return [x.date, p.person, p.company, x.phone, p.email, p.type, p.route, p.body, ST[x.st], x.memo]; })), "문의_" + new Date().toISOString().slice(0, 10) + ".csv"); });
+    $("inqList").addEventListener("click", function (e) { var b = e.target.closest("[data-iid]"); if (b) { inqCur = +b.dataset.iid; renderInq(); } });
+    $("inqDetail").addEventListener("click", function (e) {
+      var s = e.target.closest("[data-iset] [data-st]"); if (s) { var x = inq.filter(function (q) { return q.id === inqCur; })[0]; if (x.st !== s.dataset.st) { x.st = s.dataset.st; renderInq(); saveMeta(x.id, { st: x.st }).then(function () { refreshInq(); }); } return; }
+      var c = e.target.closest("[data-icopy]"); if (c) { var x2 = inq.filter(function (q) { return q.id === inqCur; })[0], p = parseMsg(x2); navigator.clipboard.writeText([p.person + (p.company ? " (" + p.company + ")" : ""), x2.phone, p.email, p.type, p.route, p.body].filter(Boolean).join("\n")).then(function () { toast("복사했습니다"); }); return; }
       var b = e.target.closest("[data-idel]"); if (!b) return;
-      H.confirm("문의 삭제", "이 문의를 지웁니다. 되돌릴 수 없습니다.", "삭제", true).then(function (ok) { if (!ok) return; fetch(H.SB_URL + "/rest/v1/inquiries?id=eq." + b.dataset.idel, { method: "DELETE", headers: H.SB_H }).then(function () { H.addLog("문의 삭제 #" + b.dataset.idel); refreshInq(); }).catch(function () { toast("삭제 실패", true); }); });
+      H.confirm("문의 삭제", "이 문의를 지웁니다. 되돌릴 수 없습니다.", "삭제", true).then(function (ok) { if (!ok) return; fetch(H.SB_URL + "/rest/v1/inquiries?id=eq." + b.dataset.idel, { method: "DELETE", headers: H.SB_H }).then(function () { H.addLog("문의 삭제 #" + b.dataset.idel); inqCur = null; refreshInq(); }).catch(function () { toast("삭제 실패", true); }); });
     });
+    $("inqDetail").addEventListener("focusout", function (e) { var m = e.target.closest("[data-imemo]"); if (!m) return; var x = inq.filter(function (q) { return String(q.id) === m.dataset.imemo; })[0]; if (x && x.memo !== m.value) { x.memo = m.value; saveMeta(x.id, { memo: m.value }); } });
   }
 
   /* ================= SEO ================= */
@@ -319,7 +342,7 @@ window.HDApp = (function () {
 
   /* ================= 계정 ================= */
   function renderAcc() {
-    $("accList").innerHTML = (D.accounts || []).map(function (a, i) { return '<div class="accrow"><input type="text" data-ai="' + i + '" data-ak="id" value="' + esc(a.id) + '" placeholder="아이디" autocomplete="off"><input type="text" data-ai="' + i + '" data-ak="pw" value="' + esc(a.pw) + '" placeholder="비밀번호" autocomplete="off"><button class="lite" data-adel="' + i + '">삭제</button></div>'; }).join("") || '<p class="empty">전용 계정이 없습니다. 통합 관리자 계정으로 로그인 중입니다.</p>';
+    $("accList").innerHTML = (D.accounts || []).map(function (a, i) { return '<div class="accrow"><input type="text" data-ai="' + i + '" data-ak="id" value="' + esc(a.id) + '" placeholder="아이디" autocomplete="off"><input type="text" data-ai="' + i + '" data-ak="pw" value="' + esc(a.pw) + '" placeholder="비밀번호" autocomplete="off"><button class="lite" data-adel="' + i + '">삭제</button></div>'; }).join("") || '<p class="empty">저장된 계정이 없어 초기 계정(admin)으로 로그인 중입니다. 계정을 추가하고 저장하면 초기 계정은 더 이상 쓸 수 없습니다.</p>';
     $("accMe").textContent = H.me;
   }
   function bindAcc() {

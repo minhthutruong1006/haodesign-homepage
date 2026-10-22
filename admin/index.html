@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="admin.css?v=2" />
+  <link rel="stylesheet" href="admin.css?v=6" />
 </head>
 <body>
   <p class="toast" id="toast" hidden></p>
@@ -26,7 +26,7 @@
         <input type="password" id="loginPw" autocomplete="current-password" />
         <p class="err" id="loginErr"></p>
         <button type="submit">로그인</button>
-        <p class="hint">통합 관리자 계정으로도 로그인할 수 있습니다.</p>
+        <p class="hint">계정은 관리자 → 관리자 계정 탭에서 관리합니다.</p>
       </form>
     </div>
   </div>
@@ -76,8 +76,6 @@
           <div class="panel"><h3>반영 대기</h3><div id="dashPending"></div></div>
           <div class="panel"><h3>최근 문의</h3><div id="dashInq"></div></div>
         </div>
-        <h3>서비스 페이지 작업 사례 <small>분류별 노출 장수 / 보유 사진</small></h3>
-        <div class="stats six" id="dashSvc"></div>
         <div class="cols">
           <div class="panel"><h3>최근 작업</h3><div id="dashLog"></div></div>
           <div class="panel note"><h3>반영 방식</h3>저장하면 관리자 데이터는 바로 저장됩니다. 사이트 화면에는 <b>30분마다 자동 반영</b>됩니다(GitHub Actions가 정적 페이지를 다시 굽습니다). 상단 <b>지금 반영</b>을 누르면 바로 시작되고 2~3분 뒤 사이트에 보입니다. (설정 탭에 GitHub 토큰을 넣어두면 버튼 한 번으로 실행됩니다.)</div>
@@ -111,22 +109,19 @@
 
       <!-- 포트폴리오 -->
       <section id="tab-works" class="tab">
-        <h2>포트폴리오 <small>포트폴리오 페이지 · 서비스 페이지 작업 사례(4×3) · 서비스 상단 갤러리에 쓰입니다</small></h2>
-        <div class="bar">
-          <div class="chips" id="workChips"></div>
-          <div class="acts"><input type="search" id="workSearch" placeholder="제목 검색" /><button class="lite" id="workView">목록으로</button><label class="lite up">사진 여러 장 추가<input type="file" id="wMulti" accept="image/*" multiple hidden /></label><button class="save" id="workAdd">+ 작품 추가</button></div>
-        </div>
-        <p class="muted" id="workCount"></p>
-        <div class="selbar" id="wSelBar" hidden><b><span id="wSelN">0</span>장 선택</b><button class="lite" id="wSelAll">전체 선택/해제</button><span class="sep"></span><select id="wSelCat"></select><button class="lite" id="wBulkCat">분류 변경</button><button class="lite" id="wBulkSvc">서비스 우선 토글</button><button class="lite danger" id="wBulkDel">삭제</button><span class="grow"></span><button class="lite" id="wSelClear">선택 해제</button></div>
+        <h2>포트폴리오 <small id="workCount"></small><span class="grow"></span><input type="search" id="workSearch" placeholder="제목 검색" /><label class="save up">+ 사진 추가<input type="file" id="wMulti" accept="image/*" multiple hidden /></label><button class="lite" id="workAdd">URL로 추가</button></h2>
+        <div class="inqbar"><div class="seg" id="workChips"></div><span class="grow"></span><button class="lite xs" id="workView">목록 보기</button></div>
+        <p class="hint"><b>★ 대표작</b>으로 표시하면 서비스 페이지 작업 사례(4×3)에 먼저 나옵니다. 카드를 끌어서 순서를 바꾸고, 제목은 두 번 클릭해 고칩니다. 사진 파일을 끌어다 놓으면 바로 추가됩니다.</p>
+        <div class="selbar" id="wSelBar" hidden><b><span id="wSelN">0</span>장 선택</b><button class="lite" id="wSelAll">전체 선택/해제</button><span class="sep"></span><select id="wSelCat"></select><button class="lite" id="wBulkCat">분류 변경</button><button class="lite" id="wBulkSvc">★ 대표작 지정/해제</button><button class="lite danger" id="wBulkDel">삭제</button><span class="grow"></span><button class="lite" id="wSelClear">선택 해제</button></div>
         <form id="workForm" class="frm panel" hidden>
           <input type="hidden" id="wIdx" />
           <div><label>제목</label><input type="text" id="wTitle" required /></div>
           <div><label>분류</label><select id="wCat"></select></div>
           <div class="full"><label>이미지</label><div class="imgrow"><input type="text" id="wImg" placeholder="https://… 또는 파일 선택" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="wImg" hidden /></label><img id="wImgPv" alt="" /></div></div>
-          <div class="full"><label class="chk"><input type="checkbox" id="wSvc" /> 서비스 페이지 작업 사례에 우선 노출</label></div>
+          <div class="full"><label class="chk"><input type="checkbox" id="wSvc" /> ★ 대표작 (서비스 페이지 작업 사례에 먼저 노출)</label></div>
           <div class="full acts"><button type="submit" class="save">저장</button><button type="button" class="lite" id="workCancel">취소 (Esc)</button></div>
         </form>
-        <div id="workDrop" class="dropzone"><div id="workList" class="grid"></div><p class="dropHint">사진 파일을 여기에 끌어다 놓으면 현재 분류로 한 번에 추가됩니다 · 카드를 끌어서 순서 변경 · 제목 두 번 클릭으로 수정</p></div>
+        <div id="workDrop" class="dropzone"><div id="workList" class="grid"></div></div>
       </section>
 
       <!-- 칼럼 -->
@@ -157,9 +152,9 @@
 
       <!-- 문의 -->
       <section id="tab-inq" class="tab">
-        <h2>견적 문의 <small id="inqCount"></small><span class="grow"></span><input type="search" id="inqSearch" placeholder="이름·연락처·내용·메모 검색" /><button class="lite" id="inqCsv">CSV 내려받기</button><button class="lite" id="inqRefresh">새로고침</button></h2>
-        <div class="chips" id="inqChips"></div>
-        <div id="inqList" class="panel"></div>
+        <h2>견적 문의 <small id="inqCount"></small><span class="grow"></span><button class="lite" id="inqCsv">CSV 내려받기</button><button class="lite" id="inqRefresh">새로고침</button></h2>
+        <div class="inqbar"><div class="seg" id="inqSt"></div><input type="search" id="inqSearch" placeholder="이름·회사·연락처·내용·메모 검색" /></div>
+        <div class="inbox"><div class="inlist" id="inqList"></div><div class="indetail" id="inqDetail"><p class="empty">왼쪽에서 문의를 선택하세요.</p></div></div>
       </section>
 
       <!-- SEO -->
@@ -199,7 +194,7 @@
 
       <!-- 계정 -->
       <section id="tab-acc" class="tab">
-        <h2>관리자 계정 <small>이 사이트 전용 계정 · 통합 관리자 계정은 항상 로그인됩니다 · 현재: <b id="accMe"></b></small></h2>
+        <h2>관리자 계정 <small>이 사이트 전용 · 현재 로그인: <b id="accMe"></b></small></h2>
         <div class="panel"><div id="accList"></div><div class="acts" style="margin-top:12px"><button class="lite" id="accAdd">+ 계정 추가</button><button class="save" id="accSave">계정 저장</button></div><p class="muted" style="margin-top:10px">비밀번호는 접근 제한용으로 평문 저장됩니다. 중요한 계정 비밀번호를 쓰지 마세요.</p></div>
       </section>
 
@@ -211,7 +206,7 @@
     </main>
   </div>
 
-  <script src="js/core.js?v=2"></script>
-  <script src="js/app.js?v=2"></script>
+  <script src="js/core.js?v=6"></script>
+  <script src="js/app.js?v=6"></script>
 </body>
 </html>

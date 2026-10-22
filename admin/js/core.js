@@ -64,12 +64,12 @@ window.HD = (function () {
   }
 
   /* ---- 데이터 ---- */
-  var DEF = null, D = {}, META = {}, hub = [{ id: "admin", pw: "haohub1234" }], bakedAt = null, me = "";
+  var DEF = null, D = {}, META = {}, bakedAt = null, me = "";
+  var DEFAULT_ACCOUNTS = [{ id: "admin", pw: "haodesign2026" }]; /* 전용 계정이 하나도 없을 때만 쓰는 초기 계정 — 계정 탭에서 바꾸세요 */
   function load() {
     return Promise.all([
       fetch("defaults.json?v=" + Date.now()).then(function (r) { return r.json(); }),
-      sbGet("/rest/v1/overrides?select=k,v,updated_at&k=like." + P + "*").catch(function () { return []; }),
-      sbGet("/rest/v1/overrides?select=v&k=eq.hub_accounts").catch(function () { return []; })
+      sbGet("/rest/v1/overrides?select=k,v,updated_at&k=like." + P + "*").catch(function () { return []; })
     ]).then(function (a) {
       DEF = a[0];
       ["works", "posts", "hero", "copy", "settings", "mail", "slots", "faq", "svc", "seo"].forEach(function (k) { D[k] = clone(DEF[k]); });
@@ -81,7 +81,6 @@ window.HD = (function () {
         D[k] = (k === "copy" || k === "svc" || k === "seo" || k === "slots" || k === "settings") ? merge(clone(DEF[k] || {}), row.v) : row.v;
         META[k] = row.updated_at;
       });
-      if (a[2][0] && Array.isArray(a[2][0].v) && a[2][0].v.length) hub = a[2][0].v;
     });
   }
   function merge(a, b) { Object.keys(b || {}).forEach(function (k) { a[k] = (b[k] && typeof b[k] === "object" && !Array.isArray(b[k]) && a[k] && typeof a[k] === "object") ? merge(a[k], b[k]) : b[k]; }); return a; }
@@ -123,13 +122,12 @@ window.HD = (function () {
   }
 
   /* ---- 로그인 ---- */
-  function verify(id, pw) { return hub.concat(D.accounts || []).some(function (a) { return a && a.id === id && a.pw === pw; }); }
+  function verify(id, pw) { var list = (D.accounts && D.accounts.length) ? D.accounts : DEFAULT_ACCOUNTS; return list.some(function (a) { return a && a.id === id && a.pw === pw; }); }
   function login(id, pw) { if (!verify(id, pw)) return false; me = id; sessionStorage.setItem("hd_admin", id); localStorage.setItem("hd_session", JSON.stringify({ id: id, exp: Date.now() + 12 * 3600e3 })); return true; }
   function logout() { sessionStorage.removeItem("hd_admin"); localStorage.removeItem("hd_session"); location.reload(); }
   function restore() {
     var s = sessionStorage.getItem("hd_admin"); if (s) { me = s; return true; }
     try { var j = JSON.parse(localStorage.getItem("hd_session") || "null"); if (j && j.exp > Date.now()) { me = j.id; sessionStorage.setItem("hd_admin", me); return true; } } catch (_) {}
-    var t = +localStorage.getItem("hub_session"); if (t && Date.now() < t) { me = "hub"; return true; } /* 통합 관리자 SSO */
     return false;
   }
 
