@@ -102,24 +102,37 @@ function renderFaqLd(faq) {
   return `<script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faq.map(f => ({ "@type": "Question", "name": f.q, "acceptedAnswer": { "@type": "Answer", "text": text(f.a) } })) })}</script>`;
 }
 
-/* ---- SEO: <head> 태그 직접 수정 ---- */
-function applySeo(html, file, seo) {
+/* ---- SEO: <head> 태그 직접 수정 (title · description · keywords · robots · og · twitter · canonical · 인증 · 파비콘 · Organization JSON-LD) ---- */
+function applySeo(html, file, seo, settings) {
   const pg = (seo.pages || {})[file]; if (!pg) return html;
   const site = (seo.siteUrl || "").replace(/\/$/, "");
+  const abs = u => (!u || /^https?:/.test(u) || !site) ? (u || "") : site + "/" + u.replace(/^\//, "");
   const url = site ? site + "/" + (file === "index.html" ? "" : file) : "";
   if (pg.title) html = html.replace(/<title>[^<]*<\/title>/, `<title>${esc(pg.title)}</title>`);
   if (pg.desc != null) html = /<meta name="description"/.test(html) ? html.replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(pg.desc)}">`) : html.replace(/<title>[^<]*<\/title>/, m => m + `\n<meta name="description" content="${esc(pg.desc)}">`);
-  html = html.replace(/\s*<meta name="robots" content="[^"]*">/, "");
-  if (pg.noindex) html = html.replace(/(<meta name="description" content="[^"]*">)/, `$1\n<meta name="robots" content="noindex, nofollow">`);
-  /* og / canonical: 기존 것은 지우고 다시 넣는다 */
-  html = html.replace(/\s*<meta property="og:[a-z_]+" content="[^"]*">/g, "").replace(/\s*<link rel="canonical" href="[^"]*">/g, "");
-  const og = [];
-  if (pg.title) og.push(`<meta property="og:title" content="${esc(pg.title)}">`);
-  if (pg.desc) og.push(`<meta property="og:description" content="${esc(pg.desc)}">`);
-  og.push(`<meta property="og:type" content="website">`);
-  if (url) { og.push(`<meta property="og:url" content="${esc(url)}">`); og.push(`<link rel="canonical" href="${esc(url)}">`); }
-  const img = pg.ogImage || seo.ogImage; if (img) og.push(`<meta property="og:image" content="${esc(/^https?:/.test(img) || !site ? img : site + "/" + img)}">`);
-  if (og.length) html = html.replace(/(<meta name="description" content="[^"]*">(?:\n<meta name="robots" content="[^"]*">)?)/, `$1\n${og.join("\n")}`);
+  /* 우리가 넣는 태그는 전부 지우고 다시 넣는다 (멱등) */
+  html = html.replace(/\s*<meta name="(robots|keywords|google-site-verification|naver-site-verification|twitter:[a-z:]+)" content="[^"]*">/g, "")
+    .replace(/\s*<meta property="og:[a-z_:]+" content="[^"]*">/g, "").replace(/\s*<link rel="canonical" href="[^"]*">/g, "")
+    .replace(/\s*<link rel="(icon|apple-touch-icon)"[^>]*data-hd="1"[^>]*>/g, "").replace(/\s*<script type="application\/ld\+json" data-hd="org">[\s\S]*?<\/script>/g, "");
+  const t = [];
+  if (pg.noindex) t.push(`<meta name="robots" content="noindex, nofollow">`);
+  const kw = pg.keywords || seo.keywords; if (kw) t.push(`<meta name="keywords" content="${esc(kw)}">`);
+  if (seo.verify && seo.verify.google) t.push(`<meta name="google-site-verification" content="${esc(seo.verify.google)}">`);
+  if (seo.verify && seo.verify.naver) t.push(`<meta name="naver-site-verification" content="${esc(seo.verify.naver)}">`);
+  if (pg.title) t.push(`<meta property="og:title" content="${esc(pg.title)}">`);
+  if (pg.desc) t.push(`<meta property="og:description" content="${esc(pg.desc)}">`);
+  t.push(`<meta property="og:type" content="website">`);
+  if (seo.siteName) t.push(`<meta property="og:site_name" content="${esc(seo.siteName)}">`);
+  if (url) { t.push(`<meta property="og:url" content="${esc(url)}">`); t.push(`<link rel="canonical" href="${esc(url)}">`); }
+  const img = pg.ogImage || seo.ogImage; if (img) { t.push(`<meta property="og:image" content="${esc(abs(img))}">`); t.push(`<meta name="twitter:card" content="summary_large_image">`); t.push(`<meta name="twitter:image" content="${esc(abs(img))}">`); }
+  if (pg.title) t.push(`<meta name="twitter:title" content="${esc(pg.title)}">`);
+  if (seo.favicon) { t.push(`<link rel="icon" href="${esc(seo.favicon)}" data-hd="1">`); t.push(`<link rel="apple-touch-icon" href="${esc(seo.favicon)}" data-hd="1">`); }
+  if (file === "index.html" && seo.org && seo.org.name) {
+    const S = settings || {}; const sameAs = String(seo.org.sameAs || "").split(/\s+/).filter(x => /^https?:/.test(x));
+    const ld = { "@context": "https://schema.org", "@type": "Organization", "name": seo.org.name, "legalName": seo.org.legal || undefined, "url": site || undefined, "logo": seo.favicon ? abs(seo.favicon) : undefined, "image": seo.ogImage ? abs(seo.ogImage) : undefined, "telephone": S.tel || undefined, "email": S.email || undefined, "address": S.address ? { "@type": "PostalAddress", "streetAddress": S.address, "addressCountry": "KR" } : undefined, "sameAs": sameAs.length ? sameAs : undefined };
+    t.push(`<script type="application/ld+json" data-hd="org">${JSON.stringify(ld)}</script>`);
+  }
+  html = html.replace(/(<meta name="description" content="[^"]*">)/, `$1\n${t.join("\n")}`);
   return html;
 }
 
@@ -167,7 +180,7 @@ function columnPage(boardHtml, p, seo) {
     if (d.faq) { h = fill(h, "faq.home", renderFaq(d.faq, d.faq_home_visible || 5)); h = fill(h, "faq.page", renderFaq(d.faq, d.faq_page_visible || 99)); h = fill(h, "faq.ld", renderFaqLd(d.faq)); }
     Object.keys(d.copy || {}).forEach(k => { h = fill(h, "copy." + k, d.copy[k]); });
     h = fill(h, "headcode", d.headcode || "");
-    h = applySeo(h, f, d.seo || {});
+    h = applySeo(h, f, d.seo || {}, S);
     /* 연락처: (직전에 구운 값 → 새 값) + (기본 문구 속 값 → 새 값: 방금 채운 copy 마커 안에도 적용) */
     [state.settings, JSON.parse(rd("admin/defaults.json")).settings].forEach(old => {
       if (!old) return;

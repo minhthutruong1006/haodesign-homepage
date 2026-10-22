@@ -1664,63 +1664,87 @@
    "about.html": {
     "title": "회사소개 | 하오 DESIGN",
     "desc": "2013년부터 카탈로그·브로슈어·팜플렛·리플렛 인쇄 디자인 한 길\n기획·디자인·촬영·인쇄·납품까지 원스톱으로 제공하는 디자인 전문 회사, 하오 DESIGN.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "board.html": {
     "title": "칼럼 | 인쇄와 디자인 이야기 | 하오 DESIGN",
     "desc": "인쇄와 디자인, 알아두면 좋은 이야기를 전합니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "catalog-brochure.html": {
     "title": "카탈로그 제작·브로슈어 디자인 | 회사소개서 편집디자인 | 하오 DESIGN",
     "desc": "회사소개서·제품 카탈로그·브로슈어 편집디자인부터 인쇄·후가공까지 원스톱. 기획·디자인·제작을 한 팀이 책임지는 하오 DESIGN 카탈로그 제작 서비스.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "ci-logo.html": {
     "title": "로고 제작·CI 디자인 | 브랜드 로고·명함 디자인 | 하오 DESIGN",
     "desc": "회사 로고 제작과 CI 디자인. 명함·서식 등 기본 응용 시스템과 인쇄·온라인 겸용 파일까지 제공하는 하오 DESIGN 브랜딩 서비스.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "contact.html": {
     "title": "견적문의 | 하오 DESIGN",
     "desc": "간단한 내용만 남겨주세요. 담당자가 확인 후 빠르게 연락드립니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "faq.html": {
     "title": "FAQ 자주 묻는 질문 | 하오 DESIGN",
     "desc": "카탈로그·브로슈어·리플렛 제작 기간, 소량 제작, 다국어 카탈로그, 촬영까지 — 하오 DESIGN에 자주 묻는 질문을 확인하세요.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "global-design.html": {
     "title": "다국어 카탈로그·영문 브로슈어 제작 | 수출 디자인 | 하오 DESIGN",
     "desc": "영문·중문·일문 다국어 카탈로그·브로슈어 제작. 원본 톤을 유지한 다국어 편집과 수출바우처 연계 제작까지 하오 DESIGN이 지원합니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "index.html": {
     "title": "하오 DESIGN | 카탈로그·브로슈어·리플렛 디자인 인쇄 제작",
     "desc": "안과 홈페이지 레이아웃 템플릿 - 샘플 문구와 플레이스홀더 이미지로 구성",
-    "noindex": true
+    "noindex": true,
+    "keywords": ""
    },
    "leaflet-pamphlet.html": {
     "title": "팜플렛·리플렛 제작 | 2단·3단 접지 리플렛 디자인 | 하오 DESIGN",
     "desc": "행사·매장·제품 안내 팜플렛·리플렛 제작. 2단·3단·대문접지 등 목적에 맞는 리플렛 디자인과 인쇄를 하오 DESIGN이 원스톱으로 제작합니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "package-label.html": {
     "title": "패키지 디자인·라벨 제작 | 단상자·스티커 디자인 | 하오 DESIGN",
     "desc": "단상자·라벨·스티커·쇼핑백 등 패키지 디자인 제작. 구조 설계부터 재질·후가공, 소량 제작과 양산까지 하오 DESIGN이 함께합니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "poster-flyer.html": {
     "title": "포스터 제작·전단지 디자인 | 행사·홍보 포스터 인쇄 | 하오 DESIGN",
     "desc": "행사·공연·모집 포스터, 판촉 전단지 제작. 멀리서도 읽히는 포스터 디자인부터 인쇄·납품까지 하오 DESIGN이 한 번에 진행합니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    },
    "work.html": {
     "title": "포트폴리오 | 하오 DESIGN 제작 사례",
     "desc": "하오 DESIGN이 직접 기획하고 완성한 카탈로그·브로슈어·리플렛·포스터·CI·패키지·다국어 디자인 작업물입니다.",
-    "noindex": false
+    "noindex": false,
+    "keywords": ""
    }
+  },
+  "siteName": "하오 DESIGN",
+  "favicon": "",
+  "keywords": "카탈로그 제작, 브로슈어 디자인, 리플렛 제작, 포스터 디자인, 패키지 디자인, 인쇄 디자인",
+  "verify": {
+   "google": "",
+   "naver": ""
+  },
+  "org": {
+   "name": "하오 DESIGN",
+   "legal": "주식회사 하오커뮤니케이션",
+   "sameAs": ""
   }
  },
  "headcode": "",

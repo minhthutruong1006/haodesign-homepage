@@ -80,7 +80,8 @@ window.HDApp = (function () {
     var items = (SPECIAL[page] || []).map(function (s) { return { k: s[0], label: s[1], sec: "상단" }; });
     var svcKey = Object.keys(SVC_PAGE).filter(function (k) { return SVC_PAGE[k] === page; })[0];
     if (svcKey) items = items.concat([["l1", "인용 첫 줄"], ["l2", "인용 둘째 줄"], ["tag", "해시태그"], ["h1", "H1 제목"], ["desc", "설명"]].map(function (f) { return { svc: svcKey, f: f[0], label: f[1], sec: "상단" }; }));
-    items = items.concat((DEF.copy_pages[page] || []).map(function (c) { return { k: c.k, label: TAG_LABEL[c.tag] || c.tag, sec: SEC_LABEL[c.sec] || c.sec || "본문" }; }));
+    items = items.concat((DEF.copy_pages[page] || []).filter(function (c) { return !/\bsp-crumb\b/.test(c.cls || ""); }) /* 경로 표시(HOME / …)는 제외 */
+      .map(function (c) { return { k: c.k, label: TAG_LABEL[c.tag] || c.tag, sec: SEC_LABEL[c.sec] || c.sec || "본문" }; }));
     if (page !== "index.html" && page !== "faq.html") items.push({ k: "qt_title", label: "견적 섹션 제목 (전 페이지 공통)", sec: "견적 섹션" }, { k: "qt_desc", label: "견적 섹션 설명 (전 페이지 공통)", sec: "견적 섹션" });
     if (page === "index.html") items.push({ k: "qt_title", label: "견적 섹션 제목 (전 페이지 공통)", sec: "견적 섹션" }, { k: "qt_desc", label: "견적 섹션 설명 (전 페이지 공통)", sec: "견적 섹션" });
     return items;
@@ -327,27 +328,54 @@ window.HDApp = (function () {
 
   /* ================= SEO ================= */
   var PAGE_LABEL = { "index.html": "홈", "about.html": "회사소개", "work.html": "포트폴리오", "board.html": "칼럼", "faq.html": "FAQ", "contact.html": "견적문의", "catalog-brochure.html": "카탈로그·브로슈어", "leaflet-pamphlet.html": "팜플렛·리플렛", "poster-flyer.html": "포스터·전단지", "ci-logo.html": "CI·로고", "package-label.html": "패키지·라벨", "global-design.html": "다국어디자인" };
+  var seoOpen = {};
+  function seoAbs(u) { var site = (D.seo.siteUrl || "").replace(/\/$/, ""); return (!u || /^https?:/.test(u) || !site) ? (u || "") : site + "/" + u.replace(/^\//, ""); }
+  function seoPreview(f, p) {
+    var site = (D.seo.siteUrl || "https://example.com").replace(/\/$/, ""), host = site.replace(/^https?:\/\//, "");
+    var img = p.ogImage || D.seo.ogImage;
+    return '<div class="seopv"><div class="gpv"><small>구글 검색 결과</small><div class="g-url">' + esc(host) + ' › ' + esc(f === "index.html" ? "" : f) + '</div><div class="g-title">' + esc(p.title || "(제목 없음)") + '</div><div class="g-desc">' + esc((p.desc || "(검색 설명 없음)").slice(0, 160)) + '</div></div>' +
+      '<div class="kpv"><small>카카오톡 · 페이스북 공유 카드</small><div class="k-card">' + (img ? '<img src="' + esc(src(img)) + '" alt="">' : '<div class="k-noimg">공유 이미지 없음</div>') + '<div class="k-body"><b>' + esc(p.title || "(제목 없음)") + '</b><span>' + esc((p.desc || "").slice(0, 80)) + '</span><em>' + esc(host) + '</em></div></div></div></div>';
+  }
   function renderSeo() {
-    var s = D.seo; $("seoSite").value = s.siteUrl || ""; $("seoOg").value = s.ogImage || ""; $("seoOgPv").src = src(s.ogImage);
+    var s = D.seo; s.verify = s.verify || {}; s.org = s.org || {};
+    $("seoSite").value = s.siteUrl || ""; $("seoOg").value = s.ogImage || ""; $("seoOgPv").src = src(s.ogImage); $("seoFav").value = s.favicon || ""; $("seoFavPv").src = src(s.favicon);
+    $("seoName").value = s.siteName || ""; $("seoKw").value = s.keywords || ""; $("seoVerifyGoogle").value = s.verify.google || ""; $("seoVerifyNaver").value = s.verify.naver || "";
+    $("seoOrgName").value = s.org.name || ""; $("seoOrgLegal").value = s.org.legal || ""; $("seoSameAs").value = s.org.sameAs || "";
+    if (s.siteUrl) { $("lnkSitemap").href = s.siteUrl.replace(/\/$/, "") + "/sitemap.xml"; $("lnkRobots").href = s.siteUrl.replace(/\/$/, "") + "/robots.txt"; }
     $("seoPages").innerHTML = Object.keys(PAGE_LABEL).map(function (f) {
-      var p = s.pages[f] || {}, d = (DEF.seo.pages[f] || {}); var tl = (p.title || "").length, dl = (p.desc || "").length;
-      return '<div class="ccard"><label>' + esc(PAGE_LABEL[f]) + ' <small>' + f + '</small>' + (p.noindex ? ' <small class="warnchip">검색 제외(noindex)</small>' : "") + ((p.title !== d.title || p.desc !== d.desc) ? ' <small class="mod">수정됨</small>' : "") + '</label>' +
-        '<div class="two"><div><small>제목 <em class="' + (tl > 60 ? "warn" : "") + '">' + tl + '/60</em></small><input type="text" data-sf="' + f + '" data-k="title" value="' + esc(p.title) + '"></div><div><small>검색 설명 <em class="' + (dl > 160 || (dl && dl < 50) ? "warn" : "") + '">' + dl + '/160</em></small><input type="text" data-sf="' + f + '" data-k="desc" value="' + esc(p.desc) + '"></div></div>' +
-        '<div class="two" style="margin-top:8px"><div><small>공유 이미지(이 페이지만, 비우면 공통)</small><input type="text" data-sf="' + f + '" data-k="ogImage" value="' + esc(p.ogImage || "") + '"></div><label class="chk" style="margin-top:18px"><input type="checkbox" data-sf="' + f + '" data-k="noindex"' + (p.noindex ? " checked" : "") + '> 검색엔진 색인 제외</label></div></div>';
+      var p = s.pages[f] = s.pages[f] || {}, d = (DEF.seo.pages[f] || {}); var tl = (p.title || "").length, dl = (p.desc || "").length, mod = p.title !== d.title || p.desc !== d.desc || (p.keywords || "") !== (d.keywords || "") || (p.ogImage || "") !== (d.ogImage || "") || !!p.noindex !== !!d.noindex;
+      var open = seoOpen[f], id = "seoOg_" + f.replace(/\W/g, "_");
+      return '<div class="ccard seoc' + (open ? " open" : "") + '"><label class="seohead" data-stoggle="' + f + '"><span class="caret">' + (open ? "▾" : "▸") + '</span> ' + esc(PAGE_LABEL[f]) + ' <small>' + f + '</small>' + (p.noindex ? ' <small class="warnchip">검색 제외</small>' : "") + (mod ? ' <small class="mod">수정됨</small>' : "") + '<span class="grow"></span><small class="seomini">' + esc((p.title || "").slice(0, 40)) + '</small></label>' +
+        (open ? '<div class="two"><div><small>제목 <em class="' + (tl > 60 ? "warn" : "") + '">' + tl + '/60</em></small><input type="text" data-sf="' + f + '" data-k="title" value="' + esc(p.title) + '"></div><div><small>키워드 <em class="muted">쉼표 구분 · 비우면 기본 키워드</em></small><input type="text" data-sf="' + f + '" data-k="keywords" value="' + esc(p.keywords || "") + '"></div></div>' +
+        '<div style="margin-top:8px"><small>검색 설명 <em class="' + (dl > 160 || (dl && dl < 50) ? "warn" : "") + '">' + dl + '/160' + (dl && dl < 50 ? " · 50자 이상 권장" : "") + '</em></small><textarea data-sf="' + f + '" data-k="desc" style="min-height:58px;font-family:inherit">' + esc(p.desc) + '</textarea></div>' +
+        '<div class="two" style="margin-top:8px"><div><small>공유 이미지 <em class="muted">이 페이지만 · 비우면 공통</em></small><div class="imgrow"><input type="text" id="' + id + '" data-sf="' + f + '" data-k="ogImage" value="' + esc(p.ogImage || "") + '"><label class="lite up">파일<input type="file" accept="image/*" data-upto="' + id + '" hidden></label><img id="' + id + 'Pv" src="' + esc(src(p.ogImage)) + '" alt=""></div></div><label class="chk" style="margin-top:22px"><input type="checkbox" data-sf="' + f + '" data-k="noindex"' + (p.noindex ? " checked" : "") + '> 검색엔진 색인 제외 (noindex)</label></div>' + seoPreview(f, p) : "") + '</div>';
     }).join("");
     seoCheck();
   }
   function seoCheck() {
-    var s = D.seo, issues = [];
-    if (!s.siteUrl) issues.push("사이트 주소가 비어 있어 canonical·sitemap이 안 만들어집니다.");
-    if (!s.ogImage) issues.push("공통 공유 이미지(og:image)가 없습니다. 카톡·페북 공유 시 사진이 안 뜹니다.");
-    Object.keys(PAGE_LABEL).forEach(function (f) { var p = s.pages[f] || {}; if (p.noindex) issues.push(PAGE_LABEL[f] + ": 검색엔진에서 제외되어 있습니다." + (f === "index.html" ? " ★ 홈이 제외되면 검색에 전혀 안 나옵니다." : "")); if (!p.desc) issues.push(PAGE_LABEL[f] + ": 검색 설명이 비어 있습니다."); else if (/템플릿|플레이스홀더/.test(p.desc)) issues.push(PAGE_LABEL[f] + ": 설명이 템플릿 문구 그대로입니다."); if ((p.title || "").length > 60) issues.push(PAGE_LABEL[f] + ": 제목이 60자를 넘습니다."); });
-    $("seoIssues").innerHTML = issues.length ? issues.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join("") : '<li class="ok">문제 없음</li>';
+    var s = D.seo, issues = [], titles = {}, descs = {};
+    if (!s.siteUrl) issues.push(["bad", "사이트 주소가 비어 있어 canonical·sitemap·og:url이 안 만들어집니다."]);
+    if (!s.ogImage) issues.push(["bad", "공통 공유 이미지(og:image)가 없습니다. 카톡·페북 공유 시 사진이 안 뜹니다."]);
+    if (!s.favicon) issues.push(["warn", "파비콘이 없습니다. 브라우저 탭·검색 결과에 아이콘이 안 뜹니다."]);
+    if (!(s.verify && (s.verify.google || s.verify.naver))) issues.push(["warn", "구글·네이버 사이트 인증 코드가 없습니다. 인증해야 사이트맵을 제출할 수 있습니다."]);
+    if (!(s.org && s.org.sameAs)) issues.push(["warn", "공식 채널 주소(sameAs)가 비어 있습니다. 인스타·블로그 주소를 넣으면 브랜드 신뢰 신호가 됩니다."]);
+    Object.keys(PAGE_LABEL).forEach(function (f) {
+      var p = s.pages[f] || {}, L = PAGE_LABEL[f];
+      if (p.noindex) issues.push([f === "index.html" ? "bad" : "warn", L + ": 검색엔진에서 제외(noindex)되어 있습니다." + (f === "index.html" ? " ★ 홈이 제외되면 검색에 전혀 안 나옵니다." : "")]);
+      if (!p.title) issues.push(["bad", L + ": 제목이 비어 있습니다."]); else if (p.title.length > 60) issues.push(["warn", L + ": 제목이 60자를 넘어 검색 결과에서 잘립니다."]);
+      if (!p.desc) issues.push(["bad", L + ": 검색 설명이 비어 있습니다."]); else if (/템플릿|플레이스홀더|샘플 문구/.test(p.desc)) issues.push(["bad", L + ": 검색 설명이 템플릿 문구 그대로입니다."]); else if (p.desc.length < 50) issues.push(["warn", L + ": 검색 설명이 50자 미만입니다."]); else if (p.desc.length > 160) issues.push(["warn", L + ": 검색 설명이 160자를 넘어 잘립니다."]);
+      if (p.title) { if (titles[p.title]) issues.push(["warn", L + ": 제목이 '" + titles[p.title] + "'와 같습니다."]); titles[p.title] = L; }
+      if (p.desc) { if (descs[p.desc]) issues.push(["warn", L + ": 검색 설명이 '" + descs[p.desc] + "'와 같습니다."]); descs[p.desc] = L; }
+    });
+    var bad = issues.filter(function (i) { return i[0] === "bad"; }).length, score = Math.max(0, 100 - bad * 12 - (issues.length - bad) * 4);
+    $("seoScore").innerHTML = '<b class="' + (score >= 80 ? "ok" : score >= 50 ? "warn" : "bad") + '">' + score + '점</b> · 문제 ' + bad + ' · 권장 ' + (issues.length - bad);
+    $("seoIssues").innerHTML = issues.length ? issues.map(function (x) { return '<li class="' + x[0] + '">' + esc(x[1]) + '</li>'; }).join("") : '<li class="ok">문제 없음</li>';
   }
   function bindSeo() {
-    $("seoSite").addEventListener("input", function () { D.seo.siteUrl = this.value.trim(); seoCheck(); });
-    $("seoOg").addEventListener("input", function () { D.seo.ogImage = this.value.trim(); $("seoOgPv").src = src(this.value.trim()); seoCheck(); });
-    $("seoPages").addEventListener("input", function (e) { var el = e.target; if (!el.dataset.sf) return; var p = D.seo.pages[el.dataset.sf] = D.seo.pages[el.dataset.sf] || {}; p[el.dataset.k] = el.type === "checkbox" ? el.checked : el.value; seoCheck(); });
+    var map = { seoSite: "siteUrl", seoOg: "ogImage", seoFav: "favicon", seoName: "siteName", seoKw: "keywords", seoOrgName: "org.name", seoOrgLegal: "org.legal", seoSameAs: "org.sameAs", seoVerifyGoogle: "verify.google", seoVerifyNaver: "verify.naver" };
+    Object.keys(map).forEach(function (id) { $(id).addEventListener("input", function () { var path = map[id].split("."), v = this.value.trim(); if (path.length === 2) { D.seo[path[0]] = D.seo[path[0]] || {}; D.seo[path[0]][path[1]] = v; } else D.seo[path[0]] = v; if (id === "seoOg") $("seoOgPv").src = src(v); if (id === "seoFav") $("seoFavPv").src = src(v); seoCheck(); if ((id === "seoOg" || id === "seoSite") && Object.keys(seoOpen).some(function (f) { return seoOpen[f]; })) renderSeo(); }); });
+    $("seoPages").addEventListener("click", function (e) { var h = e.target.closest("[data-stoggle]"); if (!h || e.target.closest("input")) return; seoOpen[h.dataset.stoggle] = !seoOpen[h.dataset.stoggle]; renderSeo(); });
+    $("seoPages").addEventListener("input", function (e) { var el = e.target; if (!el.dataset.sf) return; var p = D.seo.pages[el.dataset.sf] = D.seo.pages[el.dataset.sf] || {}; p[el.dataset.k] = el.type === "checkbox" ? el.checked : el.value; seoCheck(); var card = el.closest(".seoc"), pv = card && card.querySelector(".seopv"); if (pv) pv.outerHTML = seoPreview(el.dataset.sf, p); });
     $("seoPages").addEventListener("change", function (e) { var el = e.target; if (el.type === "checkbox" && el.dataset.sf) { D.seo.pages[el.dataset.sf].noindex = el.checked; renderSeo(); } });
     $("seoSave").addEventListener("click", function () { H.store("seo", D.seo, "SEO 저장 완료").then(renderSeo).catch(function () {}); });
   }

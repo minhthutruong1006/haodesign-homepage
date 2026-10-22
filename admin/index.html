@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="admin.css?v=8" />
+  <link rel="stylesheet" href="admin.css?v=9" />
 </head>
 <body>
   <p class="toast" id="toast" hidden></p>
@@ -155,13 +155,29 @@
 
       <!-- SEO -->
       <section id="tab-seo" class="tab">
-        <h2>SEO <small>페이지 제목·검색 설명·공유 이미지 · sitemap/robots 자동 생성</small><span class="grow"></span><button class="save" id="seoSave">SEO 저장</button></h2>
-        <div class="frm panel">
-          <div><label>사이트 주소 <small>canonical·sitemap에 사용</small></label><input type="text" id="seoSite" placeholder="https://www.haodesign.co.kr" /></div>
-          <div><label>공통 공유 이미지 (og:image, 1200×630 권장)</label><div class="imgrow"><input type="text" id="seoOg" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="seoOg" hidden /></label><img id="seoOgPv" alt="" /></div></div>
+        <h2>SEO <small>검색 노출 · 공유 카드 · 사이트맵</small><span class="grow"></span><button class="save" id="seoSave">SEO 저장</button></h2>
+        <div class="seotop">
+          <div class="panel"><h3>점검 <small id="seoScore"></small></h3><ul class="issues" id="seoIssues"></ul></div>
+          <div class="panel"><h3>검색엔진 도구</h3>
+            <div class="frm" style="margin:0">
+              <div class="full"><label>사이트 주소 <small>canonical · sitemap · og:url 에 사용</small></label><input type="text" id="seoSite" placeholder="https://www.haodesign.co.kr" /></div>
+              <div><label>Google Search Console 인증 코드</label><input type="text" id="seoVerifyGoogle" placeholder="google-site-verification content 값" /></div>
+              <div><label>네이버 서치어드바이저 인증 코드</label><input type="text" id="seoVerifyNaver" placeholder="naver-site-verification content 값" /></div>
+            </div>
+            <p class="muted" style="margin-top:10px;font-size:.8rem">자동 생성: <a id="lnkSitemap" href="../sitemap.xml" target="_blank">sitemap.xml ↗</a> · <a id="lnkRobots" href="../robots.txt" target="_blank">robots.txt ↗</a> · 인증 후 <a href="https://search.google.com/search-console" target="_blank">서치콘솔 ↗</a> / <a href="https://searchadvisor.naver.com/" target="_blank">서치어드바이저 ↗</a>에 사이트맵 주소를 등록하세요.</p>
+          </div>
         </div>
-        <h3>점검</h3><ul class="issues" id="seoIssues"></ul>
-        <h3>페이지별</h3>
+        <h3>사이트 공통</h3>
+        <div class="frm panel">
+          <div><label>사이트 이름 <small>og:site_name</small></label><input type="text" id="seoName" /></div>
+          <div><label>기본 키워드 <small>쉼표 구분 · 페이지 키워드가 비면 이걸 씀</small></label><input type="text" id="seoKw" /></div>
+          <div><label>공통 공유 이미지 <small>og:image · 1200×630 권장</small></label><div class="imgrow"><input type="text" id="seoOg" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="seoOg" hidden /></label><img id="seoOgPv" alt="" /></div></div>
+          <div><label>파비콘 <small>정사각 PNG 512px 권장</small></label><div class="imgrow"><input type="text" id="seoFav" /><label class="lite up">파일 선택<input type="file" accept="image/*" data-upto="seoFav" hidden /></label><img id="seoFavPv" alt="" class="sq" /></div></div>
+          <div><label>회사명 <small>구조화 데이터(Organization) · 연락처·주소는 사이트 설정 값 사용</small></label><input type="text" id="seoOrgName" /></div>
+          <div><label>법인명</label><input type="text" id="seoOrgLegal" /></div>
+          <div class="full"><label>공식 채널 주소 <small>인스타·블로그·유튜브 등, 줄바꿈으로 구분 · sameAs</small></label><textarea id="seoSameAs" placeholder="https://www.instagram.com/…&#10;https://blog.naver.com/…"></textarea></div>
+        </div>
+        <h3>페이지별 <small>제목 · 검색 설명 · 키워드 · 공유 이미지 · 미리보기</small></h3>
         <div id="seoPages"></div>
       </section>
 
@@ -202,7 +218,7 @@
     </main>
   </div>
 
-  <script src="js/core.js?v=8"></script>
-  <script src="js/app.js?v=8"></script>
+  <script src="js/core.js?v=9"></script>
+  <script src="js/app.js?v=9"></script>
 </body>
 </html>
